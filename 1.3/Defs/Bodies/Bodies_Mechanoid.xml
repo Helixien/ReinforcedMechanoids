@@ -219,7 +219,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	
+
 	<!-- ================================ Mechanoid Ranger ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Ranger</defName>
@@ -242,7 +242,7 @@
 							</groups>
 							<parts>
 								<li>
-									<def>RM_ArtificialSimpleBrain</def>
+									<def>ArtificialBrain</def>
 									<coverage>0.10</coverage>
 									<depth>Inside</depth>
 								</li>
@@ -408,7 +408,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	
+
 	<!-- ================================ Mechanoid Marshal ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Marshal</defName>
@@ -638,7 +638,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	
+
 	<!-- ================================ Mechanoid Behemoth ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Behemoth</defName>
@@ -820,180 +820,109 @@
 	</BodyDef>
 
 	<!-- ================================ Mechanoid Walker ====================== -->
+
 	<BodyDef>
 		<defName>RM_Mechanical_Walker</defName>
 		<label>mechanical walker</label>
 		<corePart>
-			<def>MechanicalThoraxCanManipulate</def>
+			<def>RM_MechanicalWalkerBodyFirstRing</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
 				<li>
-					<def>MechanicalNeck</def>
-					<coverage>0.10</coverage>
+					<def>RM_MechanicalWalkerHead</def>
+					<coverage>0.15</coverage>
 					<height>Top</height>
+					<groups>
+						<li>HeadAttackTool</li>
+					</groups>
 					<parts>
 						<li>
-							<def>MechanicalHead</def>
-							<coverage>0.80</coverage>
-							<groups>
-								<li>HeadAttackTool</li>
-							</groups>
+							<def>ArtificialBrain</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>SightSensor</def>
+							<customLabel>left sight sensor</customLabel>
+							<coverage>0.08</coverage>
+						</li>
+						<li>
+							<def>SightSensor</def>
+							<customLabel>right sight sensor</customLabel>
+							<coverage>0.08</coverage>
+						</li>
+						<li>
+							<def>HearingSensor</def>
+							<customLabel>left hearing sensor</customLabel>
+							<coverage>0.08</coverage>
+						</li>
+						<li>
+							<def>HearingSensor</def>
+							<customLabel>right hearing sensor</customLabel>
+							<coverage>0.08</coverage>
+						</li>
+						<li>
+							<def>SmellSensor</def>
+							<coverage>0.08</coverage>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>RM_MechanicalWalkerBodySecondRing</def>
+					<coverage>0.71</coverage>
+					<parts>
+						<li>
+							<def>FluidReprocessor</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>FluidReprocessor</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>RM_ShieldShell</def>
+							<coverage>0.9</coverage>
 							<parts>
 								<li>
-									<def>ArtificialBrain</def>
-									<coverage>0.10</coverage>
+									<def>RM_ShieldGenerator</def>
+									<coverage>0.05</coverage>
 									<depth>Inside</depth>
 								</li>
 								<li>
-									<def>SightSensor</def>
-									<customLabel>sight sensor</customLabel>
-									<coverage>0.6</coverage>
-								</li>
-								<li>
-									<def>HearingSensor</def>
-									<customLabel>left hearing sensor</customLabel>
+									<def>Reactor</def>
 									<coverage>0.05</coverage>
-								</li>
-								<li>
-									<def>HearingSensor</def>
-									<customLabel>right hearing sensor</customLabel>
-									<coverage>0.05</coverage>
+									<depth>Inside</depth>
 								</li>
 							</parts>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>MechanicalShoulder</def>
-					<customLabel>left shoulder</customLabel>
-					<coverage>0.15</coverage>
+					<def>RM_MechanicalWalkerBodyThirdRing</def>
+					<coverage>0.71</coverage>
 					<parts>
 						<li>
-							<def>MechanicalArm</def>
-							<customLabel>left arm</customLabel>
-							<coverage>0.50</coverage>
-							<parts>
-								<li>
-									<def>RM_BehemothShield</def>
-									<customLabel>armored shield</customLabel>
-									<coverage>0.35</coverage>
-									<height>Bottom</height>
-									<groups>
-										<li>LeftHand</li>
-									</groups>
-								</li>
-							</parts>
+							<def>FluidReprocessor</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
 						</li>
-					</parts>
-				</li>
-				<li>
-					<def>MechanicalShoulder</def>
-					<customLabel>right mechanical shoulder</customLabel>
-					<coverage>0.17</coverage>
-					<parts>
 						<li>
-							<def>MechanicalArm</def>
-							<customLabel>right arm</customLabel>
-							<coverage>0.85</coverage>
-							<parts>
-								<li>
-									<def>MechanicalHand</def>
-									<customLabel>right hand</customLabel>
-									<coverage>0.2</coverage>
-									<height>Bottom</height>
-									<parts>
-										<li>
-											<def>MechanicalFinger</def>
-											<customLabel>right pinky</customLabel>
-											<coverage>0.15</coverage>
-											<groups>
-												<li>RightHand</li>
-											</groups>
-										</li>
-										<li>
-											<def>MechanicalFinger</def>
-											<customLabel>right middle finger</customLabel>
-											<coverage>0.15</coverage>
-											<groups>
-												<li>RightHand</li>
-												<li>MiddleFingers</li>
-											</groups>
-										</li>
-										<li>
-											<def>MechanicalFinger</def>
-											<customLabel>right index finger</customLabel>
-											<coverage>0.15</coverage>
-											<groups>
-												<li>RightHand</li>
-											</groups>
-										</li>
-										<li>
-											<def>MechanicalFinger</def>
-											<customLabel>right thumb</customLabel>
-											<coverage>0.15</coverage>
-											<groups>
-												<li>RightHand</li>
-											</groups>
-										</li>
-									</parts>
-								</li>
-							</parts>
+							<def>FluidReprocessor</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
 						</li>
-					</parts>
-				</li>
-				<li>
-					<def>RM_MechanicalHeavyLeg</def>
-					<customLabel>left leg</customLabel>
-					<coverage>0.18</coverage>
-					<height>Bottom</height>
-					<parts>
 						<li>
-							<def>RM_MechanicalHeavyFoot</def>
-							<customLabel>left foot</customLabel>
-							<coverage>0.5</coverage>
-							<groups>
-								<li>FrontLeftLeg</li>
-							</groups>
+							<def>RM_StabilizerUnit</def>
+							<coverage>0.15</coverage>
 						</li>
-					</parts>
-				</li>
-				<li>
-					<def>RM_MechanicalHeavyLeg</def>
-					<customLabel>right leg</customLabel>
-					<coverage>0.18</coverage>
-					<height>Bottom</height>
-					<parts>
 						<li>
-							<def>RM_MechanicalHeavyFoot</def>
-							<customLabel>right foot</customLabel>
-							<coverage>0.5</coverage>
-							<groups>
-								<li>FrontRightLeg</li>
-							</groups>
+							<def>RM_StabilizerUnit</def>
+							<coverage>0.15</coverage>
 						</li>
 					</parts>
-				</li>
-				<li>
-					<def>Reactor</def>
-					<coverage>0.06</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>Reactor</def>
-					<coverage>0.06</coverage>
-					<customLabel>backup reactor</customLabel>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>FluidReprocessor</def>
-					<coverage>0.04</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>FluidReprocessor</def>
-					<coverage>0.04</coverage>
-					<depth>Inside</depth>
 				</li>
 			</parts>
 		</corePart>
@@ -1031,8 +960,7 @@
 									<coverage>0.13</coverage>
 								</li>
 								<li>
-									<def>SightSensor</def>
-									<customLabel>right sight sensor</customLabel>
+									<def>RM_StructuralScanner</def>
 									<coverage>0.13</coverage>
 								</li>
 								<li>
@@ -1045,6 +973,7 @@
 									<customLabel>right hearing sensor</customLabel>
 									<coverage>0.10</coverage>
 								</li>
+
 							</parts>
 						</li>
 					</parts>

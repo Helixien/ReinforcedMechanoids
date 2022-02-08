@@ -26,20 +26,6 @@
 			<li>ConsciousnessSource</li>
 		</tags>
 	</BodyPartDef>
-	
-	<BodyPartDef>
-		<defName>RM_ArtificialSimpleBrain</defName>
-		<label>simple artificial brain</label>
-		<hitPoints>10</hitPoints>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-		<skinCovered>false</skinCovered>
-		<solid>true</solid>
-		<alive>false</alive>
-		<bleedRate>0</bleedRate>
-		<tags>
-			<li>ConsciousnessSource</li>
-		</tags>
-	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>RM_TargetSensor</defName>
@@ -70,6 +56,20 @@
 			<li>ManipulationLimbSegment</li>
 		</tags>
 	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RM_HeadBlade</defName>
+		<label>head blade</label>
+		<hitPoints>15</hitPoints>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+	<!--===================== Behemoth specific ====================-->
 
 	<BodyPartDef>
 		<defName>RM_MechanicalHeavyLeg</defName>
@@ -101,18 +101,6 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>RM_HeadBlade</defName>
-		<label>head blade</label>
-		<hitPoints>15</hitPoints>
-		<frostbiteVulnerability>5</frostbiteVulnerability>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-		<skinCovered>false</skinCovered>
-		<solid>true</solid>
-		<alive>false</alive>
-		<bleedRate>0</bleedRate>
-	</BodyPartDef>
-
-	<BodyPartDef>
 		<defName>RM_BehemothShield</defName>
 		<label>shield</label>
 		<hitPoints>85</hitPoints>
@@ -122,6 +110,107 @@
 		<solid>true</solid>
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
+		<tags>
+			<li>RM_BehemothShieldAttack</li>
+		</tags>
+	</BodyPartDef>
+
+	<!--===================== Vulture specific ====================-->
+
+	<BodyPartDef>
+		<defName>RM_StructuralScanner</defName>
+		<label>structural scanner</label>
+		<hitPoints>15</hitPoints>
+		<frostbiteVulnerability>2</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<socketed>true</socketed>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!--===================== Walker specific ====================-->
+
+	<BodyPartDef>
+		<defName>RM_MechanicalWalkerHead</defName>
+		<label>head</label>
+		<hitPoints>60</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
+	</BodyPartDef>
+
+	<BodyPartDef Abstract="True" Name="RM_MechanicalWalkerRingBase">
+		<labelShort>body ring</labelShort>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>ManipulationLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
+		<defName>RM_MechanicalWalkerBodyFirstRing</defName>
+		<label>first body ring</label>
+		<hitPoints>80</hitPoints>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
+		<defName>RM_MechanicalWalkerBodySecondRing</defName>
+		<label>second body ring</label>
+		<hitPoints>80</hitPoints>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
+		<defName>RM_MechanicalWalkerBodyThirdRing</defName>
+		<label>third body ring</label>
+		<hitPoints>80</hitPoints>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RM_StabilizerUnit</defName>
+		<label>stabilizer</label>
+		<hitPoints>25</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RM_ShieldShell</defName>
+		<label>shell</label>
+		<hitPoints>150</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RM_ShieldGenerator</defName>
+		<label>shield generator</label>
+		<hitPoints>50</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>RM_WalkerShieldAbility</li>
+		</tags>
 	</BodyPartDef>
 
 </Defs>
