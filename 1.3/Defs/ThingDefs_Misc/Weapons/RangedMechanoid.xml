@@ -63,7 +63,7 @@
 			<graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Stun</damageDef>
+			<damageDef>Flame</damageDef>
 			<damageAmountBase>5</damageAmountBase>
 			<speed>150</speed>
 		</projectile>
