@@ -493,7 +493,7 @@
 		</lifeStages>
 		<weaponMoney>9999~9999</weaponMoney>
 		<weaponTags>
-			<li>MechanoidGunMedium</li>
+			<li>MechanoidGunSmall</li>
 		</weaponTags>
 	</PawnKindDef>
 </Defs>
