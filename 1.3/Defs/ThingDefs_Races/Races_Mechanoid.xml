@@ -382,7 +382,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>RM_Mechanical_Behemoth</body>
+			<body>RM_Mechanical_Walker</body>
 			<baseBodySize>1.8</baseBodySize>
 			<baseHealthScale>4.72</baseHealthScale>
 			<lifeStageAges>

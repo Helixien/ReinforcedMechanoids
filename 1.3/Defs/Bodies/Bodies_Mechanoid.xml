@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<!-- ================================ Mechanoid Zealot ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Zealot</defName>
@@ -219,7 +218,6 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
 	<!-- ================================ Mechanoid Ranger ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Ranger</defName>
@@ -408,7 +406,6 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
 	<!-- ================================ Mechanoid Marshal ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Marshal</defName>
@@ -638,8 +635,87 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
 	<!-- ================================ Mechanoid Behemoth ====================== -->
+	<BodyDef>
+		<defName>RM_Mechanical_Walker</defName>
+		<label>mechanical Walker</label>
+		<corePart>
+			<def>RM_MechanicalThorax</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<parts>
+				<li>
+					<def>RM_MechanicalWalkerHead</def>
+					<coverage>0.80</coverage>
+					<height>Middle</height>
+					<groups>
+						<li>HeadAttackTool</li>
+					</groups>
+					<parts>
+						<li>
+							<def>ArtificialBrain</def>
+							<coverage>0.10</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>SightSensor</def>
+							<customLabel>sight sensor</customLabel>
+							<coverage>0.6</coverage>
+						</li>
+						<li>
+							<def>HearingSensor</def>
+							<customLabel>left hearing sensor</customLabel>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>HearingSensor</def>
+							<customLabel>right hearing sensor</customLabel>
+							<coverage>0.05</coverage>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>RM_ShieldShell</def>
+					<coverage>0.80</coverage>
+					<height>Middle</height>
+					<parts>
+						<li>
+							<def>RM_ShieldGenerator</def>
+							<coverage>0.09</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>Reactor</def>
+							<coverage>0.03</coverage>
+							<depth>Inside</depth>
+						</li>
+						<li>
+							<def>Reactor</def>
+							<coverage>0.03</coverage>
+							<depth>Inside</depth>
+						</li>
+					</parts>
+				</li>
+				<li>
+					<def>Reactor</def>
+					<coverage>0.03</coverage>
+					<customLabel>backup reactor</customLabel>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>FluidReprocessor</def>
+					<coverage>0.04</coverage>
+					<depth>Inside</depth>
+				</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+	<!-- ================================ Mechanoid Walker ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Behemoth</defName>
 		<label>mechanical behemoth</label>
@@ -818,9 +894,6 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
-	<!-- ================================ Mechanoid Walker ====================== -->
-
 	<!-- ================================ Mechanoid Vulture ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Vulture</defName>
@@ -867,7 +940,6 @@
 									<customLabel>right hearing sensor</customLabel>
 									<coverage>0.10</coverage>
 								</li>
-
 							</parts>
 						</li>
 					</parts>
@@ -1010,5 +1082,4 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
 </Defs>

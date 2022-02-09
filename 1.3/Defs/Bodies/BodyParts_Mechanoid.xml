@@ -127,47 +127,20 @@
 		<bleedRate>0</bleedRate>
 		<alive>false</alive>
 	</BodyPartDef>
-
-	<BodyPartDef Abstract="True" Name="RM_MechanicalWalkerRingBase">
-		<labelShort>body ring</labelShort>
+	
+	<BodyPartDef>
+		<defName>RM_MechanicalThorax</defName>
+		<label>thorax</label>
+		<hitPoints>40</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
 		<solid>true</solid>
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
 		<tags>
-			<li>MovingLimbCore</li>
+			<li>ManipulationLimbCore</li>
 			<li>ManipulationLimbCore</li>
 		</tags>
-	</BodyPartDef>
-
-	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
-		<defName>RM_MechanicalWalkerBodyFirstRing</defName>
-		<label>first body ring</label>
-		<hitPoints>80</hitPoints>
-	</BodyPartDef>
-
-	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
-		<defName>RM_MechanicalWalkerBodySecondRing</defName>
-		<label>second body ring</label>
-		<hitPoints>80</hitPoints>
-	</BodyPartDef>
-
-	<BodyPartDef ParentName="RM_MechanicalWalkerRingBase">
-		<defName>RM_MechanicalWalkerBodyThirdRing</defName>
-		<label>third body ring</label>
-		<hitPoints>80</hitPoints>
-	</BodyPartDef>
-
-	<BodyPartDef>
-		<defName>RM_StabilizerUnit</defName>
-		<label>stabilizer</label>
-		<hitPoints>25</hitPoints>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-		<skinCovered>false</skinCovered>
-		<solid>true</solid>
-		<alive>false</alive>
-		<bleedRate>0</bleedRate>
 	</BodyPartDef>
 
 	<BodyPartDef>
