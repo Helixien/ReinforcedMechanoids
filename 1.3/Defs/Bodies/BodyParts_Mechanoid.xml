@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<!--======== RM Body Parts ========-->
 	<BodyPartDef>
 		<defName>RM_MechanicalZealotHead</defName>
@@ -12,7 +11,6 @@
 		<bleedRate>0</bleedRate>
 		<alive>false</alive>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_ArtificialCommandBrain</defName>
 		<label>advanced artificial brain</label>
@@ -26,7 +24,6 @@
 			<li>ConsciousnessSource</li>
 		</tags>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_TargetSensor</defName>
 		<label>target sensor</label>
@@ -42,7 +39,6 @@
 			<li>SightSource</li>
 		</tags>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_MechanicalShoulderGuard</defName>
 		<label>shoulder guard</label>
@@ -56,7 +52,6 @@
 			<li>ManipulationLimbSegment</li>
 		</tags>
 	</BodyPartDef>
-	
 	<BodyPartDef>
 		<defName>RM_HeadBlade</defName>
 		<label>head blade</label>
@@ -68,9 +63,7 @@
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>
-
 	<!--===================== Behemoth specific ====================-->
-
 	<BodyPartDef>
 		<defName>RM_MechanicalHeavyLeg</defName>
 		<label>heavy leg</label>
@@ -84,7 +77,6 @@
 			<li>MovingLimbCore</li>
 		</tags>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_MechanicalHeavyFoot</defName>
 		<label>foot</label>
@@ -99,7 +91,6 @@
 			<li>MovingLimbSegment</li>
 		</tags>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_BehemothShield</defName>
 		<label>shield</label>
@@ -114,9 +105,7 @@
 			<li>RM_BehemothShieldAttack</li>
 		</tags>
 	</BodyPartDef>
-
 	<!--===================== Walker specific ====================-->
-
 	<BodyPartDef>
 		<defName>RM_MechanicalWalkerHead</defName>
 		<label>head</label>
@@ -127,7 +116,6 @@
 		<bleedRate>0</bleedRate>
 		<alive>false</alive>
 	</BodyPartDef>
-	
 	<BodyPartDef>
 		<defName>RM_MechanicalThorax</defName>
 		<label>thorax</label>
@@ -142,7 +130,6 @@
 			<li>ManipulationLimbCore</li>
 		</tags>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_ShieldShell</defName>
 		<label>shell</label>
@@ -153,7 +140,6 @@
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>
-
 	<BodyPartDef>
 		<defName>RM_ShieldGenerator</defName>
 		<label>shield generator</label>
@@ -167,5 +153,4 @@
 			<li>RM_WalkerShieldAbility</li>
 		</tags>
 	</BodyPartDef>
-
 </Defs>

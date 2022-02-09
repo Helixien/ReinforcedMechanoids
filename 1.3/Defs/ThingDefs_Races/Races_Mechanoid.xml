@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<!-- ================================ Mechanoid Zealot ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Zealot</defName>
@@ -58,7 +57,6 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
@@ -81,7 +79,6 @@
 			<li>MechanoidGunMedium</li>
 		</weaponTags>
 	</PawnKindDef>
-	
 	<!-- ================================ Mechanoid Ranger ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Ranger</defName>
@@ -138,7 +135,6 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
@@ -161,7 +157,6 @@
 			<li>MechanoidGunMedium</li>
 		</weaponTags>
 	</PawnKindDef>
-
 	<!-- ================================ Mechanoid Marshal ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Marshal</defName>
@@ -221,7 +216,6 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
@@ -241,9 +235,8 @@
 		</lifeStages>
 		<weaponMoney>0~0</weaponMoney>
 		<defendPointRadius>0</defendPointRadius>
-		<weaponTags></weaponTags>
+		<weaponTags/>
 	</PawnKindDef>
-	
 	<!-- ================================ Mechanoid Behemoth ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
@@ -314,7 +307,6 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Behemoth</defName>
 		<label>behemoth</label>
@@ -337,7 +329,6 @@
 			<li>MechanoidGunHeavy</li>
 		</weaponTags>
 	</PawnKindDef>
-
 	<!-- ================================ Mechanoid Walker ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Walker</defName>
@@ -404,7 +395,6 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Walker</defName>
 		<label>walker</label>
@@ -427,7 +417,6 @@
 			<li>MechanoidGunMedium</li>
 		</weaponTags>
 	</PawnKindDef>
-	
 	<!-- ================================ Mechanoid Vulture ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Vulture</defName>
@@ -484,7 +473,6 @@
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
-
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
@@ -507,5 +495,4 @@
 			<li>MechanoidGunMedium</li>
 		</weaponTags>
 	</PawnKindDef>
-
 </Defs>

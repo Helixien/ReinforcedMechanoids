@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Tesla Coil -->
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>RM_TeslaCoil</defName>
+		<label>coil gun</label>
+		<description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MarketValue>1400</MarketValue>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+			<Mass>18</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<weaponTags>
+			<li>MechanoidGunHeavy</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>RM_Bullet_TeslaProjectile</defaultProjectile>
+				<warmupTime>5</warmupTime>
+				<range>32.9</range>
+				<minRange>8.9</minRange>
+				<soundCast>Shot_ChargeBlaster</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<burstShotCount>1</burstShotCount>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RM_Bullet_TeslaProjectile</defName>
+		<label>lightning bolt</label>
+		<thingClass>VFEMech.TeslaProjectile</thingClass>
+		<graphicData>
+			<texPath>Projectile/Lightning</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>150</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="VFEMech.TeslaChainingProps">
+				<maxBounceCount>3</maxBounceCount>
+				<damageDef>Flame</damageDef>
+				<explosionDamageDef>Smoke</explosionDamageDef>
+				<impactRadius>2.9</impactRadius>
+				<targetFriendly>false</targetFriendly>
+				<addFire>false</addFire>
+				<bounceRange>5</bounceRange>
+				<maxLifetime>100</maxLifetime>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>
