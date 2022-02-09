@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>RM_RepairMechanoid</defName>
+    <driverClass>ReinforcedMechanoids.JobDriver_RepairMechanoid</driverClass>
+    <reportString>repairing TargetA.</reportString>
+  </JobDef>
+  
+</Defs>
