@@ -26,10 +26,10 @@ namespace ReinforcedMechanoids
 
         public static void Loggging(ThinkNode_JobGiver __instance, Job __result, Pawn pawn)
         {
-            if (pawn.RaceProps.IsMechanoid)
-            {
-                Log.Message(pawn + " does search from " + __instance + " found " + __result);
-            }
+            //if (pawn.RaceProps.IsMechanoid)
+            //{
+            //    Log.Message(pawn + " does search from " + __instance + " found " + __result);
+            //}
         }
     }
 
@@ -38,8 +38,17 @@ namespace ReinforcedMechanoids
     {
         public static void Postfix(Pawn ___pawn, Job newJob)
         {
-            if (___pawn.RaceProps.IsMechanoid)
-                Log.Message(___pawn + " is starting new job: " + newJob);
+            //if (___pawn.RaceProps.IsMechanoid)
+            //    Log.Message(___pawn + " is starting new job: " + newJob);
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn_PathFollower), "PatherFailed")]
+    public static class Pawn_PathFollower_PatherFailed
+    {
+        public static void Prefix(Pawn ___pawn)
+        {
+            Log.Message(___pawn + " PATHER FAILED: " + ___pawn.CurJob);
         }
     }
 
@@ -61,75 +70,117 @@ namespace ReinforcedMechanoids
         }
     }
 
+    public class JobGiver_AIFightEnemiesNearToWalker : JobGiver_AIFightEnemies
+    {
+        public static Pawn walker;
+        public override bool ExtraTargetValidator(Pawn pawn, Thing target)
+        {
+            return walker.Position.DistanceTo(target.Position) <= 10;
+        }
+    }
+
     [HarmonyPatch(typeof(JobGiver_AIFightEnemy), "TryGiveJob")]
     public static class JobGiver_AIFightEnemy_TryGiveJob
     {
-        public static bool Prefix(Pawn pawn, ref Job __result)
+        public static bool Prefix(JobGiver_AIFightEnemy __instance, Pawn pawn, ref Job __result)
         {
-            return TryModifyJob(pawn, ref __result);
+            if (!(__instance is JobGiver_AIFightEnemiesNearToWalker))
+            {
+                return TryModifyJob(pawn, ref __result);
+            }
+            return true;
         }
 
         public static bool TryModifyJob(Pawn pawn, ref Job __result)
         {
-            if (pawn.RaceProps.IsMechanoid)
+            if (pawn.kindDef == RM_DefOf.RM_Mech_Walker)
             {
                 pawn.jobs.debugLog = true;
+            }
+            if (pawn.RaceProps.IsMechanoid && pawn.kindDef != RM_DefOf.RM_Mech_Walker)
+            {
                 Log.ResetMessageCount();
-            }
-            if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
-            {
-                if (pawn.mindState.meleeThreat != null)
+                if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                 {
-                    __result = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn.mindState.meleeThreat);
-                    __result.maxNumMeleeAttacks = 1;
-                    __result.expiryInterval = 200;
-                    __result.reactingToMeleeThreat = true;
-                }
-                else
-                {
-                    __result = HealOrFollowOtherMechanoids(pawn);
-                }
-                return false;
-            }
-            else
-            {
-                var lord = pawn.GetLord();
-                if (lord.ownedPawns.Any(x => x.kindDef == RM_DefOf.RM_Mech_Walker))
-                {
-                    var firstCloseWalker = lord.ownedPawns.Where(x => x.kindDef == RM_DefOf.RM_Mech_Walker).OrderBy(x => x.Position.DistanceTo(pawn.Position)).FirstOrDefault();
-                    var nearestCell = JobGiver_WalkToPlayerBase.GetNearestCellToPlayerBase(firstCloseWalker, out var centerColony, out var firstBlockingBuilding);
-                    Log.Message(pawn + " - Found nearest cell: " + nearestCell + " - firstBlockingBuilding: " + firstBlockingBuilding);
-                    if (firstBlockingBuilding != null && firstBlockingBuilding.Position.DistanceTo(pawn.Position) <= 10)
+                    if (pawn.mindState.meleeThreat != null)
                     {
-                        __result = TrashUtility.TrashJob(pawn, firstBlockingBuilding);
-                        Log.Message(pawn + " - Should trash it: " + firstBlockingBuilding);
-                        return false;
-                    }
-                    else if (firstCloseWalker.CurJobDef == JobDefOf.Wait)
-                    {
-                        Log.Message(pawn + " - walker is waiting, doing usual stuff");
-                        return true;
+                        __result = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn.mindState.meleeThreat);
+                        __result.maxNumMeleeAttacks = 1;
+                        __result.expiryInterval = 200;
+                        __result.reactingToMeleeThreat = true;
                     }
                     else
                     {
-                        var job = TryGiveFollowJob(pawn, firstCloseWalker, 6);
-                        if (job != null)
+                        __result = HealOrFollowOtherMechanoids(pawn);
+                    }
+                    return false;
+                }
+                else
+                {
+                    var lord = pawn.GetLord();
+                    if (lord.ownedPawns.Any(x => x.kindDef == RM_DefOf.RM_Mech_Walker))
+                    {
+                        var firstCloseWalker = lord.ownedPawns.Where(x => x.kindDef == RM_DefOf.RM_Mech_Walker).OrderBy(x => x.Position.DistanceTo(pawn.Position)).FirstOrDefault();
+                        var fightEnemiesJobGiver = new JobGiver_AIFightEnemiesNearToWalker();
+                        JobGiver_AIFightEnemiesNearToWalker.walker = firstCloseWalker;
+                        fightEnemiesJobGiver.ResolveReferences();
+                        fightEnemiesJobGiver.targetAcquireRadius = 12f;
+                        fightEnemiesJobGiver.targetKeepRadius = 12f;
+                        var fightEnemiesJob = fightEnemiesJobGiver.TryGiveJob(pawn);
+                        JobGiver_AIFightEnemiesNearToWalker.walker = null;
+                        if (fightEnemiesJob != null)
                         {
-                            job.locomotionUrgency = LocomotionUrgency.Amble;
-                            __result = job;
-                            Log.Message(pawn + " - Following Walker");
+                            //Log.Message(pawn + " - Found nearest target: " + fightEnemiesJob);
+                            __result = fightEnemiesJob;
                             return false;
+                        }
+                        var nearestCell = JobGiver_WalkToPlayerBase.GetNearestCellToPlayerBase(firstCloseWalker, out var centerColony, out var firstBlockingBuilding);
+                        //Log.Message(pawn + " - Found nearest cell: " + nearestCell + " - firstBlockingBuilding: " + firstBlockingBuilding);
+                        if (firstBlockingBuilding != null && firstBlockingBuilding.Position.DistanceTo(pawn.Position) <= 10)
+                        {
+                            __result = MeleeAttackJob(firstBlockingBuilding);
+                            if (__result != null)
+                            {
+                                //Log.Message(pawn + " - Should trash it: " + firstBlockingBuilding + " - " + __result);
+                                return false;
+                            }
+                        }
+                        if (firstCloseWalker.CurJobDef == JobDefOf.Wait)
+                        {
+                            //Log.Message(pawn + " - walker is waiting, doing usual stuff");
+                            return true;
                         }
                         else
                         {
-                            Log.Message(pawn + " - Cannot follow walker, doing usual stuff");
+                            var followJob = TryGiveFollowJob(pawn, firstCloseWalker, 6);
+                            if (followJob != null)
+                            {
+                                followJob.locomotionUrgency = LocomotionUrgency.Amble;
+                                __result = followJob;
+                                //Log.Message(pawn + " - Following Walker");
+                                return false;
+                            }
+                            else
+                            {
+                                //Log.Message(pawn + " - Cannot follow walker, doing usual stuff");
+                            }
                         }
                     }
                 }
+                //Log.Message(pawn + " is doing usual stuff");
             }
-
-            Log.Message(pawn + " is doing usual stuff");
             return true;
+        }
+        public static readonly IntRange ExpiryInterval_ShooterSucceeded = new IntRange(450, 550);
+
+        public static readonly IntRange ExpiryInterval_Melee = new IntRange(360, 480);
+        private static Job MeleeAttackJob(Thing enemyTarget)
+        {
+            Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, enemyTarget);
+            job.expiryInterval = ExpiryInterval_Melee.RandomInRange;
+            job.checkOverrideOnExpire = true;
+            job.expireRequiresEnemiesNearby = true;
+            return job;
         }
 
         public static Job HealOrFollowOtherMechanoids(Pawn pawn)

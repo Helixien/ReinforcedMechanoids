@@ -7,7 +7,7 @@ namespace ReinforcedMechanoids
 {
     public class JobGiver_WalkToPlayerBase : ThinkNode_JobGiver
     {
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
             var nearestCell = GetNearestCellToPlayerBase(pawn, out var centerColony, out var firstBlockingBuilding);
             if (nearestCell == pawn.Position)
@@ -16,7 +16,7 @@ namespace ReinforcedMechanoids
             }
             else if (nearestCell.IsValid)
             {
-                return JobMaker.MakeJob(JobDefOf.Goto, centerColony);
+                return JobMaker.MakeJob(JobDefOf.Goto, nearestCell);
             }
             return null;
         }
@@ -29,10 +29,13 @@ namespace ReinforcedMechanoids
             IntVec3 prevCell = pawn.Position;
             var pathNodes = path.NodesReversed.ListFullCopy();
             pathNodes.Reverse();
+            pawn.Map.pawnPathPool.paths.Clear();
             foreach (var cell in pathNodes)
             {
                 firstBlockingBuilding = cell.GetEdifice(pawn.Map);
-                if (cell.Roofed(pawn.Map) || firstBlockingBuilding != null || !pawn.CanReach(cell, PathEndMode.OnCell, Danger.None, canBashDoors: true, canBashFences: true))
+                if (cell.Roofed(pawn.Map) 
+                    || firstBlockingBuilding != null 
+                    || !pawn.CanReach(cell, PathEndMode.OnCell, Danger.None))
                 {
                     if (prevCell != pawn.Position)
                     {
