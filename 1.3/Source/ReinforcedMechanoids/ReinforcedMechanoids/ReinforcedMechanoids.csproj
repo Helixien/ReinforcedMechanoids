@@ -44,11 +44,17 @@
     <Compile Include="Core.cs" />
     <Compile Include="JobDriver_RepairMechanoid.cs" />
     <Compile Include="JobDriver_RepairThing.cs" />
+    <Compile Include="JobGiver_WalkToPlayerBase.cs" />
     <Compile Include="RaidStrategyWorker_ImmediateAttackMechanoidWalker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RM_DefOf.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer">
+      <Version>1.0.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.3.3200</Version>
     </PackageReference>

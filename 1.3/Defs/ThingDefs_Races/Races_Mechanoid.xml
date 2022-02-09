@@ -376,6 +376,7 @@
 			<body>RM_Mechanical_Walker</body>
 			<baseBodySize>1.8</baseBodySize>
 			<baseHealthScale>4.72</baseHealthScale>
+			<thinkTreeMain>RM_Walker</thinkTreeMain>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>

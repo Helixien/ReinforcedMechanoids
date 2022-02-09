@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CHUwq1T+sSHa2E4OuxgCbNqJWwXKt1RHNPEEOyonEADfXAXZ8ixr5BZ3EIeTqHkqPSZ54CUrFl25LEVB3Oo2QA==",
+  "dgSpecHash": "4MfyxWPlSaXDKyO2296MKNMt7ibwHnDxzB2xMRZeoO5+FjZBuqzvKqH6/r0B24vh1CtMBX/qBozWhER7fHPmMA==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ReinforcedMechanoids\\1.3\\Source\\ReinforcedMechanoids\\ReinforcedMechanoids\\ReinforcedMechanoids.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.publicizer\\1.0.2\\krafs.publicizer.1.0.2.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3200\\krafs.rimworld.ref.1.3.3200.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.2.0\\lib.harmony.2.2.0.nupkg.sha512"
   ],

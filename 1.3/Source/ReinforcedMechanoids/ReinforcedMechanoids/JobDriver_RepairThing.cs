@@ -1,19 +1,14 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 
 namespace ReinforcedMechanoids
 {
+
     public class JobDriver_RepairThing : JobDriver
     {
         protected float ticksToNextRepair;
-
-        private const float WarmupTicks = 80f;
-
-        private const float TicksBetweenRepairs = 20f;
-
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
