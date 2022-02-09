@@ -853,7 +853,8 @@
 									<coverage>0.13</coverage>
 								</li>
 								<li>
-									<def>RM_StructuralScanner</def>
+									<def>SightSensor</def>
+									<customLabel>right sight sensor</customLabel>
 									<coverage>0.13</coverage>
 								</li>
 								<li>

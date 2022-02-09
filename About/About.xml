@@ -6,7 +6,7 @@
 		<li>1.3</li>
 	</supportedVersions>
 	<url></url>
-	<packageId>hlx.Reinforced Mechanoids</packageId>
+	<packageId>hlx.ReinforcedMechanoids</packageId>
 	<description>Check the workshop page for information.</description>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>

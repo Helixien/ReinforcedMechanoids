@@ -115,24 +115,6 @@
 		</tags>
 	</BodyPartDef>
 
-	<!--===================== Vulture specific ====================-->
-
-	<BodyPartDef>
-		<defName>RM_StructuralScanner</defName>
-		<label>structural scanner</label>
-		<hitPoints>15</hitPoints>
-		<frostbiteVulnerability>2</frostbiteVulnerability>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-		<skinCovered>false</skinCovered>
-		<solid>true</solid>
-		<alive>false</alive>
-		<socketed>true</socketed>
-		<bleedRate>0</bleedRate>
-		<tags>
-			<li>SightSource</li>
-		</tags>
-	</BodyPartDef>
-
 	<!--===================== Walker specific ====================-->
 
 	<BodyPartDef>
