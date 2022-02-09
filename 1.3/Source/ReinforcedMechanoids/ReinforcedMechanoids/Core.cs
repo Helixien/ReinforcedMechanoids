@@ -43,7 +43,9 @@ namespace ReinforcedMechanoids
             var lord = pawn.GetLord();
             if (lord != null)
             {
-                var otherPawns = lord.ownedPawns.Except(pawn).OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList();
+                var otherPawns = pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction)
+                    .Where(x => x.RaceProps.IsMechanoid && !x.Fogged() && !x.Dead && !x.Awake()).Except(pawn)
+                    .OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList();
                 foreach (var otherPawn in otherPawns)
                 {
                     if (otherPawn.CanBeHealed() && pawn.CanReach(otherPawn, PathEndMode.Touch, Danger.None))
@@ -51,6 +53,18 @@ namespace ReinforcedMechanoids
                         var job = JobMaker.MakeJob(RM_DefOf.RM_RepairMechanoid, otherPawn);
                         job.locomotionUrgency = LocomotionUrgency.Sprint;
                         return job;
+                    }
+                }
+                if (lord.ownedBuildings != null)
+                {
+                    foreach (var building in lord.ownedBuildings.OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList())
+                    {
+                        if (RepairUtility.PawnCanRepairNow(pawn, building) && pawn.CanReserve(building, 1, -1, null, true) && pawn.CanReach(building, PathEndMode.Touch, Danger.None))
+                        {
+                            var job = JobMaker.MakeJob(RM_DefOf.RM_RepairThing, building);
+                            job.locomotionUrgency = LocomotionUrgency.Sprint;
+                            return job;
+                        }
                     }
                 }
                 foreach (var otherPawn2 in otherPawns.InRandomOrder()) 

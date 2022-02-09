@@ -9,5 +9,6 @@ namespace ReinforcedMechanoids
 		public static PawnKindDef RM_Mech_Walker;
 		public static PawnKindDef RM_Mech_Vulture;
 		public static JobDef RM_RepairMechanoid;
+		public static JobDef RM_RepairThing;
 	}
 }
