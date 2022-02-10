@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompExplodeIfNoOtherFactionPawns.cs" />
     <Compile Include="CompChangePawnGraphic.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="DamageWorker_BehemothAttack.cs" />
