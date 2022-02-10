@@ -51,33 +51,13 @@
 						<ThingDef ParentName="BaseMechanoid">
 							<defName>RM_Mech_Walker</defName>
 							<label>walker</label>
-							<description>Fast human-sized, Sangheili-class combat mechanoids built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
+							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carpace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
 								<MoveSpeed>4.5</MoveSpeed>
 								<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
 								<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
 							</statBases>
 							<tools>
-								<li>
-									<label>left fist</label>
-									<capacities>
-										<li>Blunt</li>
-									</capacities>
-									<power>9.0</power>
-									<cooldownTime>2</cooldownTime>
-									<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-									<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-								</li>
-								<li>
-									<label>right fist</label>
-									<capacities>
-										<li>Blunt</li>
-									</capacities>
-									<power>9.0</power>
-									<cooldownTime>2</cooldownTime>
-									<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-									<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-								</li>
 								<li>
 									<label>head</label>
 									<capacities>
@@ -92,8 +72,8 @@
 							</tools>
 							<race>
 								<body>RM_Mechanical_Walker</body>
-								<baseBodySize>1.8</baseBodySize>
-								<baseHealthScale>4.72</baseHealthScale>
+								<baseBodySize>4.0</baseBodySize>
+								<baseHealthScale>8.0</baseHealthScale>
 								<thinkTreeMain>RM_Walker</thinkTreeMain>
 								<lifeStageAges>
 									<li>
@@ -110,7 +90,7 @@
 							</race>
 							<comps>
 								<li Class="CompProperties_ProjectileInterceptor">
-									<radius>4.9</radius>
+									<radius>12</radius>
 									<interceptGroundProjectiles>true</interceptGroundProjectiles>
 									<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
 									<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
@@ -121,6 +101,7 @@
 									<activeSound>Broadshield_Ambience</activeSound>
 								</li>
 								<li Class="ReinforcedMechanoids.CompProperties_ExplodeIfNoOtherFactionPawns">
+<<<<<<< Updated upstream
 								</li>
 								<li Class="CompProperties_Explosive">
 									<explosiveRadius>4.9</explosiveRadius>
@@ -134,6 +115,9 @@
 											<ticksLeft>300</ticksLeft>
 										</li>
 									</wickMessages>
+=======
+									<radius>5.9</radius>
+>>>>>>> Stashed changes
 								</li>
 							</comps>
 							<butcherProducts>
@@ -152,7 +136,7 @@
 									<bodyGraphicData>
 										<texPath>Things/Pawn/Mechanoid/Walker</texPath>
 										<graphicClass>Graphic_Multi</graphicClass>
-										<drawSize>1.4</drawSize>
+										<drawSize>4.0</drawSize>
 										<shadowData>
 											<volume>(0.4, 0.8, 0.4)</volume>
 										</shadowData>
@@ -174,10 +158,10 @@
 							<kindDef>Combat</kindDef>
 							<commonality>1</commonality>
 							<options>
-								<Mech_Centipede>10</Mech_Centipede>
-								<Mech_Lancer>10</Mech_Lancer>
-								<Mech_Scyther>10</Mech_Scyther>
-								<Mech_Pikeman>10</Mech_Pikeman>
+								<Mech_Centipede>5</Mech_Centipede>
+								<Mech_Lancer>8</Mech_Lancer>
+								<Mech_Scyther>6</Mech_Scyther>
+								<Mech_Pikeman>5</Mech_Pikeman>
 								<RM_Mech_Walker>1</RM_Mech_Walker>
 							</options>
 						</li>
