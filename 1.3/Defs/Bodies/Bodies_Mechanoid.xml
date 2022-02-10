@@ -635,7 +635,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	<!-- ================================ Mechanoid Behemoth ====================== -->
+	<!-- ================================ Mechanoid Walker ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Walker</defName>
 		<label>mechanical Walker</label>
@@ -715,7 +715,7 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	<!-- ================================ Mechanoid Walker ====================== -->
+	<!-- ================================ Mechanoid Behemoth ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Behemoth</defName>
 		<label>mechanical behemoth</label>

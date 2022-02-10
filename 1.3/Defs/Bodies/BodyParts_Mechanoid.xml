@@ -150,8 +150,5 @@
 		<solid>true</solid>
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
-		<tags>
-			<li>RM_WalkerShieldAbility</li>
-		</tags>
 	</BodyPartDef>
 </Defs>

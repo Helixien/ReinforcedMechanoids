@@ -351,7 +351,7 @@
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
-		<description>Fast human-sized, Sangheili-class combat mechanoids built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
+		<description>Fast, small support mechanoids built to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets at all ranges - especially in melee combat. They will avoid combat if possible and only engage if no other option is left.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
@@ -363,7 +363,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>9.0</power>
+				<power>4.0</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -373,7 +373,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>9.0</power>
+				<power>4.0</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -383,16 +383,16 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>7.5</power>
+				<power>5</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
+				<chanceFactor>0.3</chanceFactor>
 			</li>
 		</tools>
 		<race>
 			<body>RM_Mechanical_Vulture</body>
-			<baseHealthScale>0.25</baseHealthScale>
+			<baseHealthScale>0.90</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
@@ -407,7 +407,7 @@
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
 		<race>RM_Mech_Vulture</race>
-		<combatPower>100</combatPower>
+		<combatPower>50</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
