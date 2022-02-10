@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeBladeRevolver</defName>
 		<label>charge revolver</label>
-		<description>A pulse-charged revolver weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>placeholder</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/ChargeBladeRevolver</texPath>

@@ -101,10 +101,9 @@
 									<activeSound>Broadshield_Ambience</activeSound>
 								</li>
 								<li Class="ReinforcedMechanoids.CompProperties_ExplodeIfNoOtherFactionPawns">
-<<<<<<< Updated upstream
 								</li>
 								<li Class="CompProperties_Explosive">
-									<explosiveRadius>4.9</explosiveRadius>
+									<explosiveRadius>7.9</explosiveRadius>
 									<explosiveDamageType>Bomb</explosiveDamageType>
 									<wickTicks>300</wickTicks>
 									<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
@@ -115,9 +114,6 @@
 											<ticksLeft>300</ticksLeft>
 										</li>
 									</wickMessages>
-=======
-									<radius>5.9</radius>
->>>>>>> Stashed changes
 								</li>
 							</comps>
 							<butcherProducts>
