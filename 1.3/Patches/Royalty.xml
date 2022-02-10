@@ -54,8 +54,8 @@
 							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carpace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
 								<MoveSpeed>4.5</MoveSpeed>
-								<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
-								<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+								<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+								<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
 							</statBases>
 							<tools>
 								<li>
@@ -73,7 +73,7 @@
 							<race>
 								<body>RM_Mechanical_Walker</body>
 								<baseBodySize>4.0</baseBodySize>
-								<baseHealthScale>8.0</baseHealthScale>
+								<baseHealthScale>10.0</baseHealthScale>
 								<thinkTreeMain>RM_Walker</thinkTreeMain>
 								<lifeStageAges>
 									<li>
@@ -117,9 +117,10 @@
 								</li>
 							</comps>
 							<butcherProducts>
-								<Steel>10</Steel>
-								<Plasteel>2</Plasteel>
-								<ComponentIndustrial>1</ComponentIndustrial>
+								<Steel>80</Steel>
+								<Plasteel>50</Plasteel>
+								<ComponentIndustrial>12</ComponentIndustrial>
+								<ComponentSpacer>3</ComponentSpacer>
 							</butcherProducts>
 						</ThingDef>
 						<PawnKindDef ParentName="BaseMechanoidKind">
