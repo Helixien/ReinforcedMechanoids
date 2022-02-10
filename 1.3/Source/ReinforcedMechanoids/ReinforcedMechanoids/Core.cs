@@ -202,7 +202,7 @@ namespace ReinforcedMechanoids
         {
             foreach (var otherPawn in otherPawns)
             {
-                if (otherPawn.CanBeHealed() && pawn.CanReach(otherPawn, PathEndMode.Touch, Danger.None))
+                if (otherPawn.CanBeHealed() && pawn.CanReserveAndReach(otherPawn, PathEndMode.Touch, Danger.None))
                 {
                     var job = JobMaker.MakeJob(RM_DefOf.RM_RepairMechanoid, otherPawn);
                     job.locomotionUrgency = LocomotionUrgency.Sprint;

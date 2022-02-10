@@ -77,7 +77,7 @@ namespace ReinforcedMechanoids
 					}
 					if (flag)
 					{
-						IntVec3 lastPassableCellInPath = followee.pather.LastPassableCellInPath;
+						IntVec3 lastPassableCellInPath = GetCellToFollow(followee);
 						if (!pawn.pather.Moving || pawn.pather.Destination.HasThing || !pawn.pather.Destination.Cell.InHorDistOf(lastPassableCellInPath, followRadius))
 						{
 							IntVec3 intVec = CellFinder.RandomClosewalkCellNear(lastPassableCellInPath, base.Map, Mathf.FloorToInt(followRadius));
@@ -95,15 +95,6 @@ namespace ReinforcedMechanoids
 								EndJobWith(JobCondition.Incompletable);
 							}
 						}
-
-						//if (NearDestinationOrNotMoving(pawn, followee, followRadius))
-						//{
-						//	EndJobWith(JobCondition.Succeeded);
-						//}
-						//else
-						//{
-						//
-						//}
 					}
 				}
 			};
@@ -111,6 +102,23 @@ namespace ReinforcedMechanoids
 			yield return toil;
 		}
 
+		public IntVec3 GetCellToFollow(Pawn target)
+        {
+			if (target.pather.Moving && target.pather.curPath != null)
+            {
+				int maxValue = 5;
+				while (true)
+                {
+					var range = Rand.RangeInclusive(1, maxValue);
+					if (target.pather.curPath.nodes.Count > range)
+                    {
+						return target.pather.curPath.nodes[range];
+                    }
+					maxValue--;
+                }
+            }
+			return target.Position;
+        }
 		public override bool IsContinuation(Job j)
 		{
 			return job.GetTarget(TargetIndex.A) == j.GetTarget(TargetIndex.A);
