@@ -102,10 +102,7 @@
 		<alive>false</alive>
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>
-	
-	<BodyPartTagDef>
-		<defName>RM_BehemothShieldAttack</defName>
-	</BodyPartTagDef>
+
 	<!--===================== Walker specific ====================-->
 	<BodyPartDef>
 		<defName>RM_MechanicalWalkerHead</defName>

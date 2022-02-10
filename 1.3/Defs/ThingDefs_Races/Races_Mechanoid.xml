@@ -313,7 +313,7 @@
 			<li Class="ReinforcedMechanoids.CompProperties_ChangeGraphic">
 				<pawnGraphicsByMissingParts>
 					<li>
-						<missingPart>RM_BehemothShieldAttack</missingPart>
+						<missingPart>RM_BehemothShield</missingPart>
 						<texPath>Things/Pawn/Mechanoid/Behemoth_NoShield</texPath>
 					</li>
 				</pawnGraphicsByMissingParts>

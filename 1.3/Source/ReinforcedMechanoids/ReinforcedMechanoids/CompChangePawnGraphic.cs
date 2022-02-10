@@ -7,7 +7,7 @@ namespace ReinforcedMechanoids
 {
     public class PawnGraphicByMissingParts
     {
-        public BodyPartTagDef missingPart;
+        public BodyPartDef missingPart;
         public string texPath;
     }
     public class CompProperties_ChangeGraphic : CompProperties

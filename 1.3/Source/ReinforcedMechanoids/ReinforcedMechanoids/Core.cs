@@ -17,11 +17,11 @@ namespace ReinforcedMechanoids
             var harm = new Harmony("ReinforcedMechanoids.Mod");
             harm.PatchAll();
         }
-        public static BodyPartRecord GetNonMissingBodyPart(Pawn pawn, BodyPartTagDef def)
+        public static BodyPartRecord GetNonMissingBodyPart(Pawn pawn, BodyPartDef def)
         {
             foreach (BodyPartRecord notMissingPart in pawn.health.hediffSet.GetNotMissingParts())
             {
-                if (notMissingPart.def.tags.Contains(def))
+                if (notMissingPart.def == def)
                 {
                     return notMissingPart;
                 }
@@ -34,38 +34,38 @@ namespace ReinforcedMechanoids
     public static class JobGiver_AITrashColonyClose_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {
+        {    
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-
+    
     [HarmonyPatch(typeof(JobGiver_AISapper), "TryGiveJob")]
     public static class JobGiver_AISapper_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {
+        {    
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-
+    
     [HarmonyPatch(typeof(JobGiver_AIGotoNearestHostile), "TryGiveJob")]
     public static class JobGiver_AIGotoNearestHostile_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {
+        {    
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-
+    
     [HarmonyPatch(typeof(JobGiver_AITrashBuildingsDistant), "TryGiveJob")]
     public static class JobGiver_AITrashBuildingsDistant_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {
+        {    
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-
+    
     public class JobGiver_AIFightEnemiesNearToWalker : JobGiver_AIFightEnemies
     {
         public static Pawn walker;
@@ -74,7 +74,7 @@ namespace ReinforcedMechanoids
             return walker.Position.DistanceTo(target.Position) <= 10;
         }
     }
-
+    
     [HarmonyPatch(typeof(JobGiver_AIFightEnemy), "TryGiveJob")]
     public static class JobGiver_AIFightEnemy_TryGiveJob
     {
@@ -86,7 +86,7 @@ namespace ReinforcedMechanoids
             }
             return true;
         }
-
+    
         public static bool TryModifyJob(Pawn pawn, ref Job __result)
         {
             if (pawn.RaceProps.IsMechanoid && pawn.kindDef != RM_DefOf.RM_Mech_Walker)
@@ -145,7 +145,7 @@ namespace ReinforcedMechanoids
                                 return false;
                             }
                         }
-
+                
                         if (firstCloseWalker.CurJobDef == JobDefOf.Wait)
                         {
                             return true;
@@ -161,9 +161,9 @@ namespace ReinforcedMechanoids
                             }
                         }
                     }
-
+                
                 }
-
+    
                 if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                 {
                     if (pawn.mindState.meleeThreat != null)
@@ -187,7 +187,7 @@ namespace ReinforcedMechanoids
             return true;
         }
         public static readonly IntRange ExpiryInterval_ShooterSucceeded = new IntRange(450, 550);
-
+    
         public static readonly IntRange ExpiryInterval_Melee = new IntRange(360, 480);
         private static Job MeleeAttackJob(Thing enemyTarget)
         {
@@ -197,7 +197,7 @@ namespace ReinforcedMechanoids
             job.expireRequiresEnemiesNearby = true;
             return job;
         }
-
+    
         public static Job HealOtherMechanoids(Pawn pawn, List<Pawn> otherPawns)
         {
             foreach (var otherPawn in otherPawns)
@@ -209,7 +209,7 @@ namespace ReinforcedMechanoids
                     return job;
                 }
             }
-
+    
             var lord = pawn.GetLord();
             if (lord != null && lord.ownedBuildings != null)
             {
@@ -229,20 +229,23 @@ namespace ReinforcedMechanoids
         {
             foreach (var otherPawn2 in otherPawns.InRandomOrder())
             {
-                var job = TryGiveFollowJob(pawn, otherPawn2, 12);
-                if (job != null)
+                if (RM_DefOf.RM_FollowClose != otherPawn2.CurJobDef)
                 {
-                    return job;
+                    var job = TryGiveFollowJob(pawn, otherPawn2, 12);
+                    if (job != null)
+                    {
+                        return job;
+                    }
                 }
             }
             return null;
         }
-
+    
         private static bool CanBeHealed(this Pawn pawn)
         {
             return pawn.health.hediffSet.hediffs.Any(x => x is Hediff_Injury);
         }
-
+    
         private static Job TryGiveFollowJob(Pawn pawn, Pawn followee, float radius)
         {
             if (!followee.Spawned || !pawn.CanReach(followee, PathEndMode.Touch, Danger.None))

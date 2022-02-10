@@ -9,7 +9,7 @@ namespace ReinforcedMechanoids
     {
         public override bool Available()
         {
-            return Core.GetNonMissingBodyPart(CasterPawn, RM_DefOf.RM_BehemothShieldAttack) != null && base.Available();
+            return Core.GetNonMissingBodyPart(CasterPawn, RM_DefOf.RM_BehemothShield) != null && base.Available();
         }
     }
 

@@ -12,6 +12,6 @@ namespace ReinforcedMechanoids
 		public static JobDef RM_RepairMechanoid;
 		public static JobDef RM_RepairThing;
 		public static JobDef RM_FollowClose;
-		public static BodyPartTagDef RM_BehemothShieldAttack;
+		public static BodyPartDef RM_BehemothShield;
 	}
 }
