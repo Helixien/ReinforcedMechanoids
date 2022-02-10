@@ -3,12 +3,13 @@
 	<!-- Tesla Coil -->
 	<ThingDef ParentName="BaseGunWithQuality">
 		<defName>RM_TeslaCoil</defName>
-		<label>coil gun</label>
+		<label>heavy coil gun</label>
 		<description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilgun</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilTurret</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
 		</graphicData>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
@@ -39,7 +40,6 @@
 				<soundCast>Shot_ChargeBlaster</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<burstShotCount>1</burstShotCount>
 			</li>
 		</verbs>
 		<tools>
@@ -63,20 +63,20 @@
 			<graphicClass>Graphic_Flicker</graphicClass>
 		</graphicData>
 		<projectile>
-			<damageDef>Flame</damageDef>
-			<damageAmountBase>5</damageAmountBase>
-			<speed>150</speed>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>140</speed>
 		</projectile>
 		<modExtensions>
 			<li Class="VFEMech.TeslaChainingProps">
-				<maxBounceCount>3</maxBounceCount>
+				<maxBounceCount>2</maxBounceCount>
 				<damageDef>Flame</damageDef>
 				<explosionDamageDef>Smoke</explosionDamageDef>
 				<impactRadius>2.9</impactRadius>
 				<targetFriendly>false</targetFriendly>
 				<addFire>false</addFire>
-				<bounceRange>5</bounceRange>
-				<maxLifetime>100</maxLifetime>
+				<bounceRange>3</bounceRange>
+				<maxLifetime>50</maxLifetime>
 			</li>
 		</modExtensions>
 	</ThingDef>
