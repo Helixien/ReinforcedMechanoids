@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ================================ Charge  ====================== -->
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_Gun_ChargeBladeRevoler</defName>
-		<label>charge revoler</label>
-		<description>A pulse-charged revoler weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<defName>RM_Gun_ChargeBladeRevolver</defName>
+		<label>charge revolver</label>
+		<description>A pulse-charged revolver weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/ChargeBladeRevoler</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/ChargeBladeRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
@@ -91,16 +92,17 @@
 			<speed>100</speed>
 		</projectile>
 	</ThingDef>
+	<!-- ================================ Coil Pistol ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
 		<defName>RM_Gun_CoilPistol</defName>
 		<label>coil pistol</label>
-		<description>A pulse-charged revoler weapon. It fires a three shots at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>placeholder</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<soundInteract>Interact_SMG</soundInteract>
+		<soundInteract>Interact_ChargeLance</soundInteract>
 		<statBases>
 			<Mass>1.6</Mass>
 			<AccuracyTouch>0.70</AccuracyTouch>
@@ -108,23 +110,10 @@
 			<AccuracyMedium>0.50</AccuracyMedium>
 			<AccuracyLong>0.35</AccuracyLong>
 			<RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown>
-			<WorkToMake>42000</WorkToMake>
 		</statBases>
-		<recipeMaker>
-			<researchPrerequisite>ChargedShot</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>9</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-		</recipeMaker>
-		<costList>
-			<Plasteel>45</Plasteel>
-			<ComponentSpacer>2</ComponentSpacer>
-		</costList>
 		<weaponTags>
 			<li>MechanoidGunSmall</li>
+			<li>MechanoidGunCoil</li>
 		</weaponTags>
 		<verbs>
 			<li>
@@ -185,6 +174,91 @@
 				<addFire>false</addFire>
 				<bounceRange>2</bounceRange>
 				<maxLifetime>15</maxLifetime>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<!-- ================================ Coil Rifle ====================== -->
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>RM_CoilRifle</defName>
+		<label>coil rifle</label>
+		<description>placeholder</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		<statBases>
+			<Mass>5.5</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.70</AccuracyLong>
+			<RangedWeapon_Cooldown>3.00</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<weaponTags>
+			<li>MechanoidGunMedium</li>
+			<li>MechanoidGunCoil</li>
+		</weaponTags>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.15</MoveSpeed>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RM_Bullet_CoilRifleProjectile</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>32.9</range>
+				<soundCast>Shot_ChargeBlaster</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>13</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RM_Bullet_CoilRifleProjectile</defName>
+		<label>lightning bolt</label>
+		<thingClass>VFEMech.TeslaProjectile</thingClass>
+		<graphicData>
+			<texPath>Projectile/Lightning</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Burn</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<speed>110</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="VFEMech.TeslaChainingProps">
+				<maxBounceCount>2</maxBounceCount>
+				<damageDef>Flame</damageDef>
+				<explosionDamageDef>Smoke</explosionDamageDef>
+				<impactRadius>0.7</impactRadius>
+				<targetFriendly>false</targetFriendly>
+				<addFire>false</addFire>
+				<bounceRange>3</bounceRange>
+				<maxLifetime>25</maxLifetime>
 			</li>
 		</modExtensions>
 	</ThingDef>
