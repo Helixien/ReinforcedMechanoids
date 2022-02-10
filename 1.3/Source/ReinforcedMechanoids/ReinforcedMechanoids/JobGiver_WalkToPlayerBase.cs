@@ -54,12 +54,16 @@ namespace ReinforcedMechanoids
         public static IntVec3 FindCenterColony(Map map)
         {
             var colonyThings = map.listerThings.AllThings.Where(x => x.Faction == Faction.OfPlayer).Select(x => x.Position);
-            var x_Averages = colonyThings.OrderBy(x => x.x);
-            var x_average = x_Averages.ElementAt(x_Averages.Count() / 2).x;
-            var z_Averages = colonyThings.OrderBy(x => x.z);
-            var z_average = z_Averages.ElementAt(z_Averages.Count() / 2).z;
-            var middleCell = new IntVec3(x_average, 0, z_average);
-            return middleCell;
+            if (colonyThings.Any())
+            {
+                var x_Averages = colonyThings.OrderBy(x => x.x);
+                var x_average = x_Averages.ElementAt(x_Averages.Count() / 2).x;
+                var z_Averages = colonyThings.OrderBy(x => x.z);
+                var z_average = z_Averages.ElementAt(z_Averages.Count() / 2).z;
+                var middleCell = new IntVec3(x_average, 0, z_average);
+                return middleCell;
+            }
+            return map.Center;
         }
     }
 }

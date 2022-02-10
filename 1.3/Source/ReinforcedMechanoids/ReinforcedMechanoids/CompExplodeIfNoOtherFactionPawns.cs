@@ -9,7 +9,6 @@ namespace ReinforcedMechanoids
 {
     public class CompProperties_ExplodeIfNoOtherFactionPawns : CompProperties
     {
-        public float radius;
         public CompProperties_ExplodeIfNoOtherFactionPawns()
         {
             this.compClass = typeof(CompExplodeIfNoOtherFactionPawns);
@@ -34,7 +33,6 @@ namespace ReinforcedMechanoids
                     pawn.apparel = new Pawn_ApparelTracker(pawn);
                 }
             }
-            this.TryExplode();
         }
 
         public override void CompTick()
@@ -52,14 +50,9 @@ namespace ReinforcedMechanoids
             {
                 if (!pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction).Where(x => x.kindDef != pawn.kindDef).Any())
                 {
-                    GenExplosion.DoExplosion(pawn.Position, pawn.Map, Props.radius, DamageDefOf.Bomb, pawn);
-                    if (!pawn.Dead)
-                    {
-                        pawn.Kill(null);
-                    }
+                    pawn.GetComp<CompExplosive>().StartWick(pawn);
                 }
             }
         }
-
     }
 }

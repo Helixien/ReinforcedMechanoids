@@ -34,7 +34,6 @@ namespace ReinforcedMechanoids
         public void TryChangeGraphic(bool changeAnyWay)
         {
             var pawn = this.parent as Pawn;
-            Log.Message(pawn + " - " + this.parent?.GetType() + " - " + Props + " - " + Props?.pawnGraphicsByMissingParts);
             foreach (var pawnGraphic in Props.pawnGraphicsByMissingParts)
             {
                 var bodyPart = Core.GetNonMissingBodyPart(pawn, pawnGraphic.missingPart);
