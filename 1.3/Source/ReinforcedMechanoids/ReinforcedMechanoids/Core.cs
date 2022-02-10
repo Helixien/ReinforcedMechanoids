@@ -26,10 +26,10 @@ namespace ReinforcedMechanoids
 
         public static void Loggging(ThinkNode_JobGiver __instance, Job __result, Pawn pawn)
         {
-            //if (pawn.RaceProps.IsMechanoid)
-            //{
-            //    Log.Message(pawn + " does search from " + __instance + " found " + __result);
-            //}
+            if (pawn.RaceProps.IsMechanoid && __result != null)
+            {
+                Log.Message(pawn + " does search from " + __instance + " found " + __result);
+            }
         }
     }
 
@@ -38,8 +38,8 @@ namespace ReinforcedMechanoids
     {
         public static void Postfix(Pawn ___pawn, Job newJob)
         {
-            //if (___pawn.RaceProps.IsMechanoid)
-            //    Log.Message(___pawn + " is starting new job: " + newJob);
+            if (___pawn.RaceProps.IsMechanoid)
+                Log.Message(___pawn + " is starting new job: " + newJob);
         }
     }
 
@@ -235,7 +235,7 @@ namespace ReinforcedMechanoids
             {
                 return null;
             }
-            Job job = JobMaker.MakeJob(JobDefOf.FollowClose, followee);
+            Job job = JobMaker.MakeJob(RM_DefOf.RM_FollowClose, followee);
             job.expiryInterval = 140;
             job.checkOverrideOnExpire = true;
             job.followRadius = radius;

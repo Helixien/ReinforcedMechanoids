@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core.cs" />
+    <Compile Include="JobDriver_FollowClose.cs" />
     <Compile Include="JobDriver_RepairMechanoid.cs" />
     <Compile Include="JobDriver_RepairThing.cs" />
     <Compile Include="JobGiver_WalkToPlayerBase.cs" />
