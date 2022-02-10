@@ -7,6 +7,7 @@ using Verse.AI.Group;
 
 namespace ReinforcedMechanoids
 {
+
     [StaticConstructorOnStartup]
 	public static class Core
     {
@@ -23,7 +24,17 @@ namespace ReinforcedMechanoids
                 }
             }
         }
-
+        public static BodyPartRecord GetNonMissingBodyPart(Pawn pawn, BodyPartTagDef def)
+        {
+            foreach (BodyPartRecord notMissingPart in pawn.health.hediffSet.GetNotMissingParts())
+            {
+                if (notMissingPart.def.tags.Contains(def))
+                {
+                    return notMissingPart;
+                }
+            }
+            return null;
+        }
         public static void Loggging(ThinkNode_JobGiver __instance, Job __result, Pawn pawn)
         {
             if (pawn.RaceProps.IsMechanoid && __result != null)
@@ -240,6 +251,19 @@ namespace ReinforcedMechanoids
             job.checkOverrideOnExpire = true;
             job.followRadius = radius;
             return job;
+        }
+    }
+
+    [HarmonyPatch(typeof(HediffSet), nameof(HediffSet.DirtyCache))]
+    public static class DirtyCache_Patch
+    {
+        private static void Postfix(HediffSet __instance)
+        {
+            var comp = __instance.pawn.GetComp<CompChangePawnGraphic>();
+            if (comp != null)
+            {
+                comp.TryChangeGraphic(false);
+            }
         }
     }
 }

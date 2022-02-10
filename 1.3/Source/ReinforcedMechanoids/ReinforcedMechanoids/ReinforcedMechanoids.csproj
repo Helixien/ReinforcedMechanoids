@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompChangePawnGraphic.cs" />
     <Compile Include="Core.cs" />
+    <Compile Include="DamageWorker_BehemothAttack.cs" />
     <Compile Include="JobDriver_FollowClose.cs" />
     <Compile Include="JobDriver_RepairMechanoid.cs" />
     <Compile Include="JobDriver_RepairThing.cs" />

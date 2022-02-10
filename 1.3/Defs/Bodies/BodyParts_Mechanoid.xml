@@ -105,6 +105,10 @@
 			<li>RM_BehemothShieldAttack</li>
 		</tags>
 	</BodyPartDef>
+	
+	<BodyPartTagDef>
+		<defName>RM_BehemothShieldAttack</defName>
+	</BodyPartTagDef>
 	<!--===================== Walker specific ====================-->
 	<BodyPartDef>
 		<defName>RM_MechanicalWalkerHead</defName>

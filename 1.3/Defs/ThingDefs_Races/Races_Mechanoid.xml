@@ -210,6 +210,12 @@
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
 		</race>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<EnergyShieldRechargeRate>0.05</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>70</EnergyShieldEnergyMax>
+			</li>
+		</comps>
 		<butcherProducts>
 			<Steel>15</Steel>
 			<Plasteel>8</Plasteel>
@@ -252,7 +258,7 @@
 			<li>
 				<label>left shield</label>
 				<capacities>
-					<li>Blunt</li>
+					<li>RM_BehemothAttack</li>
 				</capacities>
 				<power>25.0</power>
 				<cooldownTime>4.5</cooldownTime>
@@ -301,6 +307,16 @@
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
 		</race>
+		<comps>
+			<li Class="ReinforcedMechanoids.CompProperties_ChangeGraphic">
+				<pawnGraphicsByMissingParts>
+					<li>
+						<missingPart>RM_BehemothShieldAttack</missingPart>
+						<texPath>Things/Pawn/Mechanoid/Behemoth_NoShield</texPath>
+					</li>
+				</pawnGraphicsByMissingParts>
+			</li>
+		</comps>
 		<butcherProducts>
 			<Steel>55</Steel>
 			<Plasteel>15</Plasteel>
