@@ -102,6 +102,9 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
 		<soundInteract>Interact_ChargeLance</soundInteract>
 		<statBases>
 			<Mass>1.6</Mass>
@@ -183,6 +186,9 @@
 		<label>coil rifle</label>
 		<description>placeholder</description>
 		<techLevel>Spacer</techLevel>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
