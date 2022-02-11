@@ -171,9 +171,6 @@
 							<thingCategories>
 								<li>Manufactured</li>
 							</thingCategories>
-							<tradeTags>
-								<li>ExoticMisc</li>
-							</tradeTags>
 						</ThingDef>
 						<!-- ================================ Climate Chip ====================== -->
 						<ThingDef ParentName="ResourceBase">
@@ -199,9 +196,6 @@
 							<thingCategories>
 								<li>Manufactured</li>
 							</thingCategories>
-							<tradeTags>
-								<li>ExoticMisc</li>
-							</tradeTags>
 						</ThingDef>
 						<!-- ================================ Condition Causer Base ====================== -->
 						<ThingDef Name="RM_ConditionCauserBase" Abstract="True" ParentName="BuildingBase">
@@ -231,7 +225,7 @@
 							<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 							<drawerType>MapMeshAndRealTime</drawerType>
 							<castEdgeShadows>True</castEdgeShadows>
-							<designationCategory>Misc</designationCategory>
+							<designationCategory>Temperature</designationCategory>
 							<repairEffect>ConstructMetal</repairEffect>
 							<forceDebugSpawnable>false</forceDebugSpawnable>
 							<isMechClusterThreat>false</isMechClusterThreat>

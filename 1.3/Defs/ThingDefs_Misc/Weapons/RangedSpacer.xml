@@ -44,7 +44,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RM_Bullet_ChargeSRevolver</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ChargeRevolver</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<range>24.9</range>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
@@ -114,6 +114,7 @@
 			<RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
 			<WorkToMake>82000</WorkToMake>
 		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
 		<recipeMaker>
 			<researchPrerequisite>ChargedShot</researchPrerequisite>
 			<skillRequirements>

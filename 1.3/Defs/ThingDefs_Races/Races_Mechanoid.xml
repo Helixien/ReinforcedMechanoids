@@ -4,12 +4,12 @@
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
-		<description>Human-sized, Sangheili-class combat mechanoids built for commanding other mechanoids in the field. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
+		<description>Human-sized, Sangheili-class combat mechanoid. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
-			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
-			<PsychicSensitivity>0.35</PsychicSensitivity>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -84,7 +84,7 @@
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
-		<description>Fast human-sized, Sangheili-class combat mechanoids built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
+		<description>Fast human-sized, Sangheili-class combat mechanoid built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
@@ -125,14 +125,14 @@
 		</tools>
 		<race>
 			<body>RM_Mechanical_Ranger</body>
-			<baseHealthScale>0.26</baseHealthScale>
+			<baseHealthScale>0.55</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
 			<Steel>10</Steel>
-			<Plasteel>2</Plasteel>
+			<Plasteel>4</Plasteel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
@@ -140,7 +140,7 @@
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
 		<race>RM_Mech_Ranger</race>
-		<combatPower>100</combatPower>
+		<combatPower>75</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -156,7 +156,6 @@
 		<weaponMoney>9999~9999</weaponMoney>
 		<weaponTags>
 			<li>MechanoidGunMedium</li>
-			<li>MechanoidGunCoil</li>
 		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Marshal ====================== -->
@@ -164,11 +163,11 @@
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
 		<statBases>
-			<MoveSpeed>3.7</MoveSpeed>
+			<MoveSpeed>3.0</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 		</statBases>
-		<description>Fast human-sized, Sangheili-class, human-sized combat mechanoids specializing in rapid approach and close-range combat, whilst being able to withstand heavy fire. Their bodies are covered in points and blades, but they mostly use two arm blades to lop off limbs or gut their victims alive. Alternatively, they will use their head-mounted blade to ram enemies, also gutting them alive.</description>
+		<description>Human-sized, Sangheili-class, human-sized combat mechanoid specializing in rapid approach and close-range combat, whilst being able to withstand heavy fire. Their bodies are covered in points and blades, but they mostly use two arm blades to lop off limbs or gut their victims alive. Alternatively, they will use their head-mounted blade to ram enemies, also gutting them alive.</description>
 		<tools>
 			<li>
 				<label>left blade</label>
@@ -202,33 +201,34 @@
 				<cooldownTime>4</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.1</chanceFactor>
+				<chanceFactor>0.5</chanceFactor>
 			</li>
 		</tools>
 		<race>
 			<body>RM_Mechanical_Marshal</body>
-			<baseHealthScale>1.56</baseHealthScale>
+			<baseHealthScale>1.97</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
 		</race>
 		<comps>
 			<li Class="VFECore.CompProperties_ShieldBubble">
-				<EnergyShieldRechargeRate>0.05</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>70</EnergyShieldEnergyMax>
+				<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
 			</li>
 		</comps>
 		<butcherProducts>
-			<Steel>15</Steel>
-			<Plasteel>8</Plasteel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>20</Steel>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Apparel_ShieldBelt>1</Apparel_ShieldBelt>
 		</butcherProducts>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
 		<race>RM_Mech_Marshal</race>
-		<combatPower>200</combatPower>
+		<combatPower>175</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -249,7 +249,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
 		<label>behemoth</label>
-		<description>Heavy, Mgalekgolo-class combat mechanoids that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemies fire. While heavily armored, their sensors require them to move in close to fire their weapons.</description>
+		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemies fire. Using a shield to protect their body, they are based flanked.</description>
 		<statBases>
 			<MoveSpeed>1.0</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
@@ -320,8 +320,8 @@
 			</li>
 		</comps>
 		<butcherProducts>
-			<Steel>55</Steel>
-			<Plasteel>15</Plasteel>
+			<Steel>20</Steel>
+			<Plasteel>25</Plasteel>
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</butcherProducts>
 	</ThingDef>
@@ -351,7 +351,7 @@
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
-		<description>Fast, small support mechanoids built to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets at all ranges - especially in melee combat. They will avoid combat if possible and only engage if no other option is left.</description>
+		<description>Fast, small support mechanoid built to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets at all ranges - especially in melee combat. They will avoid combat if possible and only engage if no other option is left.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
@@ -407,7 +407,7 @@
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
 		<race>RM_Mech_Vulture</race>
-		<combatPower>50</combatPower>
+		<combatPower>25</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
