@@ -638,79 +638,79 @@
 	<!-- ================================ Mechanoid Walker ====================== -->
 	<BodyDef>
 		<defName>RM_Mechanical_Walker</defName>
-		<label>mechanical Walker</label>
+		<label>mechanical walker</label>
 		<corePart>
-			<def>RM_MechanicalThorax</def>
+			<def>MechanicalTermiteBodyFirstRing</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
 				<li>
 					<def>RM_MechanicalWalkerHead</def>
-					<coverage>0.80</coverage>
-					<height>Middle</height>
+					<coverage>0.25</coverage>
+					<height>Top</height>
 					<groups>
 						<li>HeadAttackTool</li>
 					</groups>
 					<parts>
 						<li>
 							<def>ArtificialBrain</def>
-							<coverage>0.10</coverage>
+							<coverage>0.05</coverage>
 							<depth>Inside</depth>
 						</li>
 						<li>
 							<def>SightSensor</def>
-							<customLabel>sight sensor</customLabel>
-							<coverage>0.6</coverage>
+							<customLabel>left sight sensor</customLabel>
+							<coverage>0.08</coverage>
+						</li>
+						<li>
+							<def>SightSensor</def>
+							<customLabel>right sight sensor</customLabel>
+							<coverage>0.08</coverage>
 						</li>
 						<li>
 							<def>HearingSensor</def>
 							<customLabel>left hearing sensor</customLabel>
-							<coverage>0.05</coverage>
+							<coverage>0.08</coverage>
 						</li>
 						<li>
 							<def>HearingSensor</def>
 							<customLabel>right hearing sensor</customLabel>
-							<coverage>0.05</coverage>
+							<coverage>0.08</coverage>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>RM_ShieldShell</def>
-					<coverage>0.80</coverage>
-					<height>Middle</height>
+					<def>MechanicalTermiteBodySecondRing</def>
+					<coverage>0.25</coverage>
 					<parts>
 						<li>
-							<def>RM_ShieldGenerator</def>
-							<coverage>0.09</coverage>
+							<def>Reactor</def>
+							<coverage>0.05</coverage>
 							<depth>Inside</depth>
 						</li>
 						<li>
-							<def>Reactor</def>
-							<coverage>0.03</coverage>
-							<depth>Inside</depth>
-						</li>
-						<li>
-							<def>Reactor</def>
-							<coverage>0.03</coverage>
-							<depth>Inside</depth>
+							<def>RM_ShieldShell</def>
+							<coverage>0.50</coverage>
+							<parts>
+								<li>
+									<def>RM_ShieldGenerator</def>
+									<coverage>0.05</coverage>
+									<depth>Inside</depth>
+								</li>
+							</parts>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>Reactor</def>
-					<coverage>0.03</coverage>
-					<customLabel>backup reactor</customLabel>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>FluidReprocessor</def>
-					<coverage>0.04</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>FluidReprocessor</def>
-					<coverage>0.04</coverage>
-					<depth>Inside</depth>
+					<def>MechanicalTermiteBodyThirdRing</def>
+					<coverage>0.25</coverage>
+					<parts>
+						<li>
+							<def>FluidReprocessor</def>
+							<coverage>0.05</coverage>
+							<depth>Inside</depth>
+						</li>
+					</parts>
 				</li>
 			</parts>
 		</corePart>

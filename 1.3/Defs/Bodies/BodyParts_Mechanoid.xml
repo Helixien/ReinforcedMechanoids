@@ -131,7 +131,7 @@
 	<BodyPartDef>
 		<defName>RM_ShieldShell</defName>
 		<label>shell</label>
-		<hitPoints>150</hitPoints>
+		<hitPoints>350</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
 		<solid>true</solid>
