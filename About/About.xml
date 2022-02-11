@@ -16,7 +16,9 @@
 		</li>
 	</modDependencies>
 	<loadAfter>
+		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
+		<li>OskarPotocki.VFE.Mechanoid</li>
 	</loadAfter>
 </ModMetaData>

@@ -13,9 +13,14 @@
 						<RM_Mech_Vulture>10</RM_Mech_Vulture>
 					</value>
 				</li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="CrashedShipPartBase"]/killedLeavings</xpath>
+                    <value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+                    </value>
+                </li>
 			</operations>
 		</match>
 	</Operation>
-
 
 </Patch>
