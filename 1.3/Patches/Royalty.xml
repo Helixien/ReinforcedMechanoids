@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
@@ -284,7 +284,7 @@
 								<li Class="CompProperties_Breakdownable" />
 								<li Class="CompProperties_CausesGameCondition">
 									<conditionDef>WeatherController</conditionDef>
-									<compClass>RG_Technologies.CompCauseGameCondition_ForceWeather</compClass>
+									<compClass>ReinforcedMechanoids.CompCauseGameCondition_ForceWeather</compClass>
 									<worldRange>5</worldRange>
 									<preventConditionStacking>false</preventConditionStacking>
 								</li>
@@ -336,7 +336,7 @@
 								</li>
 								<li Class="CompProperties_Flickable" />
 								<li Class="CompProperties_Breakdownable" />
-								<li Class="RG_Technologies.CompProperties_CausesGameCondition_ClimateAdjuster">
+								<li Class="ReinforcedMechanoids.CompProperties_CausesGameCondition_ClimateAdjuster">
 									<conditionDef>ClimateAdjustment</conditionDef>
 									<worldRange>5</worldRange>
 									<preventConditionStacking>false</preventConditionStacking>

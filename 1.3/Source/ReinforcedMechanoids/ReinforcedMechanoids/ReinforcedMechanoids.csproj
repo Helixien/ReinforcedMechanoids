@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompExplodeIfNoOtherFactionPawns.cs" />
-    <Compile Include="CompChangePawnGraphic.cs" />
+    <Compile Include="Commands\CommandAction_RightClickWeather.cs" />
+    <Compile Include="Comps\CompExplodeIfNoOtherFactionPawns.cs" />
+    <Compile Include="Comps\CompChangePawnGraphic.cs" />
+    <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
+    <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="DamageWorker_BehemothAttack.cs" />
-    <Compile Include="JobDriver_FollowClose.cs" />
-    <Compile Include="JobDriver_RepairMechanoid.cs" />
-    <Compile Include="JobDriver_RepairThing.cs" />
-    <Compile Include="JobGiver_WalkToPlayerBase.cs" />
+    <Compile Include="Jobs\JobDriver_FollowClose.cs" />
+    <Compile Include="Jobs\JobDriver_RepairMechanoid.cs" />
+    <Compile Include="Jobs\JobDriver_RepairThing.cs" />
+    <Compile Include="Jobs\JobGiver_WalkToPlayerBase.cs" />
     <Compile Include="RaidStrategyWorker_ImmediateAttackMechanoidWalker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RM_DefOf.cs" />
