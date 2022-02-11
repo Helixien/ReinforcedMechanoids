@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Royalty</li>
@@ -274,8 +273,8 @@
 									<shortCircuitInRain>true</shortCircuitInRain>
 									<basePowerConsumption>4000</basePowerConsumption>
 								</li>
-								<li Class="CompProperties_Flickable" />
-								<li Class="CompProperties_Breakdownable" />
+								<li Class="CompProperties_Flickable"/>
+								<li Class="CompProperties_Breakdownable"/>
 								<li Class="CompProperties_CausesGameCondition">
 									<conditionDef>WeatherController</conditionDef>
 									<compClass>ReinforcedMechanoids.CompCauseGameCondition_ForceWeather</compClass>
@@ -328,8 +327,8 @@
 									<compClass>CompPowerTrader</compClass>
 									<basePowerConsumption>8000</basePowerConsumption>
 								</li>
-								<li Class="CompProperties_Flickable" />
-								<li Class="CompProperties_Breakdownable" />
+								<li Class="CompProperties_Flickable"/>
+								<li Class="CompProperties_Breakdownable"/>
 								<li Class="ReinforcedMechanoids.CompProperties_CausesGameCondition_ClimateAdjuster">
 									<conditionDef>ClimateAdjustment</conditionDef>
 									<worldRange>5</worldRange>
@@ -380,9 +379,41 @@
 						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="MechCapsule"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/points</xpath>
+					<value>
+						<points>500</points>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MechCapsule"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/spawnablePawnKinds</xpath>
+					<value>
+						<li>RM_Mech_Zealot</li>
+						<li>RM_Mech_Ranger</li>
+						<li>RM_Mech_Marshal</li>
+						<li>RM_Mech_Behemoth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MechAssembler"]/comps/li[@Class="CompProperties_SpawnerPawn"]/spawnablePawnKinds</xpath>
+					<value>
+						<li>RM_Mech_Zealot</li>
+						<li>RM_Mech_Ranger</li>
+						<li>RM_Mech_Marshal</li>
+						<li>RM_Mech_Behemoth</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="MechDropBeacon"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/spawnablePawnKinds</xpath>
+					<value>
+						<li>RM_Mech_Zealot</li>
+						<li>RM_Mech_Ranger</li>
+						<li>RM_Mech_Marshal</li>
+						<li>RM_Mech_Behemoth</li>
+						<li>RM_Mech_Vulture</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
-
-
 </Patch>
