@@ -131,6 +131,9 @@
 			<li>MechanoidGunMedium</li>
 			<li>SpacerGun</li>
 		</weaponTags>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.10</MoveSpeed>
+		</equippedStatOffsets>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
