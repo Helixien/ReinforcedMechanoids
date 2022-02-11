@@ -52,7 +52,7 @@
 							<label>walker</label>
 							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carpace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
-								<MoveSpeed>4.5</MoveSpeed>
+								<MoveSpeed>1.0</MoveSpeed>
 								<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
 								<ArmorRating_Sharp>0.82</ArmorRating_Sharp>
 								<PsychicSensitivity>0.85</PsychicSensitivity>
@@ -72,7 +72,7 @@
 							<race>
 								<body>RM_Mechanical_Walker</body>
 								<baseBodySize>2.5</baseBodySize>
-								<baseHealthScale>8.32</baseHealthScale>
+								<baseHealthScale>15.32</baseHealthScale>
 								<thinkTreeMain>RM_Walker</thinkTreeMain>
 								<lifeStageAges>
 									<li>

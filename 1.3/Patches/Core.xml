@@ -1,68 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Core</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defNam="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
-					<value>
-						<RM_Mech_Vulture>10</RM_Mech_Vulture>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=100]/options</xpath>
-					<value>
-						<RM_Mech_Marshal>10</RM_Mech_Marshal>
-						<RM_Mech_Zealot>10</RM_Mech_Zealot>
-						<RM_Mech_Ranger>10</RM_Mech_Ranger>
-						<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=80]/options</xpath>
-					<value>
-						<RM_Mech_Zealot>10</RM_Mech_Zealot>
-						<RM_Mech_Ranger>10</RM_Mech_Ranger>
-						<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=70]/options</xpath>
-					<value>
-						<RM_Mech_Marshal>10</RM_Mech_Marshal>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=1]/options</xpath>
-					<value>
-						<RM_Mech_Marshal>10</RM_Mech_Marshal>
-						<RM_Mech_Zealot>10</RM_Mech_Zealot>
-						<RM_Mech_Ranger>10</RM_Mech_Ranger>
-						<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[@Name="CrashedShipPartBase"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/destroyGearOnDrop</xpath>
-					<value>
-						<destroyGearOnDrop>false</destroyGearOnDrop>
-					</value>
-				</li>
-				<li Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Mechanoid">
-					<xpath>/Defs/PawnKindDef[@Name="VFE_MechanoidKind" or @Name="VFE_AdvancedMechanoidKind"]/destroyGearOnDrop</xpath>
-					<value>
-						<destroyGearOnDrop>false</destroyGearOnDrop>
-					</value>
-				</li>
-			</operations>
-		</match>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=100]/options</xpath>
+				<value>
+					<RM_Mech_Marshal>10</RM_Mech_Marshal>
+					<RM_Mech_Zealot>10</RM_Mech_Zealot>
+					<RM_Mech_Ranger>10</RM_Mech_Ranger>
+					<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
+					<RM_Mech_Vulture>10</RM_Mech_Vulture>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=80]/options</xpath>
+				<value>
+					<RM_Mech_Zealot>10</RM_Mech_Zealot>
+					<RM_Mech_Ranger>10</RM_Mech_Ranger>
+					<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
+					<RM_Mech_Vulture>10</RM_Mech_Vulture>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=70]/options</xpath>
+				<value>
+					<RM_Mech_Marshal>10</RM_Mech_Marshal>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers/li[kindDef="Combat" and commonality=1]/options</xpath>
+				<value>
+					<RM_Mech_Marshal>10</RM_Mech_Marshal>
+					<RM_Mech_Zealot>10</RM_Mech_Zealot>
+					<RM_Mech_Ranger>10</RM_Mech_Ranger>
+					<RM_Mech_Behemoth>5</RM_Mech_Behemoth>
+					<RM_Mech_Vulture>10</RM_Mech_Vulture>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name="CrashedShipPartBase"]/killedLeavings</xpath>
+				<value>
+					<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/destroyGearOnDrop</xpath>
+				<value>
+					<destroyGearOnDrop>false</destroyGearOnDrop>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<xpath>/Defs/PawnKindDef[@Name="VFE_MechanoidKind" or @Name="VFE_AdvancedMechanoidKind"]/destroyGearOnDrop</xpath>
+				<value>
+					<destroyGearOnDrop>false</destroyGearOnDrop>
+				</value>
+			</li>
+		</operations>
 	</Operation>
 </Patch>
