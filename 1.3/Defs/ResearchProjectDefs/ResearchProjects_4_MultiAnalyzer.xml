@@ -19,7 +19,6 @@
 		<researchViewX>16.00</researchViewX>
 		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>RM_ClimateAdjuster</defName>
 		<label>climate adjuster</label>
@@ -39,5 +38,23 @@
 		<researchViewX>17.00</researchViewX>
 		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
-
+	<ResearchProjectDef>
+		<defName>RM_CoilShot</defName>
+		<label>tesla coils</label>
+		<description>Build weapons which use electricity to burn and stun. Note that these also require advanced components.</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+		<hiddenPrerequisites>
+			<li>PrecisionRifling</li>
+		</hiddenPrerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>3.8</researchViewY>
+	</ResearchProjectDef>
 </Defs>

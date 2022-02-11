@@ -1,8 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!-- Tesla Coil -->
+	<!-- ================================ Lance Weapons ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
-		<defName>RM_TeslaCoil</defName>
+		<defName>RM_Gun_HeavyLance</defName>
+		<label>heavy charge lance</label>
+		<description>placeholder</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidHeavyLance</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>20</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>3.1</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>MechanoidGunLongRange</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+			<li>LongShots</li>
+		</weaponClasses>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ChargeLance</defaultProjectile>
+				<warmupTime>2.5</warmupTime>
+				<range>33.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<!-- ================================ Coil Weapons ====================== -->
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>RM_CoilHeavy</defName>
 		<label>heavy coil gun</label>
 		<description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
 		<techLevel>Spacer</techLevel>
