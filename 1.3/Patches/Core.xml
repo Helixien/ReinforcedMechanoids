@@ -50,6 +50,18 @@
 						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/destroyGearOnDrop</xpath>
+					<value>
+						<destroyGearOnDrop>false</destroyGearOnDrop>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Mechanoid">
+					<xpath>/Defs/PawnKindDef[@Name="VFE_MechanoidKind" or @Name="VFE_AdvancedMechanoidKind"]/destroyGearOnDrop</xpath>
+					<value>
+						<destroyGearOnDrop>false</destroyGearOnDrop>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
