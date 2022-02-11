@@ -25,7 +25,6 @@
 									<selectionWeightPerPointsCurve>
 										<points>
 											<li>(0, 1)</li>
-											<!-- Constant 1 -->
 										</points>
 									</selectionWeightPerPointsCurve>
 								</li>
@@ -284,7 +283,7 @@
 								<li Class="CompProperties_Breakdownable" />
 								<li Class="CompProperties_CausesGameCondition">
 									<conditionDef>WeatherController</conditionDef>
-									<compClass>RG_Technologies.CompCauseGameCondition_ForceWeather</compClass>
+									<compClass>ReinforcedMechanoids.CompCauseGameCondition_ForceWeather</compClass>
 									<worldRange>5</worldRange>
 									<preventConditionStacking>false</preventConditionStacking>
 								</li>
@@ -336,7 +335,7 @@
 								</li>
 								<li Class="CompProperties_Flickable" />
 								<li Class="CompProperties_Breakdownable" />
-								<li Class="RG_Technologies.CompProperties_CausesGameCondition_ClimateAdjuster">
+								<li Class="ReinforcedMechanoids.CompProperties_CausesGameCondition_ClimateAdjuster">
 									<conditionDef>ClimateAdjustment</conditionDef>
 									<worldRange>5</worldRange>
 									<preventConditionStacking>false</preventConditionStacking>
