@@ -100,25 +100,15 @@ namespace ReinforcedMechanoids
                         .OrderBy(x => x.Position.DistanceTo(pawn.Position)).FirstOrDefault();
                     if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                     {
-                        if (pawn.mindState.meleeThreat != null)
+                        __result = HealOtherMechanoids(pawn, otherPawns);
+                        if (__result is null)
                         {
-                            __result = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn.mindState.meleeThreat);
-                            __result.maxNumMeleeAttacks = 1;
-                            __result.expiryInterval = 200;
-                            __result.reactingToMeleeThreat = true;
-                        }
-                        else
-                        {
-                            __result = HealOtherMechanoids(pawn, otherPawns);
-                            if (__result is null)
+                            var followJob = TryGiveFollowJob(pawn, firstCloseWalker, 6);
+                            if (followJob != null)
                             {
-                                var followJob = TryGiveFollowJob(pawn, firstCloseWalker, 6);
-                                if (followJob != null)
-                                {
-                                    followJob.locomotionUrgency = LocomotionUrgency.Amble;
-                                    __result = followJob;
-                                    return false;
-                                }
+                                followJob.locomotionUrgency = LocomotionUrgency.Amble;
+                                __result = followJob;
+                                return false;
                             }
                         }
                     }
@@ -161,25 +151,14 @@ namespace ReinforcedMechanoids
                             }
                         }
                     }
-                
                 }
     
                 if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                 {
-                    if (pawn.mindState.meleeThreat != null)
+                    __result = HealOtherMechanoids(pawn, otherPawns);
+                    if (__result is null)
                     {
-                        __result = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn.mindState.meleeThreat);
-                        __result.maxNumMeleeAttacks = 1;
-                        __result.expiryInterval = 200;
-                        __result.reactingToMeleeThreat = true;
-                    }
-                    else
-                    {
-                        __result = HealOtherMechanoids(pawn, otherPawns);
-                        if (__result is null)
-                        {
-                            __result = FollowOtherMechanoids(pawn, otherPawns);
-                        }
+                        __result = FollowOtherMechanoids(pawn, otherPawns);
                     }
                     return false;
                 }
@@ -272,4 +251,54 @@ namespace ReinforcedMechanoids
             }
         }
     }
+
+    [HarmonyPatch(typeof(DamageWorker_AddInjury), "GetExactPartFromDamageInfo")]
+    public static class GetExactPartFromDamageInfo_Patch
+    {
+        public static bool pickShield;
+        private static void Prefix(DamageInfo dinfo, Pawn pawn)
+        {
+            if (dinfo.Instigator is Pawn attacker && pawn.kindDef == RM_DefOf.RM_Mech_Behemoth)
+            {
+                float angle = (attacker.DrawPos - pawn.DrawPos).AngleFlat();
+                var rot = Pawn_RotationTracker.RotFromAngleBiased(angle);
+                if (rot == pawn.Rotation && Core.GetNonMissingBodyPart(pawn, RM_DefOf.RM_BehemothShield) != null)
+                {
+                    pickShield = true;
+                }
+            }
+        }
+        private static void Postfix(DamageInfo dinfo, Pawn pawn)
+        {
+            pickShield = false;
+        }
+    }
+
+    [HarmonyPatch(typeof(HediffSet), nameof(HediffSet.GetRandomNotMissingPart))]
+    public static class GetRandomNotMissingPart_Patch
+    {
+        private static void Postfix(HediffSet __instance, ref BodyPartRecord __result)
+        {
+            if (GetExactPartFromDamageInfo_Patch.pickShield && Rand.Chance(0.8f))
+            {
+                var part = Core.GetNonMissingBodyPart(__instance.pawn, RM_DefOf.RM_BehemothShield);
+                if (part != null)
+                {
+                    __result = part;
+                }
+            }
+        }
+    }
+
+    //[HarmonyPatch(typeof(Pawn), nameof(Pawn.TryGetAttackVerb))]
+    //public static class TryGetAttackVerb_Patch
+    //{
+    //    private static void Postfix(Pawn __instance, ref Verb __result)
+    //    {
+    //        if (__instance.kindDef == RM_DefOf.RM_Mech_Vulture)
+    //        {
+    //            __result = null;
+    //        }
+    //    }
+    //}
 }
