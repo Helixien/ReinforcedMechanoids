@@ -43,8 +43,8 @@
 								<li>EdgeDropGroups</li>
 								<li>EdgeWalkInGroups</li>
 							</arriveModes>
-							<letterLabelEnemy>Raid (WALKER)</letterLabelEnemy>
-							<arrivalTextEnemy>They are attacking immediately (WALKER).</arrivalTextEnemy>
+							<letterLabelEnemy>Raid</letterLabelEnemy>
+							<arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
 							<letterLabelFriendly>Friendlies</letterLabelFriendly>
 							<arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
 						</RaidStrategyDef>
