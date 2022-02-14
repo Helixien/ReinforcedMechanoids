@@ -3,10 +3,10 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>RM_VanometricMechanoidCell</defName>
 		<label>vanometric mechanoid cell</label>
-		<description>A vanometric powercell used by mechanoid structures.</description>
+		<description>A powerful, yet small, vanometric power cell used by mechanoid structures. It is highly unstable, but can be produce a great amount of power if rigged up correctly.</description>
 		<graphicData>
-			<texPath>Things/Item/Resource/VanometricMechanoidCell</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Item/Resource/VanometricMechanoidCell/VanometricMechanoidCell</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<resourceReadoutPriority>Middle</resourceReadoutPriority>
 		<soundInteract>Metal_Drop</soundInteract>
@@ -25,10 +25,19 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<tradeTags>
 			<li>Artifact</li>
-			<li>ExoticMisc</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardSpecial</li>
 		</thingSetMakerTags>
+		<stackLimit>5</stackLimit>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+				<wickTicks>90~350</wickTicks>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>

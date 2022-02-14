@@ -251,7 +251,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
 		<label>behemoth</label>
-		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemies fire. Using a shield to protect their body, they are based flanked.</description>
+		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemy fire. Using a shield to protect their body, they are based flanked.</description>
 		<statBases>
 			<MoveSpeed>1.0</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>

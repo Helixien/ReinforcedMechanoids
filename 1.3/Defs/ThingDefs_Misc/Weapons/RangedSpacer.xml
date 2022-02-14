@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeRevolver</defName>
 		<label>charge revolver</label>
-		<description>placeholder</description>
+		<description>A charged-shot revolver. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nThis weapon is used by smaller mechanoids on the fields but can easily be used by humans.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidChargeRevolver</texPath>
@@ -95,7 +95,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeBurster</defName>
 		<label>charge burster</label>
-		<description>placeholder</description>
+		<description>A heavy charged-shot LMG. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nHaving gotten its name by its main area of use, this deadly weapon is used for area suppression by mechanoids and fighting an enemy when greatly outnumbered.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechnoidChargerLMG</texPath>
@@ -178,7 +178,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeLanceRevolver</defName>
 		<label>charge lance revolver</label>
-		<description>placeholder</description>
+		<description>A small pulse-charged rail-assisted lance weapon. It fires a small single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRevolver</texPath>
@@ -256,7 +256,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeLanceRifle</defName>
 		<label>charge lance rifle</label>
-		<description>placeholder</description>
+		<description>An advanced pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, long range, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRifle</texPath>
@@ -340,7 +340,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_CoilPistol</defName>
 		<label>coil pistol</label>
-		<description>placeholder</description>
+		<description>A short-range tesla coil-based weapons used by mechanoids. It shoots a burst of lighting projectiles, stunning and lightly burning their target before jumping to the next, causing damage to multiple targets with one shot.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilPistol</texPath>
@@ -441,7 +441,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_CoilRifle</defName>
 		<label>coil rifle</label>
-		<description>placeholder</description>
+		<description>A tesla coil-based weapons used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, causing damage to multiple targets with one shot.</description>
 		<techLevel>Spacer</techLevel>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>

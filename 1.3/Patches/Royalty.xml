@@ -50,7 +50,7 @@
 						<ThingDef ParentName="BaseMechanoid">
 							<defName>RM_Mech_Walker</defName>
 							<label>walker</label>
-							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carpace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
+							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carapace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
 								<MoveSpeed>0.35</MoveSpeed>
 								<ArmorRating_Blunt>0.32</ArmorRating_Blunt>

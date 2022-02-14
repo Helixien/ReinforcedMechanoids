@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseGunWithQuality">
 		<defName>RM_Gun_HeavyLance</defName>
 		<label>heavy charge lance</label>
-		<description>placeholder</description>
+		<description>A heavy, pulse-charged rail-assisted lance weapon used by mechanoids. It fires three shoots in a burst in quick succession at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidHeavyLance</texPath>
@@ -58,7 +58,7 @@
 	<ThingDef ParentName="BaseGunWithQuality">
 		<defName>RM_CoilHeavy</defName>
 		<label>heavy coil gun</label>
-		<description>A long-range weapon used by mechanoids. Named after its needle-like projectiles, it fires single shots with great accuracy. While it does less damage than charge weapons, it can reach over very long distances.</description>
+		<description>A medium-range tesla coil-based weapons used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, causing damage to multiple targets with one shot. Extremely dangerous and best avoided.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilTurret</texPath>
