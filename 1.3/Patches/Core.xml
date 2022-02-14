@@ -49,12 +49,6 @@
 					<destroyGearOnDrop>false</destroyGearOnDrop>
 				</value>
 			</li>
-			<li Class="PatchOperationReplace" MayRequire="OskarPotocki.VFE.Mechanoid">
-				<xpath>/Defs/PawnKindDef[@Name="VFE_MechanoidKind" or @Name="VFE_AdvancedMechanoidKind"]/destroyGearOnDrop</xpath>
-				<value>
-					<destroyGearOnDrop>false</destroyGearOnDrop>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 </Patch>
