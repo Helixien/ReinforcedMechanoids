@@ -11,6 +11,7 @@
 		</prerequisites>
 		<hiddenPrerequisites>
 			<li>Electricity</li>
+			<li>AdvancedFabrication</li>
 		</hiddenPrerequisites>
 		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 		<requiredResearchFacilities>

@@ -34,7 +34,7 @@
 		</recipeMaker>
 		<costList>
 			<Plasteel>45</Plasteel>
-			<ComponentSpacer>2</ComponentSpacer>
+			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<weaponTags>
 			<li>MechanoidGunSmall</li>
@@ -93,8 +93,8 @@
 		</projectile>
 	</ThingDef>
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_Gun_ChargerLMG</defName>
-		<label>charge LMG</label>
+		<defName>RM_Gun_ChargeBurster</defName>
+		<label>charge burster</label>
 		<description>placeholder</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
@@ -125,7 +125,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Plasteel>90</Plasteel>
+			<Plasteel>110</Plasteel>
 			<ComponentSpacer>4</ComponentSpacer>
 		</costList>
 		<weaponTags>
@@ -207,8 +207,8 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Plasteel>35</Plasteel>
-			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>45</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<weaponTags>
 			<li>MechanoidGunSmall</li>
@@ -286,7 +286,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Plasteel>75</Plasteel>
+			<Plasteel>85</Plasteel>
 			<ComponentSpacer>3</ComponentSpacer>
 		</costList>
 		<weaponTags>
@@ -370,7 +370,7 @@
 		</recipeMaker>
 		<costList>
 			<Plasteel>35</Plasteel>
-			<ComponentSpacer>4</ComponentSpacer>
+			<ComponentSpacer>5</ComponentSpacer>
 		</costList>
 		<weaponTags>
 			<li>MechanoidGunSmall</li>
@@ -471,7 +471,7 @@
 		</recipeMaker>
 		<costList>
 			<Plasteel>75</Plasteel>
-			<ComponentSpacer>5</ComponentSpacer>
+			<ComponentSpacer>6</ComponentSpacer>
 		</costList>
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<weaponTags>
