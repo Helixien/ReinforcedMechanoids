@@ -259,6 +259,9 @@
 								<Flammability>0.2</Flammability>
 								<Beauty>-8</Beauty>
 							</statBases>
+							<researchPrerequisites>
+								<li>RM_WeatherController</li>
+							</researchPrerequisites>
 							<passability>Impassable</passability>
 							<canBeUsedUnderRoof>true</canBeUsedUnderRoof>
 							<altitudeLayer>Building</altitudeLayer>
@@ -313,6 +316,9 @@
 								<Beauty>-8</Beauty>
 								<Cleanliness>-3</Cleanliness>
 							</statBases>
+							<researchPrerequisites>
+								<li>RM_ClimateAdjuster</li>
+							</researchPrerequisites>
 							<blockWind>true</blockWind>
 							<passability>Impassable</passability>
 							<canBeUsedUnderRoof>false</canBeUsedUnderRoof>

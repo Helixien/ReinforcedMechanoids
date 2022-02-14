@@ -157,6 +157,7 @@
 		<weaponTags>
 			<li>MechanoidGunMedium</li>
 		</weaponTags>
+		<aiAvoidCover>false</aiAvoidCover>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Marshal ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
