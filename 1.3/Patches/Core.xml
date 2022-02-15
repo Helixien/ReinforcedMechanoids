@@ -43,12 +43,6 @@
 					<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 				</value>
 			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/PawnKindDef[@Name="BaseMechanoidKind"]/destroyGearOnDrop</xpath>
-				<value>
-					<destroyGearOnDrop>false</destroyGearOnDrop>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 </Patch>
