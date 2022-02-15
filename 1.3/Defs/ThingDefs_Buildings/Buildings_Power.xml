@@ -9,14 +9,8 @@
 			<texPath>Things/Building/Power/VanometricGenerator</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(5,5)</drawSize>
-			<shadowData>
-				<volume>(4.5,2.5,4.4)</volume>
-				<offset>(0,0,0)</offset>
-			</shadowData>
-			<damageData>
-				<rect>(0.1, 0.8, 5.8, 4.1)</rect>
-			</damageData>
 		</graphicData>
+		<tickerType>Normal</tickerType>
 		<castEdgeShadows>true</castEdgeShadows>
 		<rotatable>false</rotatable>
 		<altitudeLayer>Building</altitudeLayer>
@@ -33,7 +27,7 @@
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
 		</statBases>
-		<tickerType>Normal</tickerType>
+
 		<size>(5,5)</size>
 		<costList>
 			<Steel>250</Steel>
