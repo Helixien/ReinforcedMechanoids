@@ -43,6 +43,75 @@
 					<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 				</value>
 			</li>
+			<li Class="PatchOperationAdd" MayRequire="Mlie.MechanoidPower">
+				<xpath>Defs</xpath>
+				<value>
+					<RecipeDef>
+						<defName>RM_ConvertCellOne</defName>
+						<label>convert mechanoid cell [To my Mod]</label>
+						<description>Convert a Mechanoid Cell from "Mechanoid Power (Continued)" to my mod. This recipe only appears with both mods loaded and used to move from one mod to the other!</description>
+						<jobString>convert cell.</jobString>
+						<workAmount>1</workAmount>
+						<workSpeedStat>SmeltingSpeed</workSpeedStat>
+						<effectWorking>Smelt</effectWorking>
+						<soundWorking>Recipe_Smelt</soundWorking>
+						<recipeUsers>
+							<li>CraftingSpot</li>
+						</recipeUsers>
+						<workSkill>Crafting</workSkill>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>MPC_MechanoidPCell</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>MPC_MechanoidPCell</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+						</products>
+					</RecipeDef>
+					<RecipeDef>
+						<defName>RM_ConvertCellTwo</defName>
+						<label>convert mechanoid cell [From my Mod]</label>
+						<description>Convert a Mechanoid Cell from my mod to "Mechanoid Power (Continued)". This recipe only appears with both mods loaded and used to move from one mod to the other!</description>
+						<jobString>convert cell.</jobString>
+						<workAmount>1</workAmount>
+						<workSpeedStat>SmeltingSpeed</workSpeedStat>
+						<effectWorking>Smelt</effectWorking>
+						<soundWorking>Recipe_Smelt</soundWorking>
+						<recipeUsers>
+							<li>CraftingSpot</li>
+						</recipeUsers>
+						<workSkill>Crafting</workSkill>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>RM_VanometricMechanoidCell</li>
+									</thingDefs>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>RM_VanometricMechanoidCell</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<MPC_MechanoidPCell>1</MPC_MechanoidPCell>
+						</products>
+					</RecipeDef>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
