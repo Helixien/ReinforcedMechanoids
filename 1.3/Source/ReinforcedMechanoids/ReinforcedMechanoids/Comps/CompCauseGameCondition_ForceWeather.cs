@@ -10,7 +10,7 @@ using Verse;
 
 namespace ReinforcedMechanoids
 {
-	public class CompCauseGameCondition_ForceWeather : CompCauseGameCondition
+	public class CompCauseGameCondition_ForceWeather : CompCauseGameConditionPowerDependent
 	{
 		public WeatherDef weather;
 

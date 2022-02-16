@@ -13,6 +13,10 @@ namespace ReinforcedMechanoids
 	{
 		public override bool CanUseWith(IncidentParms parms, PawnGroupKindDef groupKind)
 		{
+			if (groupKind != RM_DefOf.WalkerRaid)
+            {
+				return false;
+            }
 			if (parms.faction != null && parms.faction != Faction.OfMechanoids)
 			{
 				return false;

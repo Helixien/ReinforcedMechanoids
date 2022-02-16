@@ -9,6 +9,10 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
+						<PawnGroupKindDef>
+							<defName>WalkerRaid</defName>
+							<workerClass>PawnGroupKindWorker_Normal</workerClass>
+						</PawnGroupKindDef>
 						<!-- ================================ Mechanoid Walker Raid ====================== -->
 						<RaidStrategyDef Name="ImmediateAttack">
 							<defName>ImmediateAttackMechanoidWalker</defName>
@@ -347,7 +351,7 @@
 					<xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 					<value>
 						<li>
-							<kindDef>Combat</kindDef>
+							<kindDef>WalkerRaid</kindDef>
 							<commonality>1</commonality>
 							<options>
 								<Mech_Centipede>5</Mech_Centipede>

@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
@@ -10,13 +11,15 @@ namespace ReinforcedMechanoids
 {
 
     [StaticConstructorOnStartup]
-	public static class Core
+    public static class Core
     {
-		static Core()
+        static Core()
         {
             var harm = new Harmony("ReinforcedMechanoids.Mod");
             harm.PatchAll();
+            ReinforcedMechanoidsMod.ApplySettings();
         }
+
         public static BodyPartRecord GetNonMissingBodyPart(Pawn pawn, BodyPartDef def)
         {
             foreach (BodyPartRecord notMissingPart in pawn.health.hediffSet.GetNotMissingParts())
@@ -34,38 +37,38 @@ namespace ReinforcedMechanoids
     public static class JobGiver_AITrashColonyClose_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {    
+        {
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-    
+
     [HarmonyPatch(typeof(JobGiver_AISapper), "TryGiveJob")]
     public static class JobGiver_AISapper_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {    
+        {
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-    
+
     [HarmonyPatch(typeof(JobGiver_AIGotoNearestHostile), "TryGiveJob")]
     public static class JobGiver_AIGotoNearestHostile_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {    
+        {
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-    
+
     [HarmonyPatch(typeof(JobGiver_AITrashBuildingsDistant), "TryGiveJob")]
     public static class JobGiver_AITrashBuildingsDistant_TryGiveJob
     {
         public static bool Prefix(Pawn pawn, ref Job __result)
-        {    
+        {
             return JobGiver_AIFightEnemy_TryGiveJob.TryModifyJob(pawn, ref __result);
         }
     }
-    
+
     public class JobGiver_AIFightEnemiesNearToWalker : JobGiver_AIFightEnemies
     {
         public static Pawn walker;
@@ -74,7 +77,7 @@ namespace ReinforcedMechanoids
             return walker.Position.DistanceTo(target.Position) <= 10;
         }
     }
-    
+
     [HarmonyPatch(typeof(JobGiver_AIFightEnemy), "TryGiveJob")]
     public static class JobGiver_AIFightEnemy_TryGiveJob
     {
@@ -86,7 +89,7 @@ namespace ReinforcedMechanoids
             }
             return true;
         }
-    
+
         public static bool TryModifyJob(Pawn pawn, ref Job __result)
         {
             if (pawn.RaceProps.IsMechanoid && pawn.kindDef != RM_DefOf.RM_Mech_Walker)
@@ -135,7 +138,7 @@ namespace ReinforcedMechanoids
                                 return false;
                             }
                         }
-                
+
                         if (firstCloseWalker.CurJobDef == JobDefOf.Wait)
                         {
                             return true;
@@ -152,7 +155,7 @@ namespace ReinforcedMechanoids
                         }
                     }
                 }
-    
+
                 if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                 {
                     __result = HealOtherMechanoids(pawn, otherPawns);
@@ -166,7 +169,7 @@ namespace ReinforcedMechanoids
             return true;
         }
         public static readonly IntRange ExpiryInterval_ShooterSucceeded = new IntRange(450, 550);
-    
+
         public static readonly IntRange ExpiryInterval_Melee = new IntRange(360, 480);
         private static Job MeleeAttackJob(Thing enemyTarget)
         {
@@ -176,7 +179,7 @@ namespace ReinforcedMechanoids
             job.expireRequiresEnemiesNearby = true;
             return job;
         }
-    
+
         public static Job HealOtherMechanoids(Pawn pawn, List<Pawn> otherPawns)
         {
             foreach (var otherPawn in otherPawns)
@@ -188,7 +191,7 @@ namespace ReinforcedMechanoids
                     return job;
                 }
             }
-    
+
             var lord = pawn.GetLord();
             if (lord != null && lord.ownedBuildings != null)
             {
@@ -219,12 +222,12 @@ namespace ReinforcedMechanoids
             }
             return null;
         }
-    
+
         private static bool CanBeHealed(this Pawn pawn)
         {
             return pawn.health.hediffSet.hediffs.Any(x => x is Hediff_Injury);
         }
-    
+
         private static Job TryGiveFollowJob(Pawn pawn, Pawn followee, float radius)
         {
             if (!followee.Spawned || !pawn.CanReach(followee, PathEndMode.Touch, Danger.None))
@@ -301,4 +304,108 @@ namespace ReinforcedMechanoids
     //        }
     //    }
     //}
+
+    [HarmonyPatch(typeof(MechClusterGenerator), nameof(MechClusterGenerator.MechKindSuitableForCluster))]
+    public class MechSpawn_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(PawnKindDef __0, ref bool __result)
+        {
+            if (__0 == RM_DefOf.RM_Mech_Walker)
+            {
+                __result = false;
+            }
+        }
+    }
+
+    public class ReinforcedMechanoidsSettings : ModSettings
+    {
+        internal static float powerOutput = 5000f;
+
+        internal static float marketValue = 2000f;
+
+        public static bool dropWeaponOnDeath = false;
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref powerOutput, "powerOutput", 5000f);
+            Scribe_Values.Look(ref marketValue, "marketValue", 2000f);
+            Scribe_Values.Look(ref dropWeaponOnDeath, "dropWeaponOnDeath", false);
+        }
+    }
+    internal class ReinforcedMechanoidsMod : Mod
+    {
+        public static ReinforcedMechanoidsSettings settings;
+        public ReinforcedMechanoidsMod(ModContentPack mcp)
+            : base(mcp)
+        {
+            settings = GetSettings<ReinforcedMechanoidsSettings>();
+        }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            ApplySettings();
+        }
+        public static void ApplySettings()
+        {
+            RM_DefOf.RM_VanometricMechanoidCell.SetStatBaseValue(StatDefOf.MarketValue, ReinforcedMechanoidsSettings.marketValue);
+            RM_DefOf.RM_VanometricGenerator.GetCompProperties<CompProperties_Power>().basePowerConsumption = 0f - ReinforcedMechanoidsSettings.powerOutput;
+            if (ReinforcedMechanoidsSettings.dropWeaponOnDeath)
+            {
+                foreach (var mechanoid in DefDatabase<PawnKindDef>.AllDefs.Where(x => x.RaceProps.IsMechanoid))
+                {
+                    mechanoid.destroyGearOnDrop = false;
+                }
+            }
+        }
+
+        public override string SettingsCategory()
+        {
+            return this.Content.Name;
+        }
+
+        public override void DoSettingsWindowContents(Rect rect)
+        {
+            Listing_Standard listing_Standard = new Listing_Standard();
+            listing_Standard.Begin(rect);
+            listing_Standard.Gap(10f);
+            Rect rect2 = listing_Standard.GetRect(Text.LineHeight);
+            Rect rect3 = rect2.LeftHalf().Rounded();
+            Rect rect4 = rect2.RightHalf().Rounded();
+            Rect rect5 = rect3.LeftHalf().Rounded();
+            Rect rect6 = rect3.RightHalf().Rounded();
+            Widgets.Label(rect5, "<b>Power Cell</b> market value");
+            Widgets.Label(rect6, $"<b>{ReinforcedMechanoidsSettings.marketValue:00}</b> <color=#ababab>(Influence on difficulty)</color>");
+            if (Widgets.ButtonText(new Rect(rect4.xMin, rect4.y, rect4.height, rect4.height), "-", drawBackground: true, doMouseoverSound: false) && ReinforcedMechanoidsSettings.marketValue >= 500f)
+            {
+                ReinforcedMechanoidsSettings.marketValue -= 50f;
+            }
+            ReinforcedMechanoidsSettings.marketValue = Widgets.HorizontalSlider(new Rect(rect4.xMin + rect4.height + 10f, rect4.y, rect4.width - (rect4.height * 2f + 20f), rect4.height), ReinforcedMechanoidsSettings.marketValue, 500f, 4000f, middleAlignment: true);
+            if (Widgets.ButtonText(new Rect(rect4.xMax - rect4.height, rect4.y, rect4.height, rect4.height), "+", drawBackground: true, doMouseoverSound: false) && ReinforcedMechanoidsSettings.marketValue < 4000f)
+            {
+                ReinforcedMechanoidsSettings.marketValue += 50f;
+            }
+            listing_Standard.Gap(10f);
+            Rect rect7 = listing_Standard.GetRect(Text.LineHeight);
+            Rect rect8 = rect7.LeftHalf().Rounded();
+            Rect rect9 = rect7.RightHalf().Rounded();
+            Rect rect10 = rect8.LeftHalf().Rounded();
+            Rect rect11 = rect8.RightHalf().Rounded();
+            Widgets.Label(rect10, "<b>Power Cell</b> power output (W)");
+            Widgets.Label(rect11, $"<b>{ReinforcedMechanoidsSettings.powerOutput:00}W</b> <color=#ababab>(recommended: 5000W)</color>");
+            if (Widgets.ButtonText(new Rect(rect9.xMin, rect9.y, rect9.height, rect9.height), "-", drawBackground: true, doMouseoverSound: false) && ReinforcedMechanoidsSettings.powerOutput >= 2000f)
+            {
+                ReinforcedMechanoidsSettings.powerOutput -= 500f;
+            }
+            ReinforcedMechanoidsSettings.powerOutput = Widgets.HorizontalSlider(new Rect(rect9.xMin + rect9.height + 10f, rect9.y, rect9.width - (rect9.height * 2f + 20f), rect9.height), ReinforcedMechanoidsSettings.powerOutput, 2000f, 20000f, middleAlignment: true);
+            if (Widgets.ButtonText(new Rect(rect9.xMax - rect9.height, rect9.y, rect9.height, rect9.height), "+", drawBackground: true, doMouseoverSound: false) && ReinforcedMechanoidsSettings.powerOutput < 20000f)
+            {
+                ReinforcedMechanoidsSettings.powerOutput += 500f;
+            }
+            listing_Standard.Gap();
+            listing_Standard.CheckboxLabeled("Mechanoids will wrop weapons upon death", ref ReinforcedMechanoidsSettings.dropWeaponOnDeath);
+            listing_Standard.End();
+        }
+    }
 }

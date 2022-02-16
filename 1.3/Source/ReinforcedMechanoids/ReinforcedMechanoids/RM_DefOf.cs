@@ -14,5 +14,8 @@ namespace ReinforcedMechanoids
 		public static JobDef RM_RepairThing;
 		public static JobDef RM_FollowClose;
 		public static BodyPartDef RM_BehemothShield;
+		public static PawnGroupKindDef WalkerRaid;
+		public static ThingDef RM_VanometricGenerator;
+		public static ThingDef RM_VanometricMechanoidCell;
 	}
 }
