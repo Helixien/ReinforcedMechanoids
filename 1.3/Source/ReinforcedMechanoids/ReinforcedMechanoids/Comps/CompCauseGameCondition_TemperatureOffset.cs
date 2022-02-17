@@ -66,6 +66,7 @@ namespace ReinforcedMechanoids
 		public void SetTemperatureOffset(float offset)
 		{
 			temperatureOffset += offset;
+			temperatureOffset = new FloatRange(-50, 50).ClampToRange(temperatureOffset);
 			ReSetupAllConditions();
 		}
 
@@ -132,7 +133,7 @@ namespace ReinforcedMechanoids
 		{
 			base.SetupCondition(condition, map);
 			var tempCondition = ((GameCondition_TemperatureOffset)condition);
-			tempCondition.tempOffset += temperatureOffset;
+			tempCondition.tempOffset = temperatureOffset;
 		}
 	}
 }
