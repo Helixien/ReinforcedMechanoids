@@ -88,7 +88,7 @@ namespace ReinforcedMechanoids
 							else if (intVec.IsValid && pawn.CanReach(intVec, PathEndMode.OnCell, Danger.Deadly))
 							{
 								pawn.pather.StartPath(intVec, PathEndMode.OnCell);
-								locomotionUrgencySameAs = followee;
+								this.job.locomotionUrgency = followee.CurJob?.locomotionUrgency ?? LocomotionUrgency.Walk;
 							}
 							else
 							{
@@ -107,15 +107,15 @@ namespace ReinforcedMechanoids
 			if (target.pather.Moving && target.pather.curPath != null)
             {
 				int maxValue = 5;
-				while (true)
-                {
-					var range = Rand.RangeInclusive(1, maxValue);
-					if (target.pather.curPath.nodes.Count > range)
-                    {
-						return target.pather.curPath.nodes[range];
-                    }
-					maxValue--;
-                }
+				//while (maxValue > 0)
+                //{
+				//	var range = Rand.RangeInclusive(1, maxValue);
+				//	if (target.pather.curPath.nodes.Count > range)
+                //    {
+				//		return target.pather.curPath.nodes[range];
+                //    }
+				//	maxValue--;
+                //}
             }
 			return target.Position;
         }

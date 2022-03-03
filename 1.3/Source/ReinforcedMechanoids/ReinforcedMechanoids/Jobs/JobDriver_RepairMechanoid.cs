@@ -26,7 +26,7 @@ namespace ReinforcedMechanoids
                 .FailOnDespawnedOrNull(TargetIndex.A)
                 .FailOn(() => !pawn.CanReach(job.GetTarget(TargetIndex.A), PathEndMode.Touch, Danger.None))
                 .FailOnSomeonePhysicallyInteracting(TargetIndex.A);
-
+            
             yield return new Toil
             {
                 initAction = delegate
@@ -35,18 +35,21 @@ namespace ReinforcedMechanoids
                 },
                 tickAction = delegate
                 {
-                    workDone++;
-                    if (workDone >= TotalWorkTick)
+                    if (this.pawn.IsHashIntervalTick(4))
                     {
-                        this.EndJobWith(JobCondition.Succeeded);
-                    }
-                    else if (ToRepair.health.hediffSet.hediffs.OfType<Hediff_Injury>().TryRandomElement(out var injury))
-                    {
-                        injury.Heal(0.3f);
-                    }
-                    else
-                    {
-                        this.EndJobWith(JobCondition.Succeeded);
+                        workDone++;
+                        if (workDone >= TotalWorkTick)
+                        {
+                            this.EndJobWith(JobCondition.Succeeded);
+                        }
+                        else if (ToRepair.health.hediffSet.hediffs.OfType<Hediff_Injury>().TryRandomElement(out var injury))
+                        {
+                            injury.Heal(0.3f);
+                        }
+                        else
+                        {
+                            this.EndJobWith(JobCondition.Succeeded);
+                        }
                     }
                 },
             	defaultCompleteMode = ToilCompleteMode.Never
@@ -56,7 +59,7 @@ namespace ReinforcedMechanoids
         public override void ExposeData()
         {
             base.ExposeData();
-
+            Scribe_Values.Look(ref workDone, "workDone");
         }
     }
 }
