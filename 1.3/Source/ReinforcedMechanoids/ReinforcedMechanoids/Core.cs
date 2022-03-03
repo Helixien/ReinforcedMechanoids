@@ -210,7 +210,7 @@ namespace ReinforcedMechanoids
         {
             foreach (var otherPawn2 in otherPawns.InRandomOrder())
             {
-                if (RM_DefOf.RM_FollowClose != otherPawn2.CurJobDef)
+                if (RM_DefOf.RM_FollowClose != otherPawn2.CurJobDef && otherPawn2.kindDef != RM_DefOf.RM_Mech_Vulture)
                 {
                     var job = TryGiveFollowJob(pawn, otherPawn2, 12);
                     if (job != null)
@@ -224,7 +224,7 @@ namespace ReinforcedMechanoids
 
         private static bool CanBeHealed(this Pawn pawn)
         {
-            return pawn.health.hediffSet.hediffs.Any(x => x is Hediff_Injury);
+            return pawn.kindDef != RM_DefOf.RM_Mech_Vulture && pawn.health.hediffSet.hediffs.Any(x => x is Hediff_Injury);
         }
 
         private static Job TryGiveFollowJob(Pawn pawn, Pawn followee, float radius)
