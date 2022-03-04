@@ -6,7 +6,7 @@
 		<label>ancient droid charging station</label>
 		<description>A station for assembling and recharging combat mechanoids.</description>
 		<graphicData>
-			<texPath>Things/Automation/CombatMechanoidChargingStation</texPath>
+			<texPath>Things/Building/Automation/GoliathDroidChargingStation</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.5,0.3,0.7)</volume>
@@ -20,7 +20,6 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
-		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>
 		<blockWind>false</blockWind>
