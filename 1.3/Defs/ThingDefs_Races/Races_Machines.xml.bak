@@ -56,7 +56,7 @@
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Droid_Goliath</defName>
-		<label>ancient combat droid</label>
+		<label>combat mechanoid</label>
 		<race>RM_Droid_Goliath</race>
 		<combatPower>99999</combatPower>
 		<lifeStages>

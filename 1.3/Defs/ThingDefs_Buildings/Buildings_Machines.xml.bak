@@ -30,7 +30,6 @@
 			<li>BuildingsSpecial</li>
 		</thingCategories>
 		<statBases>
-			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Mass>6</Mass>
 			<Flammability>0.5</Flammability>
