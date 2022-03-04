@@ -5,12 +5,12 @@
 	</ThingDef>
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_Droid_Goliath</defName>
-		<label>ancient goliath mechanoid</label>
+		<label>ancient goliath droid</label>
 		<description>An ancient, simple minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capale of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
 			<PsychicSensitivity>0.35</PsychicSensitivity>
 		</statBases>
 		<tools>
@@ -30,7 +30,7 @@
 			<thinkTreeMain>VFE_Mechanoids_ViolentMachine</thinkTreeMain>
 			<body>Lancer</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>4</baseHealthScale>
+			<baseHealthScale>5</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -49,7 +49,7 @@
 		<comps>
 			<li Class="VFE.Mechanoids.CompProperties_Machine">
 				<violent>true</violent>
-				<hoursActive>48</hoursActive>
+				<hoursActive>72</hoursActive>
 				<canPickupWeapons>true</canPickupWeapons>
 			</li>
 		</comps>
@@ -64,11 +64,14 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Droid/Goliath/Goliath</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.8</drawSize>
+					<drawSize>1.6</drawSize>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
 				</bodyGraphicData>
+				<li Class="AnimalBehaviours.CompProperties_Regeneration">
+					<rateInTicks>20</rateInTicks>
+				</li>
 			</li>
 		</lifeStages>
 	</PawnKindDef>
