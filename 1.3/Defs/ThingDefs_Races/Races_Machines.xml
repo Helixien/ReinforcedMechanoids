@@ -52,6 +52,9 @@
 				<hoursActive>72</hoursActive>
 				<canPickupWeapons>true</canPickupWeapons>
 			</li>
+				<li Class="AnimalBehaviours.CompProperties_Regeneration">
+					<rateInTicks>20</rateInTicks>
+				</li>
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
@@ -69,9 +72,6 @@
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
 				</bodyGraphicData>
-				<li Class="AnimalBehaviours.CompProperties_Regeneration">
-					<rateInTicks>20</rateInTicks>
-				</li>
 			</li>
 		</lifeStages>
 	</PawnKindDef>

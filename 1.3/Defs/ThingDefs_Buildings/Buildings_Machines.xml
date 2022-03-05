@@ -61,6 +61,7 @@
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>76</hoursToRecharge>
 			</li>
+			<li Class="VFEAncients.CompProperties_SolarPowerUp" MayRequire="VanillaExpanded.VFEA"/>
 		</comps>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
