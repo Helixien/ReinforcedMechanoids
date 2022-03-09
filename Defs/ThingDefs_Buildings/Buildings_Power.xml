@@ -27,7 +27,6 @@
 			<Flammability>1.0</Flammability>
 			<Beauty>-20</Beauty>
 		</statBases>
-
 		<size>(5,5)</size>
 		<costList>
 			<Steel>250</Steel>
@@ -53,7 +52,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Power</designationCategory>
+		<designationCategory>Powers</designationCategory>
 		<staticSunShadowHeight>0.50</staticSunShadowHeight>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisites>
