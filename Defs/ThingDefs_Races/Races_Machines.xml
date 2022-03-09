@@ -10,7 +10,7 @@
 		<description>An ancient, simple minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capale of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
-			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 			<PsychicSensitivity>0.12</PsychicSensitivity>
 		</statBases>
@@ -83,8 +83,8 @@
 		<description>placeholder</description>
 		<statBases>
 			<MoveSpeed>2.4</MoveSpeed>
-			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 			<PsychicSensitivity>0.35</PsychicSensitivity>
 		</statBases>
 		<tools>
@@ -93,8 +93,8 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>4</power>
-				<cooldownTime>2.6</cooldownTime>
+				<power>2</power>
+				<cooldownTime>3.2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 			</li>
@@ -104,7 +104,7 @@
 			<thinkTreeMain>VFE_Mechanoids_Machine</thinkTreeMain>
 			<body>Lancer</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>5</baseHealthScale>
+			<baseHealthScale>3</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -117,13 +117,13 @@
 			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Plasteel>35</Plasteel>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>28</Plasteel>
 		</butcherProducts>
 		<comps>
 			<li Class="VFE.Mechanoids.CompProperties_Machine">
 				<violent>false</violent>
-				<hoursActive>72</hoursActive>
+				<hoursActive>48</hoursActive>
 			</li>
 		</comps>
 	</ThingDef>
@@ -151,10 +151,10 @@
 		<label>advanced support mechanoid</label>
 		<description>placeholder</description>
 		<statBases>
-			<MoveSpeed>2.4</MoveSpeed>
-			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
-			<PsychicSensitivity>0.35</PsychicSensitivity>
+			<MoveSpeed>3.2</MoveSpeed>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			<PsychicSensitivity>0.01</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -162,7 +162,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>4</power>
+				<power>5</power>
 				<cooldownTime>2.6</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -173,7 +173,7 @@
 			<thinkTreeMain>VFE_Mechanoids_Machine</thinkTreeMain>
 			<body>Lancer</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>5</baseHealthScale>
+			<baseHealthScale>6</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -186,13 +186,13 @@
 			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
 		</race>
 		<butcherProducts>
-			<ComponentSpacer>3</ComponentSpacer>
-			<Plasteel>35</Plasteel>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Plasteel>50</Plasteel>
 		</butcherProducts>
 		<comps>
 			<li Class="VFE.Mechanoids.CompProperties_Machine">
 				<violent>true</violent>
-				<hoursActive>72</hoursActive>
+				<hoursActive>24</hoursActive>
 				<canPickupWeapons>true</canPickupWeapons>
 			</li>
 		</comps>

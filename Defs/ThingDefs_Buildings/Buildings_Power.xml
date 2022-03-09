@@ -52,7 +52,7 @@
 			</li>
 		</comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>Powers</designationCategory>
+		<designationCategory>Power</designationCategory>
 		<staticSunShadowHeight>0.50</staticSunShadowHeight>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisites>

@@ -36,8 +36,9 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<costList>
-			<Steel>100</Steel>
-			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>45</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<tickerType>Rare</tickerType>
 		<building>
@@ -109,8 +110,9 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<costList>
-			<Steel>100</Steel>
-			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>45</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
 		<tickerType>Rare</tickerType>
 		<building>
@@ -151,7 +153,7 @@
 			<li>ExoticBuilding</li>
 		</tradeTags>
 	</ThingDef>
-	<!--============================= Ultratech Combat Mechanoid ================================-->
+	<!--============================= Ultratech Support Mechanoid ================================-->
 	<ThingDef ParentName="BuildingBase">
 		<defName>RM_UltraDroid_SupportBase</defName>
 		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
@@ -187,8 +189,8 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<costList>
-			<Steel>100</Steel>
-			<ComponentSpacer>6</ComponentSpacer>
+			<Plasteel>65</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
 		</costList>
 		<tickerType>Rare</tickerType>
 		<building>
