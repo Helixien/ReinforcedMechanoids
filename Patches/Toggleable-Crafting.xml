@@ -5,8 +5,8 @@
 		<label>Enable player mechanoid crafting</label>
 		<operations>
 			<!-- ================ Ancient Combat Mechanoid ================ -->
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/BiomeDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
 				<value>
 					<designationCategory>Misc</designationCategory>
 					<researchPrerequisites>
@@ -16,8 +16,8 @@
 				</value>
 			</li>
 			<!-- ================ Ancient Worker Mechanoid ================ -->
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/BiomeDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_WorkerBase"]</xpath>
 				<value>
 					<designationCategory>Misc</designationCategory>
 					<researchPrerequisites>
@@ -27,8 +27,8 @@
 				</value>
 			</li>
 			<!-- ================ Ultratech Support Mechanoid ================ -->
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/BiomeDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_UltraDroid_SupportBase"]</xpath>
 				<value>
 					<designationCategory>Misc</designationCategory>
 					<researchPrerequisites>
