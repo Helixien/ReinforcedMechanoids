@@ -26,17 +26,6 @@
 					<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 				</value>
 			</li>
-			<!-- ================ Ultratech Support Mechanoid ================ -->
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "RM_UltraDroid_SupportBase"]</xpath>
-				<value>
-					<designationCategory>Misc</designationCategory>
-					<researchPrerequisites>
-						<li>Fabrication</li>
-					</researchPrerequisites>
-					<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 </Patch>

@@ -132,80 +132,16 @@
 		<label>ancient worker mechanoid</label>
 		<race>RM_AncientDroid_Worker</race>
 		<combatPower>99999</combatPower>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Droid/AncientWorkerDroid/AncientWorkerDroidB</texPath>
+			</li>
+		</alternateGraphics>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/AncientWorkerDroid/AncientWorkerDroid</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.2</drawSize>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-	</PawnKindDef>
-	<!--============================= Ultratech Combat Mechanoid ================================-->
-	<ThingDef ParentName="RM_BaseDroid">
-		<defName>RM_UltraDroid_Support</defName>
-		<label>advanced support mechanoid</label>
-		<description>placeholder</description>
-		<statBases>
-			<MoveSpeed>3.2</MoveSpeed>
-			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
-			<PsychicSensitivity>0.01</PsychicSensitivity>
-		</statBases>
-		<tools>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>5</power>
-				<cooldownTime>2.6</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			</li>
-		</tools>
-		<race>
-			<intelligence>ToolUser</intelligence>
-			<thinkTreeMain>VFE_Mechanoids_Machine</thinkTreeMain>
-			<body>Lancer</body>
-			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>6</baseHealthScale>
-			<lifeStageAges>
-				<li>
-					<def>MechanoidFullyFormed</def>
-					<minAge>0</minAge>
-				</li>
-			</lifeStageAges>
-			<soundCallIntervalRange>3000~8000</soundCallIntervalRange>
-			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
-		</race>
-		<butcherProducts>
-			<ComponentSpacer>5</ComponentSpacer>
-			<Plasteel>50</Plasteel>
-		</butcherProducts>
-		<comps>
-			<li Class="VFE.Mechanoids.CompProperties_Machine">
-				<violent>true</violent>
-				<hoursActive>24</hoursActive>
-				<canPickupWeapons>true</canPickupWeapons>
-			</li>
-		</comps>
-	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_UltraDroid_Support</defName>
-		<label>advanced support mechanoid</label>
-		<race>RM_UltraDroid_Support</race>
-		<combatPower>99999</combatPower>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/UltraSupportDroid/UltraSupportDroid</texPath>
+					<texPath>Things/Pawn/Droid/AncientWorkerDroid/AncientWorkerDroidA</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.4</drawSize>
 					<shadowData>
