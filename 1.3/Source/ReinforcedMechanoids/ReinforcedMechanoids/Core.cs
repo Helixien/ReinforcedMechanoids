@@ -196,7 +196,7 @@ namespace ReinforcedMechanoids
             {
                 foreach (var building in lord.ownedBuildings.OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList())
                 {
-                    if (building.Spawned && RepairUtility.PawnCanRepairNow(pawn, building) && pawn.CanReserve(building, 1, -1, null, true) 
+                    if (building.Spawned && RepairUtility.PawnCanRepairNow(pawn, building) && pawn.CanReserve(building)
                         && pawn.CanReach(building, PathEndMode.Touch, Danger.None))
                     {
                         var job = JobMaker.MakeJob(RM_DefOf.RM_RepairThing, building);
