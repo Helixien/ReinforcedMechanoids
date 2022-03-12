@@ -9,7 +9,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.3.3200": {
+      "Krafs.Rimworld.Ref/1.3.3287": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -110,7 +110,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.3.3200": {
+      "Krafs.Rimworld.Ref/1.3.3287": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -211,7 +211,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.3.3200": {
+      "Krafs.Rimworld.Ref/1.3.3287": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -312,7 +312,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.3.3200": {
+      "Krafs.Rimworld.Ref/1.3.3287": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -421,16 +421,16 @@
         "krafs.publicizer.nuspec"
       ]
     },
-    "Krafs.Rimworld.Ref/1.3.3200": {
-      "sha512": "vjo/xgY9rXwem6RCrYAMCk1uf7j74S5eB1A3h/mbckFPCcCZQFAEy97ozinyC8XefpLJmbIbVXeauUwHJhYE8Q==",
+    "Krafs.Rimworld.Ref/1.3.3287": {
+      "sha512": "EYZKMJz5WxV+1sHLzFAcpdB9WekDPdt+JNEDsVYx4buH+TdWk1rbws4Xje4BUuPTG6tHG+y5ECCGNUXuoxZDYw==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.3.3200",
+      "path": "krafs.rimworld.ref/1.3.3287",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "icon.png",
-        "krafs.rimworld.ref.1.3.3200.nupkg.sha512",
+        "krafs.rimworld.ref.1.3.3287.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -543,7 +543,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "Krafs.Publicizer >= 1.0.2",
-      "Krafs.Rimworld.Ref >= 1.3.3200",
+      "Krafs.Rimworld.Ref >= 1.3.3287",
       "Lib.Harmony >= 2.2.0"
     ]
   },
@@ -588,7 +588,7 @@
           },
           "Krafs.Rimworld.Ref": {
             "target": "Package",
-            "version": "[1.3.3200, )"
+            "version": "[1.3.3287, )"
           },
           "Lib.Harmony": {
             "target": "Package",
