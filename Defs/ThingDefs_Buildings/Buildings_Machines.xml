@@ -153,4 +153,150 @@
 			<li>ExoticBuilding</li>
 		</tradeTags>
 	</ThingDef>
+	<!--============================= Ultratech Security Mechanoid ================================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RM_UltraDroid_SecurityBase</defName>
+		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
+		<label>mechanoid station</label>
+		<description>A station for assembling and recharging ultratech security mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Automation/UltratechDroidSupportBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.1</fillPercent>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Plasteel>45</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<tickerType>Rare</tickerType>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<pawnToSpawn>RM_UltraDroid_Security</pawnToSpawn>
+				<allowedWorkTypes/>
+				<extraChargingPower>2800</extraChargingPower>
+				<hoursToRecharge>18</hoursToRecharge>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticBuilding</li>
+		</tradeTags>
+	</ThingDef>
+	<!--============================= Ultratech Security Mechanoid ================================-->
+	<ThingDef ParentName="BuildingBase">
+		<defName>RM_UltraDroid_SpartanBase</defName>
+		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
+		<label>mechanoid station</label>
+		<description>A station for assembling and recharging ultratech spartan mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Automation/UltratechDroidSupportBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.1</fillPercent>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>6</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Plasteel>45</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<tickerType>Rare</tickerType>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>750</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<pawnToSpawn>RM_UltraDroid_Spartan</pawnToSpawn>
+				<allowedWorkTypes/>
+				<extraChargingPower>2800</extraChargingPower>
+				<hoursToRecharge>22</hoursToRecharge>
+			</li>
+		</comps>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticBuilding</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

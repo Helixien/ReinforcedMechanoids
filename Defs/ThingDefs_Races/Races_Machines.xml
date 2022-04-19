@@ -151,4 +151,144 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+	<!--============================= Ultratech Security Droid ================================-->
+	<ThingDef ParentName="RM_BaseDroid">
+		<defName>RM_UltraDroid_Security</defName>
+		<label>ultratech security mechanoid</label>
+		<description>placeholder</description>
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<PsychicSensitivity>0.12</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>VFE_Mechanoids_ViolentMachine</thinkTreeMain>
+			<body>Lancer</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>3000~8000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Plasteel>35</Plasteel>
+		</butcherProducts>
+		<comps>
+			<li Class="VFE.Mechanoids.CompProperties_Machine">
+				<violent>true</violent>
+				<hoursActive>72</hoursActive>
+				<canPickupWeapons>true</canPickupWeapons>
+			</li>
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_UltraDroid_Security</defName>
+		<label>ultratech security mechanoid</label>
+		<race>RM_UltraDroid_Security</race>
+		<combatPower>99999</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Droid/UltratechSecurityDroid/UltratechSecurityDroid</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.6</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	<!--============================= Ultratech Spartan Droid ================================-->
+	<ThingDef ParentName="RM_BaseDroid">
+		<defName>RM_UltraDroid_Spartan</defName>
+		<label>ultratech spartan mechanoid</label>
+		<description>placeholder</description>
+		<statBases>
+			<MoveSpeed>3.5</MoveSpeed>
+			<ArmorRating_Blunt>2.12</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.82</ArmorRating_Sharp>
+			<PsychicSensitivity>0</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>VFE_Mechanoids_ViolentMachine</thinkTreeMain>
+			<body>Lancer</body>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHealthScale>8</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>3000~8000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<ComponentSpacer>5</ComponentSpacer>
+			<Plasteel>50</Plasteel>
+		</butcherProducts>
+		<comps>
+			<li Class="VFE.Mechanoids.CompProperties_Machine">
+				<violent>true</violent>
+				<hoursActive>144</hoursActive>
+				<canPickupWeapons>true</canPickupWeapons>
+			</li>
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_UltraDroid_Spartan</defName>
+		<label>ultratech spartan mechanoid</label>
+		<race>RM_UltraDroid_Spartan</race>
+		<combatPower>99999</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Droid/UltratechSpartanDroid/UltratechSpartanDroid</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
 </Defs>

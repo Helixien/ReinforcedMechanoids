@@ -56,6 +56,11 @@
 			<Plasteel>20</Plasteel>
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</butcherProducts>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_Regeneration">
+				<rateInTicks>8</rateInTicks>
+			</li>
+		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Mech_Zealot</defName>
