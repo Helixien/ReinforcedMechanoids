@@ -1,5 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ================================ Inferno Canon MK.2 ====================== -->
+	<ThingDef ParentName="Gun_InfernoCannonBase">
+		<defName>RM_Gun_InfernoCannonMk2</defName>
+		<label>advanced inferno cannon</label>
+		<description>An advanced incendiary-shot mini-artillery device. It fires three large incendiary warhead.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidInfernoCannonMk2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<destroyOnDrop>true</destroyOnDrop>
+		<weaponTags>
+			<li>MechanoidGunHeavy</li>
+		</weaponTags>
+		<statBases>
+			<MarketValue>3800</MarketValue>
+			<Mass>28</Mass>
+			<RangedWeapon_Cooldown>16.4</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_InfernoCannon</defaultProjectile>
+				<forcedMissRadius>3.5</forcedMissRadius>
+				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+				<warmupTime>1.25</warmupTime>
+				<range>29.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>24</ticksBetweenBurstShots>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>18</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
 	<!-- ================================ Lance Weapons ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
 		<defName>RM_Gun_HeavyLance</defName>
