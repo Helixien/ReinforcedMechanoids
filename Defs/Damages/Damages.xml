@@ -5,7 +5,12 @@
     <defName>RM_BehemothAttack</defName>
     <deathMessage>{0} has been smashed to death.</deathMessage>
     <label>behemoth attack</label>
-    <workerClass>ReinforcedMechanoids.DamageWorker_BehemothAttack</workerClass>
+    <workerClass>VFECore.DamageWorker_PushBackAttackMelee</workerClass>
+	<modExtensions>
+		<li Class="VFECore.DamageExtension">
+			<pushBackDistance>2~5</pushBackDistance>
+		</li>
+	</modExtensions>
   </DamageDef>
   
 	<ManeuverDef>

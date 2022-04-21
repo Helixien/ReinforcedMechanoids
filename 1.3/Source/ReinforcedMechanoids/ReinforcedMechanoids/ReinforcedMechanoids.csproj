@@ -47,7 +47,7 @@
     <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
     <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
     <Compile Include="Core.cs" />
-    <Compile Include="DamageWorker_BehemothAttack.cs" />
+    <Compile Include="Verb_MeleeAttackDamageBehemoth.cs" />
     <Compile Include="Jobs\JobDriver_FollowClose.cs" />
     <Compile Include="Jobs\JobDriver_RepairMechanoid.cs" />
     <Compile Include="Jobs\JobDriver_RepairThing.cs" />
