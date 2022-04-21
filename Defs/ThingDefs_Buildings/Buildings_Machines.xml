@@ -155,7 +155,7 @@
 	</ThingDef>
 	<!--============================= Ultratech Security Mechanoid ================================-->
 	<ThingDef ParentName="BuildingBase">
-		<defName>RM_UltraDroid_SecurityBase</defName>
+		<defName>RM_Droid_SecurityBase</defName>
 		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
 		<label>mechanoid station</label>
 		<description>A station for assembling and recharging ultratech security mechanoids.</description>
@@ -193,6 +193,11 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
+					<designationCategory>Security</designationCategory>
+					<researchPrerequisites>
+						<li>Fabrication</li>
+					</researchPrerequisites>
+					<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 		<tickerType>Rare</tickerType>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
@@ -211,7 +216,7 @@
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<pawnToSpawn>RM_UltraDroid_Security</pawnToSpawn>
+				<pawnToSpawn>RM_Droid_Security</pawnToSpawn>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>18</hoursToRecharge>
@@ -228,7 +233,7 @@
 	</ThingDef>
 	<!--============================= Ultratech Security Mechanoid ================================-->
 	<ThingDef ParentName="BuildingBase">
-		<defName>RM_UltraDroid_SpartanBase</defName>
+		<defName>RM_Droid_SpartanBase</defName>
 		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
 		<label>mechanoid station</label>
 		<description>A station for assembling and recharging ultratech spartan mechanoids.</description>
@@ -266,6 +271,11 @@
 			<ComponentIndustrial>2</ComponentIndustrial>
 			<ComponentSpacer>2</ComponentSpacer>
 		</costList>
+					<designationCategory>Security</designationCategory>
+					<researchPrerequisites>
+						<li>Fabrication</li>
+					</researchPrerequisites>
+					<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<tickerType>Rare</tickerType>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
@@ -284,7 +294,7 @@
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<pawnToSpawn>RM_UltraDroid_Spartan</pawnToSpawn>
+				<pawnToSpawn>RM_Droid_Spartan</pawnToSpawn>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>22</hoursToRecharge>

@@ -153,8 +153,8 @@
 	</PawnKindDef>
 	<!--============================= Ultratech Security Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
-		<defName>RM_UltraDroid_Security</defName>
-		<label>ultratech security mechanoid</label>
+		<defName>RM_Droid_Security</defName>
+		<label>security mechanoid</label>
 		<description>placeholder</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
@@ -204,14 +204,14 @@
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_UltraDroid_Security</defName>
-		<label>ultratech security mechanoid</label>
-		<race>RM_UltraDroid_Security</race>
+		<defName>RM_Droid_Security</defName>
+		<label>security mechanoid</label>
+		<race>RM_Droid_Security</race>
 		<combatPower>99999</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/UltratechSecurityDroid/UltratechSecurityDroid</texPath>
+					<texPath>Things/Pawn/Droid/SecurityDroid/SecurityDroid</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.6</drawSize>
 					<shadowData>
@@ -223,8 +223,8 @@
 	</PawnKindDef>
 	<!--============================= Ultratech Spartan Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
-		<defName>RM_UltraDroid_Spartan</defName>
-		<label>ultratech spartan mechanoid</label>
+		<defName>RM_Droid_Spartan</defName>
+		<label>spartan mechanoid</label>
 		<description>placeholder</description>
 		<statBases>
 			<MoveSpeed>3.5</MoveSpeed>
@@ -274,14 +274,14 @@
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_UltraDroid_Spartan</defName>
-		<label>ultratech spartan mechanoid</label>
-		<race>RM_UltraDroid_Spartan</race>
+		<defName>RM_Droid_Spartan</defName>
+		<label>spartan mechanoid</label>
+		<race>RM_Droid_Spartan</race>
 		<combatPower>99999</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/UltratechSpartanDroid/UltratechSpartanDroid</texPath>
+					<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroid</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2.0</drawSize>
 					<shadowData>

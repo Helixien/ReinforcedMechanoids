@@ -2,28 +2,48 @@
 <Patch>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>False</enabled>
-		<label>Enable player mechanoid crafting</label>
+		<label>Enable ancient mechanoid crafting</label>
 		<operations>
 			<!-- ================ Ancient Combat Mechanoid ================ -->
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
 				<value>
-					<designationCategory>Misc</designationCategory>
+					<designationCategory>Security</designationCategory>
 					<researchPrerequisites>
 						<li>Fabrication</li>
 					</researchPrerequisites>
-					<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+					<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 				</value>
 			</li>
 			<!-- ================ Ancient Worker Mechanoid ================ -->
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_WorkerBase"]</xpath>
 				<value>
-					<designationCategory>Misc</designationCategory>
+					<designationCategory>Security</designationCategory>
 					<researchPrerequisites>
 						<li>Fabrication</li>
 					</researchPrerequisites>
-					<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+					<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Enable white skins for player mechanoids</label>
+		<operations>
+			<!-- ================ Security Mechanoid ================ -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Security"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SecurityDroid_ALT/SecurityDroid</texPath>
+				</value>
+			</li>
+			<!-- ================ Spartan Mechanoid ================ -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroid</texPath>
 				</value>
 			</li>
 		</operations>
