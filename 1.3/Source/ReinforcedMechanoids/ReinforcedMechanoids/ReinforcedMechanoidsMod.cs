@@ -76,7 +76,7 @@ namespace ReinforcedMechanoids
                 ReinforcedMechanoidsSettings.powerOutput += 500f;
             }
             listing_Standard.Gap();
-            listing_Standard.CheckboxLabeled("Mechanoids will wrop weapons upon death", ref ReinforcedMechanoidsSettings.dropWeaponOnDeath);
+            listing_Standard.CheckboxLabeled("Mechanoids will drop weapons upon death", ref ReinforcedMechanoidsSettings.dropWeaponOnDeath);
             listing_Standard.End();
         }
     }
