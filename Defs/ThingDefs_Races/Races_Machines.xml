@@ -7,7 +7,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Combat</defName>
 		<label>ancient combat mechanoid</label>
-		<description>An ancient, simple minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capale of using different weapons and consumes very little energy.</description>
+		<description>An ancient, simple minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
 			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>

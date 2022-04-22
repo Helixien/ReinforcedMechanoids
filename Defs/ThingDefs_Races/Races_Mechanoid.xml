@@ -79,7 +79,6 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
-		<destroyGearOnDrop>false</destroyGearOnDrop>
 		<weaponMoney>9999~9999</weaponMoney>
 		<weaponTags>
 			<li>MechanoidGunMedium</li>

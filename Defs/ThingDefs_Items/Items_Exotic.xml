@@ -3,7 +3,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>RM_VanometricMechanoidCell</defName>
 		<label>vanometric mechanoid cell</label>
-		<description>A powerful, yet small, vanometric power cell used by mechanoid structures. It is highly unstable, but can be produce a great amount of power if rigged up correctly.</description>
+		<description>A powerful, yet small, vanometric power cell used by mechanoid structures. It is highly unstable, but can produce a great amount of power if rigged up correctly.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/VanometricMechanoidCell</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
