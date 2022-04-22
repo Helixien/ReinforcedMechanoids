@@ -10,9 +10,9 @@
 		<description>An ancient, somewhat complex minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>4.0</MoveSpeed>
-			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-			<PsychicSensitivity>0.12</PsychicSensitivity>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -89,9 +89,9 @@
 		<description>An ancient, somewhat complex minded worker droid. Searches for nearby work tasks and will autonomously attampt to fulfill them. Unlike most worker drones, this model is capable of doing different kinds of work and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
-			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<PsychicSensitivity>0.35</PsychicSensitivity>
+			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -164,9 +164,9 @@
 		<description>A simple minded ranged combat drone slightly smaller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
 			<MoveSpeed>4.0</MoveSpeed>
-			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-			<PsychicSensitivity>0.12</PsychicSensitivity>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -240,9 +240,9 @@
 		<description>A highly complex and well armoured ranged combat drone taller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
 			<MoveSpeed>4.8</MoveSpeed>
-			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-			<PsychicSensitivity>0</PsychicSensitivity>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
 			<li>
@@ -261,7 +261,7 @@
 			<thinkTreeMain>VFE_Mechanoids_ViolentMachine</thinkTreeMain>
 			<body>Lancer</body>
 			<baseBodySize>1.2</baseBodySize>
-			<baseHealthScale>8</baseHealthScale>
+			<baseHealthScale>2.6</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
