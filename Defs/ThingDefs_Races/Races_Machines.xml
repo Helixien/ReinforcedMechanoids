@@ -9,7 +9,7 @@
 		<label>ancient combat mechanoid</label>
 		<description>An ancient, somewhat complex minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
 		<statBases>
-			<MoveSpeed>3</MoveSpeed>
+			<MoveSpeed>4.0</MoveSpeed>
 			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 			<PsychicSensitivity>0.12</PsychicSensitivity>
@@ -88,7 +88,7 @@
 		<label>ancient worker mechanoid</label>
 		<description>An ancient, somewhat complex minded worker droid. Searches for nearby work tasks and will autonomously attampt to fulfill them. Unlike most worker drones, this model is capable of doing different kinds of work and consumes very little energy.</description>
 		<statBases>
-			<MoveSpeed>2.4</MoveSpeed>
+			<MoveSpeed>3.0</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 			<PsychicSensitivity>0.35</PsychicSensitivity>
@@ -163,7 +163,7 @@
 		<label>security mechanoid</label>
 		<description>A simple minded ranged combat drone slightly smaller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
-			<MoveSpeed>3</MoveSpeed>
+			<MoveSpeed>4.0</MoveSpeed>
 			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 			<PsychicSensitivity>0.12</PsychicSensitivity>
@@ -219,7 +219,7 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Droid/SecurityDroid/SecurityDroid</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.6</drawSize>
+					<drawSize>1.5</drawSize>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
@@ -239,9 +239,9 @@
 		<label>spartan mechanoid</label>
 		<description>A highly complex and well armoured ranged combat drone taller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
-			<MoveSpeed>3.5</MoveSpeed>
-			<ArmorRating_Blunt>2.12</ArmorRating_Blunt>
-			<ArmorRating_Sharp>1.82</ArmorRating_Sharp>
+			<MoveSpeed>4.8</MoveSpeed>
+			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 			<PsychicSensitivity>0</PsychicSensitivity>
 		</statBases>
 		<tools>
@@ -295,7 +295,7 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroid</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.0</drawSize>
+					<drawSize>1.8</drawSize>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
