@@ -2,7 +2,7 @@
 <Defs>
 	<!-- ================================ Inferno Canon MK.2 ====================== -->
 	<ThingDef ParentName="Gun_InfernoCannonBase">
-		<defName>RM_Gun_InfernoCannonMk2</defName>
+		<defName>RM_Gun_InfernoCannonMkTwo</defName>
 		<label>advanced inferno cannon</label>
 		<description>An advanced incendiary-shot mini-artillery device. It fires three large incendiary warhead.</description>
 		<graphicData>
