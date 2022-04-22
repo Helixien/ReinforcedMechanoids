@@ -134,6 +134,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<WorkToBuild>2200</WorkToBuild>
 			<MarketValue>1800</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints>
 		</statBases>
@@ -173,6 +174,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
 			<MarketValue>2000</MarketValue>
 			<MaxHitPoints>250</MaxHitPoints>
 		</statBases>

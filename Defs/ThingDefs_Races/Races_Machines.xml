@@ -7,7 +7,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Combat</defName>
 		<label>ancient combat mechanoid</label>
-		<description>An ancient, simple minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
+		<description>An ancient, somewhat complex minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
 			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
@@ -80,7 +80,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Worker</defName>
 		<label>ancient worker mechanoid</label>
-		<description>placeholder</description>
+		<description>An ancient, somewhat complex minded worker droid. Searches for nearby work tasks and will autonomously attampt to fulfill them. Unlike most worker drones, this model is capable of doing different kinds of work and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>2.4</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
@@ -151,11 +151,11 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-	<!--============================= Ultratech Security Droid ================================-->
+	<!--============================= Security Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_Droid_Security</defName>
 		<label>security mechanoid</label>
-		<description>placeholder</description>
+		<description>A simple minded ranged combat drone slightly smaller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
 			<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
@@ -221,11 +221,11 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-	<!--============================= Ultratech Spartan Droid ================================-->
+	<!--============================= Spartan Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_Droid_Spartan</defName>
 		<label>spartan mechanoid</label>
-		<description>placeholder</description>
+		<description>A highly complex and well armoured ranged combat drone taller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
 		<statBases>
 			<MoveSpeed>3.5</MoveSpeed>
 			<ArmorRating_Blunt>2.12</ArmorRating_Blunt>

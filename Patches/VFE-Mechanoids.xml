@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Mechanoids</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!--============================= Security Mechanoid ================================-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>VFE_Factory</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/researchPrerequisites</xpath>
+					<value>
+						<li>VFE_AutomatedDefensiveMeasures</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/costList</xpath>
+					<value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_Security"]/butcherProducts</xpath>
+					<value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+					</value>
+				</li>
+				<!--============================= Spartan Mechanoid ================================-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SpartanBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>VFE_Factory</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SpartanBase"]/researchPrerequisites</xpath>
+					<value>
+						<li>VFE_AutomatedDefensiveMeasures</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_SpartanBase"]/costList</xpath>
+					<value>
+						<VFE_ComponentMechanoid>3</VFE_ComponentMechanoid>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_Spartan"]/butcherProducts</xpath>
+					<value>
+						<VFE_ComponentMechanoid>3</VFE_ComponentMechanoid>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

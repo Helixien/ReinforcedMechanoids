@@ -30,7 +30,7 @@
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>False</enabled>
-		<label>Enable white skins for player mechanoids</label>
+		<label>Enable clean mechanoids skins</label>
 		<operations>
 			<!-- ================ Security Mechanoid ================ -->
 			<li Class="PatchOperationReplace">
