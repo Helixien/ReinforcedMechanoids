@@ -275,9 +275,9 @@
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
 		<defName>RM_Droid_Spartan</defName>
+		<combatPower>99999</combatPower>
 		<label>spartan mechanoid</label>
 		<race>RM_Droid_Spartan</race>
-		<combatPower>99999</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>

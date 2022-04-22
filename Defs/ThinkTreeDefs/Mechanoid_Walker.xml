@@ -4,15 +4,12 @@
 		<defName>RM_Walker</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
-				<!-- Downed -->
 				<li Class="ThinkNode_Subtree">
 					<treeDef>Downed</treeDef>
 				</li>
 				<li Class="ReinforcedMechanoids.JobGiver_WalkToPlayerBase">
-		</li>
-				<!-- Do a queued job -->
+				</li>
 				<li Class="ThinkNode_QueuedJob"/>
-				<!-- Idle -->
 				<li Class="ThinkNode_Tagger">
 					<tagToGive>Idle</tagToGive>
 					<subNodes>
@@ -21,7 +18,6 @@
 						</li>
 					</subNodes>
 				</li>
-				<!-- Idle error -->
 				<li Class="JobGiver_IdleError"/>
 			</subNodes>
 		</thinkRoot>

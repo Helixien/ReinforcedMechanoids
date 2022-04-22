@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--============================= Weather Controller ================================-->
 	<ResearchProjectDef>
 		<defName>RM_WeatherController</defName>
 		<label>weather controler</label>
@@ -20,6 +21,7 @@
 		<researchViewX>16.00</researchViewX>
 		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
+	<!--============================= Climate Adjuster ================================-->
 	<ResearchProjectDef>
 		<defName>RM_ClimateAdjuster</defName>
 		<label>climate adjuster</label>
@@ -39,6 +41,7 @@
 		<researchViewX>17.00</researchViewX>
 		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
+	<!--============================= Coil Weapons ================================-->
 	<ResearchProjectDef>
 		<defName>RM_CoilShot</defName>
 		<label>tesla coils</label>
@@ -58,6 +61,7 @@
 		<researchViewX>15.00</researchViewX>
 		<researchViewY>3.8</researchViewY>
 	</ResearchProjectDef>
+	<!--============================= Vanometric Generator ================================-->
 	<ResearchProjectDef>
 		<defName>RM_VanometricGenerator</defName>
 		<label>vanometric generator</label>
