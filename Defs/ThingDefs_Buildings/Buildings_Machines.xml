@@ -127,10 +127,10 @@
 	<!--============================= Security Mechanoid ================================-->
 	<ThingDef ParentName="RM_DroidBase">
 		<defName>RM_Droid_SecurityBase</defName>
-		<label>mechanoid station</label>
+		<label>security mechanoid charging station</label>
 		<description>A station for assembling and recharging spacer security combat mechanoids.</description>
 		<graphicData>
-			<texPath>Things/Building/Automation/UltratechDroidSupportBase</texPath>
+			<texPath>Things/Building/Automation/SecurityDroidBase</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -167,10 +167,10 @@
 	<!--============================= Spartan Mechanoid ================================-->
 	<ThingDef ParentName="RM_DroidBase">
 		<defName>RM_Droid_SpartanBase</defName>
-		<label>mechanoid station</label>
+		<label>spartan mechanoid charging station</label>
 		<description>A station for assembling and recharging spacer spartan combat mechanoids.</description>
 		<graphicData>
-			<texPath>Things/Building/Automation/UltratechDroidSupportBase</texPath>
+			<texPath>Things/Building/Automation/SpartanDroidBase</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>

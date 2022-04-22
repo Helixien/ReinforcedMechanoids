@@ -75,6 +75,12 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>15</range>
+			</li>
+		</skills>
 	</PawnKindDef>
 	<!--============================= Ancient Worker Mechanoid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
@@ -220,6 +226,12 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6</range>
+			</li>
+		</skills>
 	</PawnKindDef>
 	<!--============================= Spartan Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
@@ -290,5 +302,11 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>12</range>
+			</li>
+		</skills>
 	</PawnKindDef>
 </Defs>
