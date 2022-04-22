@@ -8,6 +8,7 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidInfernoCannonMk2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<destroyOnDrop>true</destroyOnDrop>
 		<weaponTags>
@@ -34,6 +35,10 @@
 				<muzzleFlashScale>18</muzzleFlashScale>
 			</li>
 		</verbs>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			</li>
+		</comps>
 	</ThingDef>
 	<!-- ================================ Lance Weapons ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
@@ -44,6 +49,7 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidHeavyLance</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
 		</graphicData>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
@@ -78,6 +84,10 @@
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			</li>
+		</comps>
 		<tools>
 			<li>
 				<label>barrel</label>
@@ -131,6 +141,10 @@
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+		<comps>
+			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			</li>
+		</comps>
 		<tools>
 			<li>
 				<label>barrel</label>
