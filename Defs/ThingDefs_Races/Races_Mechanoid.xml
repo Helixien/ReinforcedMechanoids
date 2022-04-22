@@ -4,11 +4,11 @@
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
-		<description>Human-sized, Sangheili-class combat mechanoid. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
+		<description>Bulky human-sized, Sangheili-class combat mechanoid build for medium and long-range combat while able commanding other mechanoids locally if a connection to command was lost. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
 			<PsychicSensitivity>0</PsychicSensitivity>
 		</statBases>
 		<tools>
@@ -92,8 +92,8 @@
 		<description>Fast human-sized, Sangheili-class combat mechanoid built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 		</statBases>
 		<tools>
 			<li>
@@ -169,9 +169,9 @@
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
 		<statBases>
-			<MoveSpeed>3.0</MoveSpeed>
-			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<MoveSpeed>2.4</MoveSpeed>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 		</statBases>
 		<description>Human-sized, Sangheili-class, human-sized combat mechanoid specializing in rapid approach and close-range combat, whilst being able to withstand heavy fire. Their bodies are covered in points and blades, but they mostly use two arm blades to lop off limbs or gut their victims alive. Alternatively, they will use their head-mounted blade to ram enemies, also gutting them alive.</description>
 		<tools>
@@ -255,10 +255,10 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
 		<label>behemoth</label>
-		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemy fire. Using a shield to protect their body, they are based flanked.</description>
+		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemy fire. Using a shield to protect their body, they are open to be flanked.</description>
 		<statBases>
 			<MoveSpeed>1.0</MoveSpeed>
-			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>

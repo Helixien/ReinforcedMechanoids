@@ -57,8 +57,8 @@
 							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carapace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
 								<MoveSpeed>0.35</MoveSpeed>
-								<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
-								<ArmorRating_Sharp>0.52</ArmorRating_Sharp>
+								<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+								<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
 								<PsychicSensitivity>0.85</PsychicSensitivity>
 							</statBases>
 							<tools>

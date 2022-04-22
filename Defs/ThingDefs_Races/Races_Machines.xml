@@ -10,8 +10,8 @@
 		<description>An ancient, somewhat complex minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
 		<statBases>
 			<MoveSpeed>4.0</MoveSpeed>
-			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.15</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
@@ -90,7 +90,7 @@
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
 			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.60</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
 		</statBases>
 		<tools>
