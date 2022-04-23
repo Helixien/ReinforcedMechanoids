@@ -431,4 +431,98 @@
 			<li>MechanoidGunSmall</li>
 		</weaponTags>
 	</PawnKindDef>
+	<!-- ================================ Mechanoid Caretaker ====================== -->
+	<ThingDef ParentName="BaseMechanoid">
+		<defName>RM_Mech_Caretaker</defName>
+		<label>caretaker</label>
+		<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carapace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
+		<statBases>
+			<MoveSpeed>0.35</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<PsychicSensitivity>0.85</PsychicSensitivity>
+			<VEF_EnergyShieldRadiusPawn>10</VEF_EnergyShieldRadiusPawn>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.5</power>
+				<cooldownTime>2.9</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>RM_Mechanical_Caretaker</body>
+			<baseBodySize>2.5</baseBodySize>
+			<baseHealthScale>12</baseHealthScale>
+			<thinkTreeMain>RM_Caretaker</thinkTreeMain>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1500~2500</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<comps>
+			<li Class="VFECore.CompProperties_ShieldField">
+				<shieldColour>(0.6, 0.6, 0.8)</shieldColour>
+				<shieldRadiusStat>VEF_EnergyShieldRadiusPawn</shieldRadiusStat>
+				<disarmedByEmpForTicks>600</disarmedByEmpForTicks>
+				<activeSound>Broadshield_Ambience</activeSound>
+			</li>
+			<li Class="ReinforcedMechanoids.CompProperties_ExplodeIfNoOtherFactionPawns">
+								</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>6.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<wickTicks>500</wickTicks>
+				<chanceNeverExplodeFromDamage>1</chanceNeverExplodeFromDamage>
+				<wickMessages>
+					<li>
+						<wickMessagekey>SelfDestructCountdown</wickMessagekey>
+						<messageType>NeutralEvent</messageType>
+						<ticksLeft>500</ticksLeft>
+					</li>
+				</wickMessages>
+			</li>
+		</comps>
+		<butcherProducts>
+			<Steel>80</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Caretaker</defName>
+		<label>caretaker</label>
+		<race>RM_Mech_Caretaker</race>
+		<combatPower>100</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Caretaker</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>4.0</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>0~0</weaponMoney>
+		<defendPointRadius>0</defendPointRadius>
+		<weaponTags/>
+	</PawnKindDef>
 </Defs>
