@@ -2,9 +2,9 @@
 <Defs>
 	<!-- ================================ Charge Weapons ====================== -->
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_Gun_ChargeRevolver</defName>
-		<label>charge revolver</label>
-		<description>A charged-shot revolver. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nThis weapon is used by smaller mechanoids on the fields but can easily be used by humans.</description>
+		<defName>RM_Gun_ChargeSidearm</defName>
+		<label>charge sidearm</label>
+		<description>A charged-shot burst-fire sidearm. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nDesigned as a sidearm for infantry mechanoids with manipulators similar to human hands. The attached blade gives it superior melee viability.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidChargeRevolver</texPath>
@@ -44,7 +44,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RM_Bullet_ChargeRevolver</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ChargeSidearm</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<range>21.9</range>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
@@ -77,7 +77,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>RM_Bullet_ChargeRevolver</defName>
+		<defName>RM_Bullet_ChargeSidearm</defName>
 		<label>charge shot</label>
 		<graphicData>
 			<texPath>Things/Projectile/Charge_Small</texPath>
@@ -93,9 +93,9 @@
 		</projectile>
 	</ThingDef>
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_Gun_ChargeBurster</defName>
-		<label>charge burster</label>
-		<description>A heavy charged-shot LMG. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nHaving gotten its name by its main area of use, this deadly weapon is used for area suppression by mechanoids and fighting an enemy when greatly outnumbered.</description>
+		<defName>RM_Gun_ReinforcedChargeLMG</defName>
+		<label>reinforced charge lmg</label>
+		<description>A reinforced charged-shot light machine gun. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.\n\nDesigned as a suppression weapon for infantry mechanoids with manipulators similar to human hands. Intended for use in field operations where allied forces are likely to be greatly outnumbered.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechnoidChargerLMG</texPath>
@@ -139,7 +139,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RM_Bullet_ChargerLMG</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ReinforcedChargeLMG</defaultProjectile>
 				<warmupTime>1.25</warmupTime>
 				<range>19.9</range>
 				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
@@ -161,7 +161,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>RM_Bullet_ChargerLMG</defName>
+		<defName>RM_Bullet_ReinforcedChargeLMG</defName>
 		<label>charge shot</label>
 		<graphicData>
 			<texPath>Things/Projectile/Charge_Small</texPath>
@@ -178,7 +178,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeLanceRevolver</defName>
 		<label>charge lance revolver</label>
-		<description>A small pulse-charged rail-assisted lance weapon. It fires a small single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>A small pulse-charged rail-assisted lance revolver. It fires a single small projectile at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRevolver</texPath>
@@ -256,7 +256,7 @@
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RM_Gun_ChargeLanceRifle</defName>
 		<label>charge lance rifle</label>
-		<description>An advanced pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, long range, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<description>An ergonomic pulse-charged rail-assisted lance rifle. It fires a single accurate shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRifle</texPath>
@@ -338,9 +338,9 @@
 	</ThingDef>
 	<!-- ================================ Coil Weapons ====================== -->
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_Gun_CoilPistol</defName>
-		<label>coil pistol</label>
-		<description>A short-range tesla coil-based weapons used by mechanoids. It shoots a burst of lighting projectiles, stunning and lightly burning their target before jumping to the next, causing damage to multiple targets with one shot.</description>
+		<defName>RM_Gun_ReinforcedCoilPistol</defName>
+		<label>reinforced coil pistol</label>
+		<description>A reinforced short-range tesla-coil pistol used by mechanoids. It shoots a burst of lighting projectiles, stunning and lightly burning their target before jumping to the next, capable of causing damage to multiple targets with each shot.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilPistol</texPath>
@@ -380,7 +380,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RM_Bullet_CoilPistolProjectile</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ReinforcedCoilPistol</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<range>24.9</range>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
@@ -413,7 +413,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>RM_Bullet_CoilPistolProjectile</defName>
+		<defName>RM_Bullet_ReinforcedCoilPistol</defName>
 		<label>lightning bolt</label>
 		<thingClass>VFEMech.TeslaProjectile</thingClass>
 		<graphicData>
@@ -439,9 +439,9 @@
 		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>RM_CoilRifle</defName>
-		<label>coil rifle</label>
-		<description>A tesla coil-based weapons used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, causing damage to multiple targets with one shot.</description>
+		<defName>RM_ReinforcedCoilRifle</defName>
+		<label>reinforced coil rifle</label>
+		<description>A reinforced tesla-coil based rifle used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, capable of causing damage to multiple targets with each shot.</description>
 		<techLevel>Spacer</techLevel>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -484,7 +484,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>RM_Bullet_CoilRifleProjectile</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ReinforcedCoilRifle</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
 				<range>32.9</range>
 				<soundCast>Shot_ChargeBlaster</soundCast>
@@ -513,7 +513,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>RM_Bullet_CoilRifleProjectile</defName>
+		<defName>RM_Bullet_ReinforcedCoilRifle</defName>
 		<label>lightning bolt</label>
 		<thingClass>VFEMech.TeslaProjectile</thingClass>
 		<graphicData>

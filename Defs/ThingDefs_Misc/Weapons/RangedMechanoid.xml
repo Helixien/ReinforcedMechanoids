@@ -2,9 +2,9 @@
 <Defs>
 	<!-- ================================ Inferno Canon MK.2 ====================== -->
 	<ThingDef ParentName="Gun_InfernoCannonBase">
-		<defName>RM_Gun_InfernoCannonMkTwo</defName>
-		<label>advanced inferno cannon</label>
-		<description>An advanced incendiary-shot mini-artillery device. It fires three large incendiary warhead.</description>
+		<defName>RM_Gun_ReinforcedInfernoCannon</defName>
+		<label>reinforced inferno cannon</label>
+		<description>A reinforced incendiary-shot mini-artillery device. It fires three large incendiary warheads per burst using an internal rotating chamber.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidInfernoCannonMk2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -42,9 +42,9 @@
 	</ThingDef>
 	<!-- ================================ Lance Weapons ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
-		<defName>RM_Gun_HeavyLance</defName>
-		<label>heavy charge lance</label>
-		<description>A heavy, pulse-charged rail-assisted lance weapon used by mechanoids. It fires three shoots in a burst in quick succession at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+		<defName>RM_Gun_ReinforcedChargeLance</defName>
+		<label>reinforced charge lance</label>
+		<description>A reinforced, pulse-charged rail-assisted lance weapon used by mechanoids. It fires three high-velocity rounds in quick succession as a burst, charged with unstable energy as each shot leaves the acceleration rail.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidHeavyLance</texPath>
@@ -102,9 +102,9 @@
 	</ThingDef>
 	<!-- ================================ Coil Weapons ====================== -->
 	<ThingDef ParentName="BaseGunWithQuality">
-		<defName>RM_CoilHeavy</defName>
-		<label>heavy coil gun</label>
-		<description>A medium-range tesla coil-based weapons used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, causing damage to multiple targets with one shot. Extremely dangerous and best avoided.</description>
+		<defName>RM_ReinforcedTeslaCoil</defName>
+		<label>reinforced tesla coil</label>
+		<description>A medium-range reinforced tesla-coil weapon used by mechanoids. It fires lighting projectiles, stunning and burning their target before jumping to the next, able to damage multiple targets with each shot. Extremely dangerous and best avoided.</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilTurret</texPath>
@@ -132,7 +132,7 @@
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
-				<defaultProjectile>RM_Bullet_TeslaProjectile</defaultProjectile>
+				<defaultProjectile>RM_Bullet_ReinforcedTeslaCoil</defaultProjectile>
 				<warmupTime>5</warmupTime>
 				<range>32.9</range>
 				<minRange>8.9</minRange>
@@ -158,7 +158,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>RM_Bullet_TeslaProjectile</defName>
+		<defName>RM_Bullet_ReinforcedTeslaCoil</defName>
 		<label>lightning bolt</label>
 		<thingClass>VFEMech.TeslaProjectile</thingClass>
 		<graphicData>
