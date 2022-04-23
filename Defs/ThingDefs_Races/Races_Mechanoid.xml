@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ================================ Mechanoid Zealot ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
+	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
 		<description>Bulky human-sized, Sangheili-class combat mechanoid build for medium and long-range combat while able commanding other mechanoids locally if a connection to command was lost. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
@@ -86,7 +86,7 @@
 		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Ranger ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
+	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
 		<description>Fast human-sized, Sangheili-class combat mechanoid built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
@@ -165,7 +165,7 @@
 		<aiAvoidCover>false</aiAvoidCover>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Marshal ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
+	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
 		<statBases>
@@ -354,7 +354,7 @@
 		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Vulture ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
+	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
 		<description>Fast, small support mechanoid built to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets at all ranges - especially in melee combat. They will avoid combat if possible and only engage if no other option is left.</description>

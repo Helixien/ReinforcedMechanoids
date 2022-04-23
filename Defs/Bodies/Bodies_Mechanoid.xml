@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ================================ Mechanoid Zealot ====================== -->
 	<BodyDef>
@@ -635,17 +635,17 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-	<!-- ================================ Mechanoid Walker ====================== -->
+	<!-- ================================ Mechanoid Caretaker ====================== -->
 	<BodyDef>
-		<defName>RM_Mechanical_Walker</defName>
-		<label>mechanical walker</label>
+		<defName>RM_Mechanical_Caretaker</defName>
+		<label>mechanical caretaker</label>
 		<corePart>
 			<def>MechanicalTermiteBodyFirstRing</def>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
 				<li>
-					<def>RM_MechanicalWalkerHead</def>
+					<def>RM_MechanicalCaretakerHead</def>
 					<coverage>0.25</coverage>
 					<height>Top</height>
 					<groups>

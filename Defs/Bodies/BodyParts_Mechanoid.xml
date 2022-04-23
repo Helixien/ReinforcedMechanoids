@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!--======== RM Body Parts ========-->
 	<BodyPartDef>
@@ -103,9 +103,9 @@
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>
 
-	<!--===================== Walker specific ====================-->
+	<!--===================== Caretaker specific ====================-->
 	<BodyPartDef>
-		<defName>RM_MechanicalWalkerHead</defName>
+		<defName>RM_MechanicalCaretakerHead</defName>
 		<label>head</label>
 		<hitPoints>60</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>

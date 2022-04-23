@@ -68,12 +68,12 @@ namespace ReinforcedMechanoids
         }
     }
 
-    public class JobGiver_AIFightEnemiesNearToWalker : JobGiver_AIFightEnemies
+    public class JobGiver_AIFightEnemiesNearToCaretaker : JobGiver_AIFightEnemies
     {
-        public static Pawn walker;
+        public static Pawn caretaker;
         public override bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
-            return walker.Position.DistanceTo(target.Position) <= 10;
+            return caretaker.Position.DistanceTo(target.Position) <= 10;
         }
     }
 
@@ -82,7 +82,7 @@ namespace ReinforcedMechanoids
     {
         public static bool Prefix(JobGiver_AIFightEnemy __instance, Pawn pawn, ref Job __result)
         {
-            if (!(__instance is JobGiver_AIFightEnemiesNearToWalker))
+            if (!(__instance is JobGiver_AIFightEnemiesNearToCaretaker))
             {
                 return TryModifyJob(pawn, ref __result);
             }
@@ -91,21 +91,21 @@ namespace ReinforcedMechanoids
 
         public static bool TryModifyJob(Pawn pawn, ref Job __result)
         {
-            if (pawn.RaceProps.IsMechanoid && pawn.kindDef != RM_DefOf.RM_Mech_Walker)
+            if (pawn.RaceProps.IsMechanoid && pawn.kindDef != RM_DefOf.RM_Mech_Caretaker)
             {
                 var otherPawns = pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction)
                     .Where(x => x.RaceProps.IsMechanoid && !x.Fogged() && !x.Dead && x.Awake()).Except(pawn)
                     .OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList();
-                if (otherPawns.Any(x => x.kindDef == RM_DefOf.RM_Mech_Walker))
+                if (otherPawns.Any(x => x.kindDef == RM_DefOf.RM_Mech_Caretaker))
                 {
-                    var firstCloseWalker = otherPawns.Where(x => x.kindDef == RM_DefOf.RM_Mech_Walker)
+                    var firstCloseCaretaker = otherPawns.Where(x => x.kindDef == RM_DefOf.RM_Mech_Caretaker)
                         .OrderBy(x => x.Position.DistanceTo(pawn.Position)).FirstOrDefault();
                     if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                     {
                         __result = HealOtherMechanoids(pawn, otherPawns);
                         if (__result is null)
                         {
-                            var followJob = TryGiveFollowJob(pawn, firstCloseWalker, 6);
+                            var followJob = TryGiveFollowJob(pawn, firstCloseCaretaker, 6);
                             if (followJob != null)
                             {
                                 followJob.locomotionUrgency = LocomotionUrgency.Amble;
@@ -116,19 +116,19 @@ namespace ReinforcedMechanoids
                     }
                     else
                     {
-                        var fightEnemiesJobGiver = new JobGiver_AIFightEnemiesNearToWalker();
-                        JobGiver_AIFightEnemiesNearToWalker.walker = firstCloseWalker;
+                        var fightEnemiesJobGiver = new JobGiver_AIFightEnemiesNearToCaretaker();
+                        JobGiver_AIFightEnemiesNearToCaretaker.caretaker = firstCloseCaretaker;
                         fightEnemiesJobGiver.ResolveReferences();
                         fightEnemiesJobGiver.targetAcquireRadius = 12f;
                         fightEnemiesJobGiver.targetKeepRadius = 12f;
                         var fightEnemiesJob = fightEnemiesJobGiver.TryGiveJob(pawn);
-                        JobGiver_AIFightEnemiesNearToWalker.walker = null;
+                        JobGiver_AIFightEnemiesNearToCaretaker.caretaker = null;
                         if (fightEnemiesJob != null)
                         {
                             __result = fightEnemiesJob;
                             return false;
                         }
-                        var nearestCell = JobGiver_WalkToPlayerBase.GetNearestCellToPlayerBase(firstCloseWalker, out var centerColony, out var firstBlockingBuilding);
+                        var nearestCell = JobGiver_WalkToPlayerBase.GetNearestCellToPlayerBase(firstCloseCaretaker, out var centerColony, out var firstBlockingBuilding);
                         if (firstBlockingBuilding != null && firstBlockingBuilding.Position.DistanceTo(pawn.Position) <= 10)
                         {
                             __result = MeleeAttackJob(firstBlockingBuilding);
@@ -138,13 +138,13 @@ namespace ReinforcedMechanoids
                             }
                         }
 
-                        if (firstCloseWalker.CurJobDef == JobDefOf.Wait)
+                        if (firstCloseCaretaker.CurJobDef == JobDefOf.Wait)
                         {
                             return true;
                         }
                         else
                         {
-                            var followJob = TryGiveFollowJob(pawn, firstCloseWalker, 6);
+                            var followJob = TryGiveFollowJob(pawn, firstCloseCaretaker, 6);
                             if (followJob != null)
                             {
                                 followJob.locomotionUrgency = LocomotionUrgency.Amble;
@@ -311,7 +311,7 @@ namespace ReinforcedMechanoids
         [HarmonyPostfix]
         public static void Postfix(PawnKindDef __0, ref bool __result)
         {
-            if (__0 == RM_DefOf.RM_Mech_Walker)
+            if (__0 == RM_DefOf.RM_Mech_Caretaker)
             {
                 __result = false;
             }

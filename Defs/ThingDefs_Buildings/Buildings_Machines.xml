@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="BuildingBase" Name="RM_DroidBase" Abstract="True">
 		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
@@ -157,6 +157,7 @@
 				<pawnToSpawn>RM_Droid_Security</pawnToSpawn>
 				<allowedWorkTypes>
 					<li>Firefighter</li>
+					<li>Doctor</li>
 				</allowedWorkTypes>
 				<extraChargingPower>1200</extraChargingPower>
 				<hoursToRecharge>18</hoursToRecharge>

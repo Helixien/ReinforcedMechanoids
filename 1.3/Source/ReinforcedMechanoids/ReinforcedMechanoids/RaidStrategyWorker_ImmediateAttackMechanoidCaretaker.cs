@@ -9,14 +9,10 @@ using Verse;
 
 namespace ReinforcedMechanoids
 {
-    public class RaidStrategyWorker_ImmediateAttackMechanoidWalker : RaidStrategyWorker_ImmediateAttack
+    public class RaidStrategyWorker_ImmediateAttackMechanoidCaretaker : RaidStrategyWorker_ImmediateAttack
 	{
 		public override bool CanUseWith(IncidentParms parms, PawnGroupKindDef groupKind)
 		{
-			if (groupKind != RM_DefOf.WalkerRaid)
-            {
-				return false;
-            }
 			if (parms.faction != null && parms.faction != Faction.OfMechanoids)
 			{
 				return false;
@@ -33,7 +29,7 @@ namespace ReinforcedMechanoids
 		}
 		protected bool MatchesRequiredPawnKind(PawnKindDef kind)
         {
-			return kind == RM_DefOf.RM_Mech_Walker;
+			return kind == RM_DefOf.RM_Mech_Caretaker;
         }
 
 		protected int MinRequiredPawnsForPoints(float pointsTotal, Faction faction = null)

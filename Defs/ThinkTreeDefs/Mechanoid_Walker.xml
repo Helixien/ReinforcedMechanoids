@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThinkTreeDef>
-		<defName>RM_Walker</defName>
+		<defName>RM_Caretaker</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
 				<li Class="ThinkNode_Subtree">

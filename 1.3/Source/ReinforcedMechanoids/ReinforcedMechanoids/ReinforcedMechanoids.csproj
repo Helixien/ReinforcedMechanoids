@@ -52,7 +52,7 @@
     <Compile Include="Jobs\JobDriver_RepairMechanoid.cs" />
     <Compile Include="Jobs\JobDriver_RepairThing.cs" />
     <Compile Include="Jobs\JobGiver_WalkToPlayerBase.cs" />
-    <Compile Include="RaidStrategyWorker_ImmediateAttackMechanoidWalker.cs" />
+    <Compile Include="RaidStrategyWorker_ImmediateAttackMechanoidCaretaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReinforcedMechanoidsMod.cs" />
     <Compile Include="ReinforcedMechanoidsSettings.cs" />

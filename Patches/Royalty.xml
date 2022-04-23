@@ -9,14 +9,11 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-						<PawnGroupKindDef>
-							<defName>WalkerRaid</defName>
-							<workerClass>PawnGroupKindWorker_Normal</workerClass>
-						</PawnGroupKindDef>
-						<!-- ================================ Mechanoid Walker Raid ====================== -->
+
+						<!-- ================================ Mechanoid Caretaker Raid ====================== -->
 						<RaidStrategyDef Name="ImmediateAttack">
-							<defName>ImmediateAttackMechanoidWalker</defName>
-							<workerClass>ReinforcedMechanoids.RaidStrategyWorker_ImmediateAttackMechanoidWalker</workerClass>
+							<defName>ImmediateAttackMechanoidCaretaker</defName>
+							<workerClass>ReinforcedMechanoids.RaidStrategyWorker_ImmediateAttackMechanoidCaretaker</workerClass>
 							<selectionWeightPerPointsCurve>
 								<points>
 									<li>(0, 1)</li>
@@ -50,16 +47,17 @@
 							<letterLabelFriendly>Friendlies</letterLabelFriendly>
 							<arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
 						</RaidStrategyDef>
-						<!-- ================================ Mechanoid Walker Race ====================== -->
+						<!-- ================================ Mechanoid Caretaker Race ====================== -->
 						<ThingDef ParentName="BaseMechanoid">
-							<defName>RM_Mech_Walker</defName>
-							<label>walker</label>
+							<defName>RM_Mech_Caretaker</defName>
+							<label>caretaker</label>
 							<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carapace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
 							<statBases>
 								<MoveSpeed>0.35</MoveSpeed>
 								<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
 								<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
 								<PsychicSensitivity>0.85</PsychicSensitivity>
+								<VEF_EnergyShieldRadiusPawn>10</VEF_EnergyShieldRadiusPawn>
 							</statBases>
 							<tools>
 								<li>
@@ -74,10 +72,10 @@
 								</li>
 							</tools>
 							<race>
-								<body>RM_Mechanical_Walker</body>
+								<body>RM_Mechanical_Caretaker</body>
 								<baseBodySize>2.5</baseBodySize>
 								<baseHealthScale>12</baseHealthScale>
-								<thinkTreeMain>RM_Walker</thinkTreeMain>
+								<thinkTreeMain>RM_Caretaker</thinkTreeMain>
 								<lifeStageAges>
 									<li>
 										<def>MechanoidFullyFormed</def>
@@ -93,17 +91,13 @@
 								<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 							</race>
 							<comps>
-								<li Class="CompProperties_ProjectileInterceptor">
-									<radius>10</radius>
-									<interceptGroundProjectiles>true</interceptGroundProjectiles>
-									<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
-									<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
-									<color>(0.6, 0.6, 0.8)</color>
-									<idlePulseSpeed>3</idlePulseSpeed>
-									<minIdleAlpha>0.05</minIdleAlpha>
+								<li Class="VFECore.CompProperties_ShieldField">
+									<shieldColour>(0.6, 0.6, 0.8)</shieldColour>
+									<shieldRadiusStat>VEF_EnergyShieldRadiusPawn</shieldRadiusStat>
 									<disarmedByEmpForTicks>600</disarmedByEmpForTicks>
 									<activeSound>Broadshield_Ambience</activeSound>
 								</li>
+								
 								<li Class="ReinforcedMechanoids.CompProperties_ExplodeIfNoOtherFactionPawns">
 								</li>
 								<li Class="CompProperties_Explosive">
@@ -127,16 +121,16 @@
 								<ComponentSpacer>3</ComponentSpacer>
 							</butcherProducts>
 						</ThingDef>
-						<!-- ================================ Mechanoid Walker Pawn ====================== -->
+						<!-- ================================ Mechanoid Caretaker Pawn ====================== -->
 						<PawnKindDef ParentName="BaseMechanoidKind">
-							<defName>RM_Mech_Walker</defName>
-							<label>walker</label>
-							<race>RM_Mech_Walker</race>
+							<defName>RM_Mech_Caretaker</defName>
+							<label>caretaker</label>
+							<race>RM_Mech_Caretaker</race>
 							<combatPower>100</combatPower>
 							<lifeStages>
 								<li>
 									<bodyGraphicData>
-										<texPath>Things/Pawn/Mechanoid/Walker</texPath>
+										<texPath>Things/Pawn/Mechanoid/Caretaker</texPath>
 										<graphicClass>Graphic_Multi</graphicClass>
 										<drawSize>4.0</drawSize>
 										<shadowData>
@@ -351,14 +345,14 @@
 					<xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 					<value>
 						<li>
-							<kindDef>WalkerRaid</kindDef>
+							<kindDef>Combat</kindDef>
 							<commonality>1</commonality>
 							<options>
 								<Mech_Centipede>5</Mech_Centipede>
 								<Mech_Lancer>8</Mech_Lancer>
 								<Mech_Scyther>6</Mech_Scyther>
 								<Mech_Pikeman>5</Mech_Pikeman>
-								<RM_Mech_Walker>1</RM_Mech_Walker>
+								<RM_Mech_Caretaker>1</RM_Mech_Caretaker>
 							</options>
 						</li>
 					</value>
