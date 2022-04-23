@@ -46,7 +46,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>RM_Bullet_ChargeRevolver</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>24.9</range>
+				<range>21.9</range>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>Shot_ChargeBlaster</soundCast>
@@ -141,7 +141,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>RM_Bullet_ChargerLMG</defaultProjectile>
 				<warmupTime>1.25</warmupTime>
-				<range>22.9</range>
+				<range>19.9</range>
 				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
 				<burstShotCount>8</burstShotCount>
 				<soundCast>Shot_ChargeBlaster</soundCast>

@@ -77,6 +77,7 @@
 				<defaultProjectile>Bullet_ChargeLance</defaultProjectile>
 				<warmupTime>2.5</warmupTime>
 				<range>33.9</range>
+				<minRange>8.9</minRange>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>ChargeLance_Fire</soundCast>
@@ -111,14 +112,13 @@
 			<drawSize>1.5</drawSize>
 		</graphicData>
 		<tradeability>None</tradeability>
-		<destroyOnDrop>true</destroyOnDrop>
 		<relicChance>0</relicChance>
 		<statBases>
 			<MarketValue>1400</MarketValue>
-			<AccuracyTouch>1</AccuracyTouch>
-			<AccuracyShort>1</AccuracyShort>
-			<AccuracyMedium>1</AccuracyMedium>
-			<AccuracyLong>1</AccuracyLong>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.9</AccuracyMedium>
+			<AccuracyLong>0.95</AccuracyLong>
 			<RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
 			<Mass>18</Mass>
 			<Flammability>0</Flammability>
