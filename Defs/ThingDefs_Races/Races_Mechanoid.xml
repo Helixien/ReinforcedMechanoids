@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
-		<description>Bulky human-sized, Sangheili-class combat mechanoid build for medium and long-range combat while able commanding other mechanoids locally if a connection to command was lost. Their bodies are well armored, leaving only their heads vulnerable - especially in melee combat.</description>
+		<description>Bulky Sangheili-class humanoid mechanoids, outfitted for mid to long-range combat and capable of acting as a mobile command post in guerilla operations. This means that while their body is properly protected, the head is lightly armoured and remains vulnerable in melee.</description>
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
@@ -89,7 +89,7 @@
 	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
-		<description>Fast human-sized, Sangheili-class combat mechanoid built to serve as cannon fodder. Their bodies are light, making them vulnerable targets at all ranges - especially in melee combat.</description>
+		<description>Rapid Sangheili-class humanoid mechanoids designed to act as cannon fodder. Very lightly armoured to promote mass-produced swarm tactics, but particularly weak once engaged in melee.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
@@ -168,12 +168,12 @@
 	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
+		<description>Reinforced Sangheili-class humanoid mechanoids, outfitted for rapid close-range engagement while shrugging off heavy suppressive fire. While their bodies are covered with razors and spikes to punish melee attackers, their primary attack method is using their twin arm blades to sever limbs and gut victims. If that wasn’t already enough, they can charge and ram their enemy with their forehead-mounted axe.</description>
 		<statBases>
 			<MoveSpeed>2.4</MoveSpeed>
 			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 		</statBases>
-		<description>Human-sized, Sangheili-class, human-sized combat mechanoid specializing in rapid approach and close-range combat, whilst being able to withstand heavy fire. Their bodies are covered in points and blades, but they mostly use two arm blades to lop off limbs or gut their victims alive. Alternatively, they will use their head-mounted blade to ram enemies, also gutting them alive.</description>
 		<tools>
 			<li>
 				<label>left blade</label>
@@ -255,7 +255,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
 		<label>behemoth</label>
-		<description>Heavy, Mgalekgolo-class mechanoid that move slowly on two massive legs. Their thick carapace makes them very effective at drawing enemy fire. Using a shield to protect their body, they are open to be flanked.</description>
+		<description>Heavy Mgalekgolo-class mechanoids, outfitted with extremely bulky reactive armour plating to protect them as they engage their weapon systems. While they are also fitted with a forearm-mounted shield, their thick tree-trunk legs hampers their turning and makes them vulnerable to flanking manoeuvres.</description>
 		<statBases>
 			<MoveSpeed>1.0</MoveSpeed>
 			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
@@ -357,7 +357,7 @@
 	<ThingDef ParentName="BaseMechanoidCaretaker">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
-		<description>Fast, small support mechanoid built to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets at all ranges - especially in melee combat. They will avoid combat if possible and only engage if no other option is left.</description>
+		<description>Small and agile support mechanoids designed to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets but especially to being tied up in melee. They will actively avoid engaging in combat unless they are left with no alternative.</description>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
@@ -435,7 +435,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Caretaker</defName>
 		<label>caretaker</label>
-		<description>Heavy support mechanoids that glide on dozens of tiny legs. They carry a mobile shield generator on their back, protected by thick carapace, and lack any kind of offensive capabilities. They are vulnerable to anything that is inside their shields and require an escort.</description>
+		<description>Super heavy support mechanoids that are propelled forward on dozens of tiny legs. Essentially a heavily armoured mobile shield generator, they are intended to deploy alongside an escort to improve their chances of survival. Extremely vulnerable should they be without backup if an enemy enters the shield dome as they lack offensive capabilities.</description>
 		<statBases>
 			<MoveSpeed>0.35</MoveSpeed>
 			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
