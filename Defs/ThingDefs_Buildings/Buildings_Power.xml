@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>RM_VanometricGenerator</defName>
 		<label>vanometric generator</label>
-		<description>A rigged up vanometric mechanoid cell generating a great amount of electricity. Lacking the correct cooling facilities, it produces a high a lot of heat which is dispersed into the surrounding area.</description>
+		<description>A jury-rigged housing for a vanometric mechanoid cell, cobbled together for the highest power output possible. Due to the haphazard nature of the construction, it generates excessive amounts of heat into the surrounding area.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Power/VanometricGenerator</texPath>
