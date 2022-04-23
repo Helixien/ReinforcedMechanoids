@@ -7,7 +7,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Combat</defName>
 		<label>ancient combat mechanoid</label>
-		<description>An ancient, somewhat complex minded ranged combat droid. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and consumes very little energy.</description>
+		<description>An ancient and sophisticated ranged combat droid with an extremely efficient power system. Patrols designated areas while scanning and autonomously engaging nearby threats. Unlike most combat drones, this model is fitted with humanoid manipulators and can use such weapons.</description>
 		<statBases>
 			<MoveSpeed>4.0</MoveSpeed>
 			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
@@ -86,7 +86,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Worker</defName>
 		<label>ancient worker mechanoid</label>
-		<description>An ancient, somewhat complex minded worker droid. Searches for nearby work tasks and will autonomously attampt to fulfill them. Unlike most worker drones, this model is capable of doing different kinds of work and consumes very little energy.</description>
+		<description>An ancient and sophisticated worker droid with an extremely efficient power system. Searches for nearby work task designations and attempts to complete them.  Unlike most worker drones, this model is fitted with humanoid manipulators and can use a variety of tools.</description>
 		<statBases>
 			<MoveSpeed>3.0</MoveSpeed>
 			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
@@ -157,11 +157,11 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-	<!--============================= Security Droid ================================-->
+	<!--============================= Guardian Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
-		<defName>RM_Droid_Security</defName>
-		<label>security mechanoid</label>
-		<description>A simple minded ranged combat drone slightly smaller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
+		<defName>RM_Droid_Guardian</defName>
+		<label>guardian mechanoid</label>
+		<description>A relatively simple ranged combat drone that stands slightly shorter than a regular human. Patrols designated areas while scanning and autonomously engaging nearby threats. Unlike most combat drones, this model is fitted with humanoid manipulators and can use such weapons. Capable of performing emergency tasks such as extinguishing fires.</description>
 		<statBases>
 			<MoveSpeed>4.0</MoveSpeed>
 			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
@@ -210,9 +210,9 @@
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_Droid_Security</defName>
-		<label>security mechanoid</label>
-		<race>RM_Droid_Security</race>
+		<defName>RM_Droid_Guardian</defName>
+		<label>guardian mechanoid</label>
+		<race>RM_Droid_Guardian</race>
 		<combatPower>99999</combatPower>
 		<lifeStages>
 			<li>
@@ -237,7 +237,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_Droid_Spartan</defName>
 		<label>spartan mechanoid</label>
-		<description>A highly complex and well armoured ranged combat drone taller than a normal human. Patrols designated areas analyzing for nearby threats and will autonomously engage them. Unlike most combat drones, this model is capable of using different weapons and do emergency tasks like firefighting.</description>
+		<description>A reinforced and sophisticated ranged combat drone that stands taller than a regular human. Patrols designated areas while scanning and autonomously engaging nearby threats. Unlike most combat drones, this model is fitted with humanoid manipulators and can use such weapons.</description>
 		<statBases>
 			<MoveSpeed>4.8</MoveSpeed>
 			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>

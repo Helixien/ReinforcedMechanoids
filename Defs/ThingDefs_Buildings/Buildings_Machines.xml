@@ -124,11 +124,11 @@
 			<li Class="VFEAncients.CompProperties_SolarPowerUp" MayRequire="VanillaExpanded.VFEA"/>
 		</comps>
 	</ThingDef>
-	<!--============================= Security Mechanoid ================================-->
+	<!--============================= Guardian Mechanoid ================================-->
 	<ThingDef ParentName="RM_DroidBase">
-		<defName>RM_Droid_SecurityBase</defName>
-		<label>security mechanoid charging station</label>
-		<description>A station for assembling and recharging spacer security combat mechanoids.</description>
+		<defName>RM_Droid_GuardianBase</defName>
+		<label>guardian mechanoid charging station</label>
+		<description>A station for assembling and recharging spacer guardian combat mechanoids.</description>
 		<graphicData>
 			<texPath>Things/Building/Automation/SecurityDroidBase</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -154,7 +154,7 @@
 				<basePowerConsumption>500</basePowerConsumption>
 			</li>
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<pawnToSpawn>RM_Droid_Security</pawnToSpawn>
+				<pawnToSpawn>RM_Droid_Guardian</pawnToSpawn>
 				<allowedWorkTypes>
 					<li>Firefighter</li>
 					<li>Doctor</li>
