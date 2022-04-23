@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ================================ Mechanoid Zealot ====================== -->
-	<ThingDef ParentName="BaseMechanoidCaretaker">
+	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Zealot</defName>
 		<label>zealot</label>
 		<description>Bulky Sangheili-class humanoid mechanoids, outfitted for mid to long-range combat and capable of acting as a mobile command post in guerilla operations. This means that while their body is properly protected, the head is lightly armoured and remains vulnerable in melee.</description>
@@ -86,7 +86,7 @@
 		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Ranger ====================== -->
-	<ThingDef ParentName="BaseMechanoidCaretaker">
+	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Ranger</defName>
 		<label>ranger</label>
 		<description>Rapid Sangheili-class humanoid mechanoids designed to act as cannon fodder. Very lightly armoured to promote mass-produced swarm tactics, but particularly weak once engaged in melee.</description>
@@ -165,7 +165,7 @@
 		<aiAvoidCover>false</aiAvoidCover>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Marshal ====================== -->
-	<ThingDef ParentName="BaseMechanoidCaretaker">
+	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Marshal</defName>
 		<label>marshal</label>
 		<description>Reinforced Sangheili-class humanoid mechanoids, outfitted for rapid close-range engagement while shrugging off heavy suppressive fire. While their bodies are covered with razors and spikes to punish melee attackers, their primary attack method is using their twin arm blades to sever limbs and gut victims. If that wasn’t already enough, they can charge and ram their enemy with their forehead-mounted axe.</description>
@@ -354,7 +354,7 @@
 		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Vulture ====================== -->
-	<ThingDef ParentName="BaseMechanoidCaretaker">
+	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Vulture</defName>
 		<label>vulture</label>
 		<description>Small and agile support mechanoids designed to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets but especially to being tied up in melee. They will actively avoid engaging in combat unless they are left with no alternative.</description>
