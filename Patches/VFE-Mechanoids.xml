@@ -6,27 +6,27 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<!--============================= Security Mechanoid ================================-->
+				<!--============================= Guardian Mechanoid ================================-->
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/designationCategory</xpath>
+					<xpath>/Defs/ThingDef[defName="RM_Droid_GuardianBase"]/designationCategory</xpath>
 					<value>
 						<designationCategory>VFE_Factory</designationCategory>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/researchPrerequisites</xpath>
+					<xpath>/Defs/ThingDef[defName="RM_Droid_GuardianBase"]/researchPrerequisites</xpath>
 					<value>
 						<li>VFE_AutomatedDefensiveMeasures</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="RM_Droid_SecurityBase"]/costList</xpath>
+					<xpath>/Defs/ThingDef[defName="RM_Droid_GuardianBase"]/costList</xpath>
 					<value>
 						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="RM_Droid_Security"]/butcherProducts</xpath>
+					<xpath>/Defs/ThingDef[defName="RM_Droid_Guardian"]/butcherProducts</xpath>
 					<value>
 						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
 					</value>

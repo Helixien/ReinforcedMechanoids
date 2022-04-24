@@ -283,6 +283,25 @@
 				<hoursActive>144</hoursActive>
 				<canPickupWeapons>true</canPickupWeapons>
 			</li>
+			<li Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.CompShieldBubble</compClass>
+				<blockRangedAttack>true</blockRangedAttack>
+				<blockMeleeAttack>false</blockMeleeAttack>
+				<showWhenDrafted>true</showWhenDrafted>
+				<showOnHostiles>true</showOnHostiles>
+				<showOnNeutralInCombat>true</showOnNeutralInCombat>
+				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<EnergyShieldRechargeRate>7</EnergyShieldRechargeRate>
+				<EnergyShieldEnergyMax>120</EnergyShieldEnergyMax>
+				<chargeFullyWhenMade>true</chargeFullyWhenMade>
+				<minShieldSize>2.2</minShieldSize>
+				<maxShieldSize>2.2</maxShieldSize>
+				<disableRotation>true</disableRotation>
+			</li>
+			<li Class="VFECore.CompProperties_ShieldField">
+				<shieldColour>(0.96, 0.9, 0.5)</shieldColour>
+				<disarmedByEmpForTicks>1800</disarmedByEmpForTicks>
+			</li>
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
