@@ -482,7 +482,7 @@
 				<activeSound>Broadshield_Ambience</activeSound>
 			</li>
 			<li Class="ReinforcedMechanoids.CompProperties_ExplodeIfNoOtherFactionPawns">
-								</li>
+			</li>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>6.9</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
