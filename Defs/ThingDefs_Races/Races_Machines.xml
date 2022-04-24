@@ -243,6 +243,7 @@
 			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
 			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
+			<VEF_EnergyShieldRadiusPawn>5</VEF_EnergyShieldRadiusPawn>
 		</statBases>
 		<tools>
 			<li>
@@ -300,6 +301,7 @@
 			</li>
 			<li Class="VFECore.CompProperties_ShieldField">
 				<shieldColour>(0.96, 0.9, 0.5)</shieldColour>
+				<shieldRadiusStat>VEF_EnergyShieldRadiusPawn</shieldRadiusStat>
 				<disarmedByEmpForTicks>1800</disarmedByEmpForTicks>
 			</li>
 		</comps>

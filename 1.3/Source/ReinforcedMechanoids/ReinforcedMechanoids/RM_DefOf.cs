@@ -16,5 +16,6 @@ namespace ReinforcedMechanoids
 		public static BodyPartDef RM_BehemothShield;
 		public static ThingDef RM_VanometricGenerator;
 		public static ThingDef RM_VanometricMechanoidCell;
+		public static HediffDef RM_BehemothAttack;
 	}
 }

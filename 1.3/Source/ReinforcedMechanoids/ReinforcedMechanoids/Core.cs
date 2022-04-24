@@ -2,6 +2,7 @@
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
@@ -337,6 +338,35 @@ namespace ReinforcedMechanoids
                 }
             }
             return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnTweener), "PreDrawPosCalculation")]
+    public static class PawnTweener_PreDrawPosCalculation_Patch
+    {
+        private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            var codes = instructions.ToList();
+            var pawnField = AccessTools.Field(typeof(PawnTweener), "pawn");
+            for (var i = 0; i < codes.Count; i++)
+            {
+                yield return codes[i];
+                if (i > 1 && codes[i - 1].opcode == OpCodes.Ldloc_1 && codes[i].opcode == OpCodes.Ldloc_2)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldfld, pawnField);
+                    yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(PawnTweener_PreDrawPosCalculation_Patch), "ReturnNum"));
+                }
+            }
+        }
+
+        public static float ReturnNum(float num, Pawn pawn)
+        {
+            if (!pawn.pather.moving && pawn.health.hediffSet.GetFirstHediffOfDef(RM_DefOf.RM_BehemothAttack) != null)
+            {
+                return num * 0.5f;
+            }
+            return num;
         }
     }
 }

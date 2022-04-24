@@ -13,6 +13,25 @@
 	</modExtensions>
   </DamageDef>
   
+  <HediffDef>
+    <defName>RM_BehemothAttack</defName>
+    <label>behemoth attack</label>
+    <description>behemoth attack.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+		<becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+  
 	<ManeuverDef>
     <defName>RM_BehemothAttack</defName>
     <requiredCapacity>RM_BehemothAttack</requiredCapacity>
