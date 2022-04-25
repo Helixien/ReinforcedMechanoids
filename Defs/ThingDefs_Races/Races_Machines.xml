@@ -292,17 +292,13 @@
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
+				<shieldColor>(0.96, 0.9, 0.5)</shieldColor>
 				<EnergyShieldRechargeRate>7</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>120</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.2</minShieldSize>
-				<maxShieldSize>2.2</maxShieldSize>
+				<maxShieldSize>2.7</maxShieldSize>
 				<disableRotation>true</disableRotation>
-			</li>
-			<li Class="VFECore.CompProperties_ShieldField">
-				<shieldColour>(0.96, 0.9, 0.5)</shieldColour>
-				<shieldRadiusStat>VEF_EnergyShieldRadiusPawn</shieldRadiusStat>
-				<disarmedByEmpForTicks>1800</disarmedByEmpForTicks>
 			</li>
 		</comps>
 	</ThingDef>
