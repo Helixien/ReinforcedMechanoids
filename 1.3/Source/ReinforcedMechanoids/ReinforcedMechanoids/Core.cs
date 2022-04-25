@@ -362,7 +362,7 @@ namespace ReinforcedMechanoids
 
         public static float ReturnNum(float num, Pawn pawn)
         {
-            if (!pawn.pather.moving && pawn.health.hediffSet.GetFirstHediffOfDef(RM_DefOf.RM_BehemothAttack) != null)
+            if (pawn.pather != null && !pawn.pather.moving && pawn.health?.hediffSet?.GetFirstHediffOfDef(RM_DefOf.RM_BehemothAttack) != null)
             {
                 return num * 0.5f;
             }
