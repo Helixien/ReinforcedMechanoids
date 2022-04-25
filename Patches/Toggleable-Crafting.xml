@@ -32,9 +32,9 @@
 		<enabled>False</enabled>
 		<label>Enable clean mechanoids skins</label>
 		<operations>
-			<!-- ================ Security Mechanoid ================ -->
+			<!-- ================ Guardian Mechanoid ================ -->
 			<li Class="PatchOperationReplace">
-				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Security"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Guardian"]/lifeStages/li/bodyGraphicData/texPath</xpath>
 				<value>
 					<texPath>Things/Pawn/Droid/SecurityDroid_ALT/SecurityDroid</texPath>
 				</value>
