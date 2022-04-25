@@ -44,7 +44,7 @@ namespace ReinforcedMechanoids
                         }
                         else if (ToRepair.health.hediffSet.hediffs.OfType<Hediff_Injury>().TryRandomElement(out var injury))
                         {
-                            injury.Heal(0.3f);
+                            injury.Heal(0.09f);
                         }
                         else
                         {

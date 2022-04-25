@@ -312,7 +312,7 @@ namespace ReinforcedMechanoids
         [HarmonyPostfix]
         public static void Postfix(PawnKindDef __0, ref bool __result)
         {
-            if (__0 == RM_DefOf.RM_Mech_Caretaker)
+            if (__0 == RM_DefOf.RM_Mech_Caretaker || __0 == RM_DefOf.RM_Mech_Vulture)
             {
                 __result = false;
             }

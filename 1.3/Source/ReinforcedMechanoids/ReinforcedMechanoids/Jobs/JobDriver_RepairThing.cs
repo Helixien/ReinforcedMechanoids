@@ -30,7 +30,7 @@ namespace ReinforcedMechanoids
                 ticksToNextRepair -= num;
                 if (ticksToNextRepair <= 0f)
                 {
-                    ticksToNextRepair += 20f;
+                    ticksToNextRepair += 35f;
                     base.TargetThingA.HitPoints++;
                     base.TargetThingA.HitPoints = Mathf.Min(base.TargetThingA.HitPoints, base.TargetThingA.MaxHitPoints);
                     base.Map.listerBuildingsRepairable.Notify_BuildingRepaired((Building)base.TargetThingA);
