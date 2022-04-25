@@ -1,53 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <DamageDef ParentName="BluntBase">
-    <defName>RM_BehemothAttack</defName>
-    <deathMessage>{0} has been smashed to death.</deathMessage>
-    <label>behemoth attack</label>
-    <workerClass>VFECore.DamageWorker_PushBackAttackMelee</workerClass>
-	<modExtensions>
-		<li Class="VFECore.DamageExtension">
-			<pushBackDistance>2~5</pushBackDistance>
-		</li>
-	</modExtensions>
-  </DamageDef>
-  
-  <HediffDef>
-    <defName>RM_BehemothAttack</defName>
-    <label>behemoth attack</label>
-    <description>behemoth attack.</description>
-    <hediffClass>HediffWithComps</hediffClass>
-    <comps>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>300</disappearsAfterTicks>
-      </li>
-      <li Class="HediffCompProperties_DisappearsOnDeath"/>
-    </comps>
-    <isBad>false</isBad>
-    <stages>
-      <li>
-		<becomeVisible>false</becomeVisible>
-      </li>
-    </stages>
-  </HediffDef>
-  
+	<DamageDef ParentName="BluntBase">
+		<defName>RM_BehemothAttack</defName>
+		<deathMessage>{0} has been smashed to death.</deathMessage>
+		<label>behemoth attack</label>
+		<workerClass>VFECore.DamageWorker_PushBackAttackMelee</workerClass>
+		<modExtensions>
+			<li Class="VFECore.DamageExtension">
+				<pushBackDistance>2~5</pushBackDistance>
+			</li>
+		</modExtensions>
+	</DamageDef>
+	<HediffDef>
+		<defName>RM_BehemothAttack</defName>
+		<label>behemoth attack</label>
+		<description>behemoth attack.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
 	<ManeuverDef>
-    <defName>RM_BehemothAttack</defName>
-    <requiredCapacity>RM_BehemothAttack</requiredCapacity>
-    <verb>
-      <verbClass>ReinforcedMechanoids.Verb_MeleeAttackDamageBehemoth</verbClass>
-      <meleeDamageDef>RM_BehemothAttack</meleeDamageDef>
-    </verb>
-    <logEntryDef>MeleeAttack</logEntryDef>
-    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
-    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
-    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
-    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
-  </ManeuverDef>
-  
-  <ToolCapacityDef>
-    <defName>RM_BehemothAttack</defName>
-    <label>behemoth attack</label>
-  </ToolCapacityDef>
+		<defName>RM_BehemothAttack</defName>
+		<requiredCapacity>RM_BehemothAttack</requiredCapacity>
+		<verb>
+			<verbClass>ReinforcedMechanoids.Verb_MeleeAttackDamageBehemoth</verbClass>
+			<meleeDamageDef>RM_BehemothAttack</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+	<ToolCapacityDef>
+		<defName>RM_BehemothAttack</defName>
+		<label>behemoth attack</label>
+	</ToolCapacityDef>
 </Defs>

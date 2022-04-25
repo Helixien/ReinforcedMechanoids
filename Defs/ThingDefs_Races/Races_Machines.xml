@@ -296,8 +296,8 @@
 				<EnergyShieldRechargeRate>7</EnergyShieldRechargeRate>
 				<EnergyShieldEnergyMax>120</EnergyShieldEnergyMax>
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
-				<minShieldSize>2.2</minShieldSize>
-				<maxShieldSize>2.7</maxShieldSize>
+				<minShieldSize>1.5</minShieldSize>
+				<maxShieldSize>2.0</maxShieldSize>
 				<disableRotation>true</disableRotation>
 			</li>
 		</comps>
