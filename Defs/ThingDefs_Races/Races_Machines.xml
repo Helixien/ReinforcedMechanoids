@@ -3,6 +3,50 @@
 	<ThingDef ParentName="BaseMechanoid" Name="RM_BaseDroid" Abstract="True">
 		<thingClass>VFEMech.Machine</thingClass>
 	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind" Name="RM_BaseDroidKind" Abstract="True">
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>0</range>
+			</li>
+		</skills>
+	</PawnKindDef>
 	<!--============================= Ancient Combat Mechanoid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_AncientDroid_Combat</defName>
@@ -58,7 +102,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
+	<PawnKindDef ParentName="RM_BaseDroidKind">
 		<defName>RM_AncientDroid_Combat</defName>
 		<label>ancient combat mechanoid</label>
 		<race>RM_AncientDroid_Combat</race>
@@ -79,6 +123,10 @@
 			<li>
 				<skill>Shooting</skill>
 				<range>15</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>9</range>
 			</li>
 		</skills>
 	</PawnKindDef>
@@ -133,7 +181,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
+	<PawnKindDef ParentName="RM_BaseDroidKind">
 		<defName>RM_AncientDroid_Worker</defName>
 		<label>ancient worker mechanoid</label>
 		<race>RM_AncientDroid_Worker</race>
@@ -156,6 +204,56 @@
 				</bodyGraphicData>
 			</li>
 		</lifeStages>
+		<skills Inherit="False">
+			<li>
+				<skill>Shooting</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>5</range>
+			</li>
+			<li>
+				<skill>Animals</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<range>8</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>0</range>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<range>10</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>0</range>
+			</li>
+		</skills>
 	</PawnKindDef>
 	<!--============================= Guardian Droid ================================-->
 	<ThingDef ParentName="RM_BaseDroid">
@@ -209,7 +307,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
+	<PawnKindDef ParentName="RM_BaseDroidKind">
 		<defName>RM_Droid_Guardian</defName>
 		<label>guardian mechanoid</label>
 		<race>RM_Droid_Guardian</race>
@@ -230,6 +328,10 @@
 			<li>
 				<skill>Shooting</skill>
 				<range>6</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4</range>
 			</li>
 		</skills>
 	</PawnKindDef>
@@ -302,7 +404,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
+	<PawnKindDef ParentName="RM_BaseDroidKind">
 		<defName>RM_Droid_Spartan</defName>
 		<combatPower>99999</combatPower>
 		<label>spartan mechanoid</label>
@@ -323,6 +425,10 @@
 			<li>
 				<skill>Shooting</skill>
 				<range>12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>10</range>
 			</li>
 		</skills>
 	</PawnKindDef>

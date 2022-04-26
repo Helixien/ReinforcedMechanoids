@@ -118,6 +118,9 @@
 					<li>Hauling</li>
 					<li>Firefighter</li>
 					<li>PlantCutting</li>
+					<li>Growing</li>
+					<li>Cooking</li>
+					<li>BasicWorker</li>
 				</allowedWorkTypes>
 			</li>
 			<li Class="CompProperties_Flickable"/>
