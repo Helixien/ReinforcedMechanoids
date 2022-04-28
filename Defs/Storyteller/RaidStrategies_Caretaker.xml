@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<RaidStrategyDef Name="ImmediateAttack">
+	<RaidStrategyDef>
 		<defName>ImmediateAttackMechanoidCaretaker</defName>
 		<workerClass>ReinforcedMechanoids.RaidStrategyWorker_ImmediateAttackMechanoidCaretaker</workerClass>
 		<selectionWeightPerPointsCurve>
