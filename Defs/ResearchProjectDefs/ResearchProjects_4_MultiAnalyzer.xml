@@ -78,4 +78,18 @@
 		<researchViewX>19</researchViewX>
 		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
+	<!--============================= Player Mechanoids ================================-->
+	<ResearchProjectDef>
+		<defName>RG_AdvancedAutomatedDefensiveMeasures</defName>
+		<label>advanced automated defensive measures</label>
+		<description>Research the ability to build advanced automated drones for combat purposes including the spartan defensive countermeasures.</description>
+		<baseCost>8000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
+		</prerequisites>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>4.90</researchViewY>
+	</ResearchProjectDef>
 </Defs>

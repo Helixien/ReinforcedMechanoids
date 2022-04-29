@@ -43,7 +43,13 @@
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/lifeStages/li/bodyGraphicData/texPath</xpath>
 				<value>
-					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroid</texPath>
+					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroidA</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/alternateGraphics/li/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroidB</texPath>
 				</value>
 			</li>
 		</operations>

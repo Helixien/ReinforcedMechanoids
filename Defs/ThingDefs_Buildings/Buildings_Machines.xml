@@ -149,8 +149,9 @@
 		<designationCategory>Security</designationCategory>
 		<researchPrerequisites>
 			<li>Fabrication</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -179,31 +180,31 @@
 		</graphicData>
 		<statBases>
 			<WorkToBuild>5000</WorkToBuild>
-			<MarketValue>2000</MarketValue>
+			<MarketValue>3000</MarketValue>
 			<MaxHitPoints>250</MaxHitPoints>
 		</statBases>
 		<costList>
-			<Plasteel>35</Plasteel>
+			<Plasteel>50</Plasteel>
 			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>4</ComponentSpacer>
 		</costList>
 		<designationCategory>Security</designationCategory>
 		<researchPrerequisites>
-			<li>Fabrication</li>
+			<li>RG_AdvancedAutomatedDefensiveMeasures</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>650</basePowerConsumption>
+				<basePowerConsumption>800</basePowerConsumption>
 			</li>
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
 				<pawnToSpawn>RM_Droid_Spartan</pawnToSpawn>
 				<allowedWorkTypes>
 					<li>Firefighter</li>
 				</allowedWorkTypes>
-				<extraChargingPower>6500</extraChargingPower>
-				<hoursToRecharge>24</hoursToRecharge>
+				<extraChargingPower>6000</extraChargingPower>
+				<hoursToRecharge>32</hoursToRecharge>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		</comps>

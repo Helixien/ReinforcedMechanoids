@@ -75,7 +75,7 @@
 			<thinkTreeMain>VFE_Mechanoids_ViolentMachine</thinkTreeMain>
 			<body>Lancer</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>5</baseHealthScale>
+			<baseHealthScale>4.6</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>MechanoidFullyFormed</def>
@@ -261,7 +261,7 @@
 		<label>guardian mechanoid</label>
 		<description>A relatively simple ranged combat drone that stands slightly shorter than a regular human. Patrols designated areas while scanning and autonomously engaging nearby threats. Unlike most combat drones, this model is fitted with humanoid manipulators and can use such weapons. Capable of performing emergency tasks such as extinguishing fires.</description>
 		<statBases>
-			<MoveSpeed>4.0</MoveSpeed>
+			<MoveSpeed>3.8</MoveSpeed>
 			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
 			<PsychicSensitivity>0.75</PsychicSensitivity>
@@ -409,10 +409,16 @@
 		<combatPower>99999</combatPower>
 		<label>spartan mechanoid</label>
 		<race>RM_Droid_Spartan</race>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroidB</texPath>
+			</li>
+		</alternateGraphics>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroid</texPath>
+					<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroidA</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.8</drawSize>
 					<shadowData>

@@ -70,7 +70,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Zealot</texPath>
+					<texPath>Things/Pawn/Mechanoid/Zealot/Zealot</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.6</drawSize>
 					<shadowData>
@@ -149,7 +149,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Ranger</texPath>
+					<texPath>Things/Pawn/Mechanoid/Ranger/Ranger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.4</drawSize>
 					<shadowData>
@@ -238,7 +238,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Marshal</texPath>
+					<texPath>Things/Pawn/Mechanoid/Marshal/Marshal</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.6</drawSize>
 					<shadowData>
@@ -320,7 +320,7 @@
 				<pawnGraphicsByMissingParts>
 					<li>
 						<missingPart>RM_BehemothShield</missingPart>
-						<texPath>Things/Pawn/Mechanoid/Behemoth_NoShield</texPath>
+						<texPath>Things/Pawn/Mechanoid/Behemoth/Behemoth_NoShield</texPath>
 					</li>
 				</pawnGraphicsByMissingParts>
 			</li>
@@ -339,7 +339,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Behemoth</texPath>
+					<texPath>Things/Pawn/Mechanoid/Behemoth/Behemoth</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2.5</drawSize>
 					<shadowData>
@@ -417,7 +417,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Vulture</texPath>
+					<texPath>Things/Pawn/Mechanoid/Vulture/Vulture</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.0</drawSize>
 					<shadowData>
@@ -457,7 +457,7 @@
 		</tools>
 		<race>
 			<body>RM_Mechanical_Caretaker</body>
-			<baseBodySize>2.5</baseBodySize>
+			<baseBodySize>3.5</baseBodySize>
 			<baseHealthScale>12</baseHealthScale>
 			<thinkTreeMain>RM_Caretaker</thinkTreeMain>
 			<lifeStageAges>
@@ -512,7 +512,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Caretaker</texPath>
+					<texPath>Things/Pawn/Mechanoid/Caretaker/Caretaker</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>4.0</drawSize>
 					<shadowData>
