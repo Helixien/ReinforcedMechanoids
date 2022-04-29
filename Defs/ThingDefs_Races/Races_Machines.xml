@@ -186,7 +186,7 @@
 		<label>ancient worker mechanoid</label>
 		<race>RM_AncientDroid_Worker</race>
 		<combatPower>99999</combatPower>
-		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphicChance>0.5</alternateGraphicChance>
 		<alternateGraphics>
 			<li>
 				<texPath>Things/Pawn/Droid/AncientWorkerDroid/AncientWorkerDroidB</texPath>
@@ -409,7 +409,7 @@
 		<combatPower>99999</combatPower>
 		<label>spartan mechanoid</label>
 		<race>RM_Droid_Spartan</race>
-		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphicChance>0.5</alternateGraphicChance>
 		<alternateGraphics>
 			<li>
 				<texPath>Things/Pawn/Droid/SpartanDroid/SpartanDroidB</texPath>

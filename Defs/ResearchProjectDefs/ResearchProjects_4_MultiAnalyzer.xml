@@ -89,7 +89,7 @@
 			<li>Fabrication</li>
 			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
 		</prerequisites>
-		<researchViewX>9.00</researchViewX>
-		<researchViewY>4.90</researchViewY>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
 	</ResearchProjectDef>
 </Defs>
