@@ -64,7 +64,7 @@
 				<value>
 					<RecipeDef>
 						<defName>RM_ConvertCellOne</defName>
-						<label>convert mechanoid cell [To my Mod]</label>
+						<label>convert mechanoid cell to my mod</label>
 						<description>Convert a Mechanoid Cell from "Mechanoid Power (Continued)" to my mod. This recipe only appears with both mods loaded and used to move from one mod to the other!</description>
 						<jobString>convert cell.</jobString>
 						<workAmount>1</workAmount>
@@ -96,7 +96,7 @@
 					</RecipeDef>
 					<RecipeDef>
 						<defName>RM_ConvertCellTwo</defName>
-						<label>convert mechanoid cell [From my Mod]</label>
+						<label>convert mechanoid cell from my mod</label>
 						<description>Convert a Mechanoid Cell from my mod to "Mechanoid Power (Continued)". This recipe only appears with both mods loaded and used to move from one mod to the other!</description>
 						<jobString>convert cell.</jobString>
 						<workAmount>1</workAmount>
