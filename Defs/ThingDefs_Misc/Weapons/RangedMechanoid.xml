@@ -111,6 +111,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.5</drawSize>
 		</graphicData>
+		<destroyOnDrop>true</destroyOnDrop>
 		<tradeability>None</tradeability>
 		<relicChance>0</relicChance>
 		<statBases>
@@ -179,7 +180,7 @@
 				<targetFriendly>false</targetFriendly>
 				<addFire>false</addFire>
 				<bounceRange>3</bounceRange>
-				<maxLifetime>50</maxLifetime>
+				<maxLifetime>40</maxLifetime>
 			</li>
 		</modExtensions>
 	</ThingDef>
