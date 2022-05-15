@@ -11,14 +11,26 @@ namespace ReinforcedMechanoids
     {
         public override Job TryGiveJob(Pawn pawn)
         {
-            var nearestCell = GetNearestCellToPlayerBase(pawn, out var centerColony, out var firstBlockingBuilding);
-            if (nearestCell == pawn.Position)
+            if (pawn.Faction != Faction.OfPlayer)
             {
-                return JobMaker.MakeJob(JobDefOf.Wait);
-            }
-            else if (nearestCell.IsValid)
-            {
-                return JobMaker.MakeJob(JobDefOf.Goto, nearestCell);
+                var otherPawns = pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction)
+                    .Where(x => x.RaceProps.IsMechanoid && !x.Fogged() && !x.Dead && x.Awake()).Except(pawn)
+                    .OrderBy(x => x.Position.DistanceTo(pawn.Position)).ToList();
+                if (otherPawns.Count(x => x.IsFighting()) >= otherPawns.Count / 3f)
+                {
+                    Job job = JobMaker.MakeJob(JobDefOf.Wait_MaintainPosture);
+                    job.expiryInterval = 120;
+                    return job;
+                }
+                var nearestCell = GetNearestCellToPlayerBase(pawn, out var centerColony, out var firstBlockingBuilding);
+                if (nearestCell == pawn.Position)
+                {
+                    return JobMaker.MakeJob(JobDefOf.Wait);
+                }
+                else if (nearestCell.IsValid)
+                {
+                    return JobMaker.MakeJob(JobDefOf.Goto, nearestCell);
+                }
             }
             return null;
         }
