@@ -225,6 +225,38 @@
 						</killedLeavings>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="SunBlocker"]</xpath>
+					<value>
+						<killedLeavings>
+							<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+						</killedLeavings>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="SmokeSpewer"]</xpath>
+					<value>
+						<killedLeavings>
+							<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+						</killedLeavings>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ToxicSpewer"]</xpath>
+					<value>
+						<killedLeavings>
+							<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+						</killedLeavings>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="EMIDynamo"]</xpath>
+					<value>
+						<killedLeavings>
+							<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+						</killedLeavings>
+					</value>
+				</li>
 				<li Class="PatchOperationAdd" MayRequire="OskarPotocki.VFE.Mechanoid">
 					<xpath>/Defs/ThingDef[defName="VFE_ClimateAdjuster"]/killedLeavings</xpath>
 					<value>
@@ -232,46 +264,10 @@
 						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="SunBlocker"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="SmokeSpewer"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="ToxicSpewer"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="PsychicDroner"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="PsychicSuppressor"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="EMIDynamo"]/killedLeavings</xpath>
-					<value>
-						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
-					</value>
-				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="MechCapsule"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/points</xpath>
 					<value>
-						<points>600</points>
+						<points>500</points>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
