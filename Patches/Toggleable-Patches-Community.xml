@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Make new weapons spawn on mechanoids only?</label>
+		<operations>
+			<!-- Add Tradeability None Below -->
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ChargeSidearm" or 
+					defName = "RM_Gun_ReinforcedChargeLMG" or 
+					defName = "RM_Gun_ChargeLanceRevolver" or 
+					defName = "RM_Gun_ChargeLanceRifle" or 
+					defName = "RM_Gun_ReinforcedCoilPistol" or 
+					defName = "RM_ReinforcedCoilRifle" or 
+					defName = "RM_Gun_ReinforcedInfernoCannon"]</xpath>
+				<value>
+					<tradeability>None</tradeability>
+				</value>
+			</li>
+			<!-- Add Tradeability None Above -->
+			<!-- Add destroyOnDrop Below -->
+			<li Class="PatchOperationAdd">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ChargeSidearm" or 
+					defName = "RM_Gun_ReinforcedChargeLMG" or 
+					defName = "RM_Gun_ChargeLanceRevolver" or 
+					defName = "RM_Gun_ChargeLanceRifle" or 
+					defName = "RM_Gun_ReinforcedCoilPistol" or 
+					defName = "RM_ReinforcedCoilRifle" or 
+					defName = "RM_Gun_ReinforcedInfernoCannon"]</xpath>
+				<value>
+					<destroyOnDrop>true</destroyOnDrop>
+				</value>
+			</li>
+			<!-- Add destroyOnDrop Above -->
+			<!-- Remove SpacerGun WeaponTag Below -->
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ReinforcedChargeLMG" or 
+					defName = "RM_Gun_ChargeLanceRifle"]/weaponTags</xpath>
+				<value>
+					<weaponTags>
+						<li>MechanoidGunMedium</li>
+					</weaponTags>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ChargeSidearm" or 
+					defName = "RM_Gun_ChargeLanceRevolver"]/weaponTags</xpath>
+				<value>
+					<weaponTags>
+						<li>MechanoidGunSmall</li>
+					</weaponTags>
+				</value>
+			</li>
+			<!-- Remove SpacerGun WeaponTag Above -->
+			<!-- Remove RecipeMaker Below -->
+			<li Class="PatchOperationRemove">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ChargeSidearm" or 
+					defName = "RM_Gun_ReinforcedChargeLMG" or 
+					defName = "RM_Gun_ChargeLanceRevolver" or 
+					defName = "RM_Gun_ChargeLanceRifle" or 
+					defName = "RM_Gun_ReinforcedCoilPistol" or 
+					defName = "RM_ReinforcedCoilRifle"]/destroyOnDrop</xpath>
+			</li>
+			<!-- Remove RecipeMaker Above -->
+			<!-- Remove thingSetMakerTag Below -->
+			<li Class="PatchOperationRemove">
+				<xpath>*/ThingDef[
+					defName = "RM_Gun_ChargeSidearm" or 
+					defName = "RM_Gun_ReinforcedChargeLMG" or 
+					defName = "RM_Gun_ChargeLanceRevolver" or 
+					defName = "RM_Gun_ChargeLanceRifle" or 
+					defName = "RM_Gun_ReinforcedCoilPistol" or 
+					defName = "RM_ReinforcedCoilRifle"]/thingSetMakerTags</xpath>
+			</li>
+			<!-- Remove thingSetMakerTag Above -->
+		</operations>
+	</Operation>
+</Patch>

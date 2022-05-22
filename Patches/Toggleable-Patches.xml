@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Enable ancient mechanoid crafting?</label>
+		<operations>
+			<!-- ================ Ancient Combat Mechanoid ================ -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_CombatBase"]</xpath>
+				<value>
+					<designationCategory>Security</designationCategory>
+					<researchPrerequisites>
+						<li>Fabrication</li>
+					</researchPrerequisites>
+					<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+				</value>
+			</li>
+			<!-- ================ Ancient Worker Mechanoid ================ -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_AncientDroid_WorkerBase"]</xpath>
+				<value>
+					<designationCategory>Security</designationCategory>
+					<researchPrerequisites>
+						<li>Fabrication</li>
+					</researchPrerequisites>
+					<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Enable clean player mechanoid skins?</label>
+		<operations>
+			<!-- ================ Guardian Mechanoid ================ -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Guardian"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SecurityDroid_ALT/SecurityDroid</texPath>
+				</value>
+			</li>
+			<!-- ================ Spartan Mechanoid ================ -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroidA</texPath>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/alternateGraphics/li/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/SpartanDroid_ALT/SpartanDroidB</texPath>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Enable classic sounds for Sparten mechanoid shields?</label>
+		<operations>
+			<!-- ================ Shield Sounds ================ -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<SoundDef>
+						<defName>RM_EnergyShield_Broken</defName>
+						<context>MapOnly</context>
+						<maxSimultaneous>1</maxSimultaneous>
+						<subSounds>
+							<li>
+								<grains>
+									<li Class="AudioGrain_Folder">
+										<clipFolderPath>Misc/EnergyShield/CE_Shield_Broken</clipFolderPath>
+									</li>
+								</grains>
+								<volumeRange>40.58823~40.58823</volumeRange>
+								<distRange>0~70</distRange>
+							</li>
+						</subSounds>
+					</SoundDef>
+					<SoundDef>
+						<defName>RM_EnergyShield_Reset</defName>
+						<context>MapOnly</context>
+						<maxSimultaneous>1</maxSimultaneous>
+						<subSounds>
+							<li>
+								<grains>
+									<li Class="AudioGrain_Clip">
+										<clipPath>Misc/EnergyShield/CE_Shield_Reset</clipPath>
+									</li>
+								</grains>
+								<volumeRange>24.11765~24.11765</volumeRange>
+								<distRange>0~70</distRange>
+							</li>
+						</subSounds>
+					</SoundDef>
+				</value>
+			</li>
+			<!-- ================ Spartan Mechanoid ================ -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "RM_Droid_Spartan"]/comps/li[@Class="VFECore.CompProperties_ShieldBubble"]</xpath>
+				<value>
+					<brokenSound>RM_EnergyShield_Broken</brokenSound>
+					<resetSound>RM_EnergyShield_Reset</resetSound>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

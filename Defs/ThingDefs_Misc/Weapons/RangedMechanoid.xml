@@ -10,6 +10,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
+		<generateCommonality>0.3</generateCommonality>
 		<destroyOnDrop>true</destroyOnDrop>
 		<weaponTags>
 			<li>MechanoidGunHeavy</li>
@@ -51,6 +52,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
+		<generateCommonality>0.4</generateCommonality>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
 		<relicChance>0</relicChance>
@@ -111,6 +113,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.5</drawSize>
 		</graphicData>
+		<generateCommonality>0.15</generateCommonality>
 		<destroyOnDrop>true</destroyOnDrop>
 		<tradeability>None</tradeability>
 		<relicChance>0</relicChance>

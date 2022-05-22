@@ -232,10 +232,46 @@
 						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="SunBlocker"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="SmokeSpewer"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="ToxicSpewer"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="PsychicDroner"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="PsychicSuppressor"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="EMIDynamo"]/killedLeavings</xpath>
+					<value>
+						<RM_VanometricMechanoidCell>1</RM_VanometricMechanoidCell>
+					</value>
+				</li>
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="MechCapsule"]/comps/li[@Class="CompProperties_PawnSpawnOnWakeup"]/points</xpath>
 					<value>
-						<points>500</points>
+						<points>600</points>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">

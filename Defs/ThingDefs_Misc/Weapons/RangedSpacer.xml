@@ -10,6 +10,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidChargeRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<generateCommonality>0.7</generateCommonality>
 		<soundInteract>Interact_SMG</soundInteract>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -101,16 +102,17 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechnoidChargerLMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<generateCommonality>0.6</generateCommonality>
 		<soundInteract>Interact_SMG</soundInteract>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<statBases>
 			<Mass>14</Mass>
-			<AccuracyTouch>0.18</AccuracyTouch>
-			<AccuracyShort>0.26</AccuracyShort>
-			<AccuracyMedium>0.26</AccuracyMedium>
-			<AccuracyLong>0.18</AccuracyLong>
+			<AccuracyTouch>0.28</AccuracyTouch>
+			<AccuracyShort>0.36</AccuracyShort>
+			<AccuracyMedium>0.46</AccuracyMedium>
+			<AccuracyLong>0.28</AccuracyLong>
 			<RangedWeapon_Cooldown>7.4</RangedWeapon_Cooldown>
 			<WorkToMake>82000</WorkToMake>
 		</statBases>
@@ -143,7 +145,7 @@
 				<warmupTime>1.25</warmupTime>
 				<range>19.9</range>
 				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<burstShotCount>8</burstShotCount>
+				<burstShotCount>6</burstShotCount>
 				<soundCast>Shot_ChargeBlaster</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -170,8 +172,9 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>9</damageAmountBase>
-			<speed>90</speed>
+			<damageAmountBase>14</damageAmountBase>
+			<stoppingPower>0.3</stoppingPower>
+			<speed>95</speed>
 		</projectile>
 	</ThingDef>
 	<!-- ================================ Lance Weapons ====================== -->
@@ -184,6 +187,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<generateCommonality>0.7</generateCommonality>
 		<soundInteract>Interact_ChargeLance</soundInteract>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -262,6 +266,7 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidLanceRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<generateCommonality>0.35</generateCommonality>
 		<soundInteract>Interact_ChargeLance</soundInteract>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -346,10 +351,12 @@
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<generateCommonality>0.3</generateCommonality>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<soundInteract>Interact_ChargeLance</soundInteract>
+		<generateAllowChance>0.30</generateAllowChance>
 		<statBases>
 			<Mass>1.6</Mass>
 			<AccuracyTouch>0.70</AccuracyTouch>
@@ -443,14 +450,16 @@
 		<label>reinforced coil rifle</label>
 		<description>A reinforced tesla-coil based rifle used by mechanoids. It shoots lighting projectiles, stunning and burning their target before jumping to the next, capable of causing damage to multiple targets with each shot.</description>
 		<techLevel>Spacer</techLevel>
-		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
-		</thingSetMakerTags>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MechanoidCoilRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<generateCommonality>0.15</generateCommonality>
 		<soundInteract>Interact_ChargeLance</soundInteract>
+		<generateAllowChance>0.15</generateAllowChance>
 		<statBases>
 			<Mass>5.5</Mass>
 			<AccuracyTouch>0.85</AccuracyTouch>
