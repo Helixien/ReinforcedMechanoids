@@ -19,17 +19,21 @@ namespace ReinforcedMechanoids
                 if (otherPawns.Count(x => x.IsFighting()) >= otherPawns.Count / 3f)
                 {
                     Job job = JobMaker.MakeJob(JobDefOf.Wait_MaintainPosture);
-                    job.expiryInterval = 120;
+                    job.expiryInterval = 180;
                     return job;
                 }
                 var nearestCell = GetNearestCellToPlayerBase(pawn, out var centerColony, out var firstBlockingBuilding);
                 if (nearestCell == pawn.Position)
                 {
-                    return JobMaker.MakeJob(JobDefOf.Wait);
+                    var job = JobMaker.MakeJob(JobDefOf.Wait);
+                    job.expiryInterval = 180;
+                    return job;
                 }
                 else if (nearestCell.IsValid)
                 {
-                    return JobMaker.MakeJob(JobDefOf.Goto, nearestCell);
+                    var job = JobMaker.MakeJob(JobDefOf.Goto, nearestCell);
+                    job.expiryInterval = 180;
+                    return job;
                 }
             }
             return null;
