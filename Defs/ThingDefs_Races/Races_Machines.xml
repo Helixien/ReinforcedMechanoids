@@ -394,7 +394,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Droid/PesennikDroid/PesennikDroid</texPath>
+					<texPath>Things/Pawn/Droid/PesennikDroid/Pesennik</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.5</drawSize>
 					<shadowData>
