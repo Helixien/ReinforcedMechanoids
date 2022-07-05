@@ -9,14 +9,13 @@ using Verse.AI.Group;
 
 namespace ReinforcedMechanoids
 {
-
     [StaticConstructorOnStartup]
-    public static class Core
+    public static class HarmonyPatches
     {
-        static Core()
+        static HarmonyPatches()
         {
-            var harm = new Harmony("ReinforcedMechanoids.Mod");
-            harm.PatchAll();
+            var harmony = new Harmony("ReinforcedMechanoids.Mod");
+            harmony.PatchAll();
             ReinforcedMechanoidsMod.ApplySettings();
         }
 
@@ -272,7 +271,7 @@ namespace ReinforcedMechanoids
             {
                 float angle = (attacker.DrawPos - pawn.DrawPos).AngleFlat();
                 var rot = Pawn_RotationTracker.RotFromAngleBiased(angle);
-                if (rot == pawn.Rotation && Core.GetNonMissingBodyPart(pawn, RM_DefOf.RM_BehemothShield) != null)
+                if (rot == pawn.Rotation && HarmonyPatches.GetNonMissingBodyPart(pawn, RM_DefOf.RM_BehemothShield) != null)
                 {
                     pickShield = true;
                 }
@@ -291,7 +290,7 @@ namespace ReinforcedMechanoids
         {
             if (GetExactPartFromDamageInfo_Patch.pickShield && Rand.Chance(0.8f))
             {
-                var part = Core.GetNonMissingBodyPart(__instance.pawn, RM_DefOf.RM_BehemothShield);
+                var part = HarmonyPatches.GetNonMissingBodyPart(__instance.pawn, RM_DefOf.RM_BehemothShield);
                 if (part != null)
                 {
                     __result = part;
@@ -300,25 +299,14 @@ namespace ReinforcedMechanoids
         }
     }
 
-    //[HarmonyPatch(typeof(Pawn), nameof(Pawn.TryGetAttackVerb))]
-    //public static class TryGetAttackVerb_Patch
-    //{
-    //    private static void Postfix(Pawn __instance, ref Verb __result)
-    //    {
-    //        if (__instance.kindDef == RM_DefOf.RM_Mech_Vulture)
-    //        {
-    //            __result = null;
-    //        }
-    //    }
-    //}
-
     [HarmonyPatch(typeof(MechClusterGenerator), nameof(MechClusterGenerator.MechKindSuitableForCluster))]
     public class MechSpawn_Patch
     {
         [HarmonyPostfix]
         public static void Postfix(PawnKindDef __0, ref bool __result)
         {
-            if (__0 == RM_DefOf.RM_Mech_Caretaker || __0 == RM_DefOf.RM_Mech_Vulture)
+            if (__0 == RM_DefOf.RM_Mech_Caretaker || __0 == RM_DefOf.RM_Mech_Vulture 
+                || ReinforcedMechanoidsSettings.disabledMechanoids.Contains(__0.defName))
             {
                 __result = false;
             }
@@ -332,7 +320,7 @@ namespace ReinforcedMechanoids
         {
             if (__instance.pawn.kindDef == RM_DefOf.RM_Mech_Behemoth)
             {
-                var part = Core.GetNonMissingBodyPart(__instance.pawn, RM_DefOf.RM_BehemothShield);
+                var part = HarmonyPatches.GetNonMissingBodyPart(__instance.pawn, RM_DefOf.RM_BehemothShield);
                 if (part != null)
                 {
                     var verb = __instance.GetUpdatedAvailableVerbsList(false).Where(x => x.verb is Verb_MeleeAttackDamageBehemoth).FirstOrDefault();

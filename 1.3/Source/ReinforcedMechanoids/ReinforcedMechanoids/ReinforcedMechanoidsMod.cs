@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using Verse;
+using VFEMech;
 
 namespace ReinforcedMechanoids
 {
@@ -30,6 +31,28 @@ namespace ReinforcedMechanoids
                     mechanoid.destroyGearOnDrop = false;
                 }
             }
+            foreach (var mechanoid in ReinforcedMechanoidsSettings.disabledMechanoids)
+            {
+                var pawnKind = DefDatabase<PawnKindDef>.GetNamedSilentFail(mechanoid);
+                if (pawnKind != null)
+                {
+                    foreach (var faction in DefDatabase<FactionDef>.AllDefs)
+                    {
+                        if (faction.pawnGroupMakers != null)
+                        {
+                            foreach (var groupMaker in faction.pawnGroupMakers)
+                            {
+                                groupMaker.traders?.RemoveAll(x => x.kind == pawnKind);
+                                groupMaker.carriers?.RemoveAll(x => x.kind == pawnKind);
+                                groupMaker.guards?.RemoveAll(x => x.kind == pawnKind);
+                                groupMaker.options?.RemoveAll(x => x.kind == pawnKind);
+                            }
+                            var removed = faction.pawnGroupMakers.RemoveAll(x => x.carriers?.Count() == 0 && x.traders?.Count() == 0 
+                                && x.guards?.Count() == 0 && x.options?.Count() == 0);
+                        }
+                    }
+                }
+            }
         }
 
         public override string SettingsCategory()
@@ -37,10 +60,16 @@ namespace ReinforcedMechanoids
             return this.Content.Name;
         }
 
+        public float scrollHeight;
+        public Vector2 scrollPosition;
         public override void DoSettingsWindowContents(Rect rect)
         {
+            var inRect = new Rect(rect.x, rect.y, rect.width - 16, 10000);
+            var totalRect = new Rect(rect.x, rect.y, rect.width - 16, scrollHeight);
+            Widgets.BeginScrollView(rect, ref scrollPosition, totalRect);
+            scrollHeight = 0;
             Listing_Standard listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(rect);
+            listing_Standard.Begin(inRect);
             listing_Standard.Gap(10f);
             Rect rect2 = listing_Standard.GetRect(Text.LineHeight);
             Rect rect3 = rect2.LeftHalf().Rounded();
@@ -77,7 +106,26 @@ namespace ReinforcedMechanoids
             }
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("Mechanoids will drop weapons upon death", ref ReinforcedMechanoidsSettings.dropWeaponOnDeath);
+            listing_Standard.Label("Disable mechanoids from spawning in the game");
+            foreach (var pawn in DefDatabase<PawnKindDef>.AllDefs)
+            {
+                if (pawn.RaceProps.IsMechanoid && typeof(Machine).IsAssignableFrom(pawn.race.thingClass) is false)
+                {
+                    var enabled = ReinforcedMechanoidsSettings.disabledMechanoids.Contains(pawn.defName) is false;
+                    listing_Standard.CheckboxLabeled(pawn.LabelCap, ref enabled);
+                    if (enabled && ReinforcedMechanoidsSettings.disabledMechanoids.Contains(pawn.defName))
+                    {
+                        ReinforcedMechanoidsSettings.disabledMechanoids.Remove(pawn.defName);
+                    }
+                    else if (!enabled && !ReinforcedMechanoidsSettings.disabledMechanoids.Contains(pawn.defName))
+                    {
+                        ReinforcedMechanoidsSettings.disabledMechanoids.Add(pawn.defName);
+                    }
+                }
+            }
+            scrollHeight = listing_Standard.CurHeight;
             listing_Standard.End();
+            Widgets.EndScrollView();
         }
     }
 }
