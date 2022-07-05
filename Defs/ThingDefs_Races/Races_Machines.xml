@@ -301,8 +301,9 @@
 		</butcherProducts>
 		<comps>
 			<li Class="VFE.Mechanoids.CompProperties_Machine">
-				<violent>false</violent>
+				<violent>true</violent>
 				<hoursActive>72</hoursActive>
+				<canPickupWeapons>true</canPickupWeapons>
 			</li>
 		</comps>
 	</ThingDef>
@@ -380,9 +381,8 @@
 		</butcherProducts>
 		<comps>
 			<li Class="VFE.Mechanoids.CompProperties_Machine">
-				<violent>true</violent>
-				<hoursActive>72</hoursActive>
-				<canPickupWeapons>true</canPickupWeapons>
+				<violent>false</violent>
+				<hoursActive>64</hoursActive>
 			</li>
 		</comps>
 	</ThingDef>

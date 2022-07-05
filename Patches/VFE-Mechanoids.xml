@@ -31,6 +31,31 @@
 						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
 					</value>
 				</li>
+				<!--============================= Pesennik Mechanoid ================================-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_PesennikBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>VFE_Factory</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_PesennikBase"]/researchPrerequisites</xpath>
+					<value>
+						<li>VFE_AutomatedDefensiveMeasures</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_PesennikBase"]/costList</xpath>
+					<value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="RM_Droid_Pesennik"]/butcherProducts</xpath>
+					<value>
+						<VFE_ComponentMechanoid>2</VFE_ComponentMechanoid>
+					</value>
+				</li>
 				<!--============================= Spartan Mechanoid ================================-->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="RM_Droid_SpartanBase"]/designationCategory</xpath>
