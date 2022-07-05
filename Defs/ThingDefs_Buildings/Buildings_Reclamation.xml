@@ -2,7 +2,6 @@
 <Defs>
 	<!--============================= Reclaimation Station - Base ================================-->
 	<ThingDef ParentName="RM_DroidBase" Name="RM_ReclaimationBase" Abstract="True">
-		<label>reclaimation station</label>
 		<description>A station for assembling and recharging reclaimed mechanoids.</description>
 		<thingSetMakerTags>
 			<li>RewardStandardHighFreq</li>
@@ -18,6 +17,7 @@
 	<!--============================= Reclaimation Station - Small ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationStationSmall</defName>
+		<label>reclaimation station (small)</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -44,6 +44,7 @@
 	<!--============================= Reclaimation Station - Medium (2x2) ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationBaseMedium</defName>
+		<label>reclaimation station (medium)</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -75,6 +76,7 @@
 	<!--============================= Reclaimation Station - Big (3x3) ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationBaseBig</defName>
+		<label>reclaimation station (large)</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
