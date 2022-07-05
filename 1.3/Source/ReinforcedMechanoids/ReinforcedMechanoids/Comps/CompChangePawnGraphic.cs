@@ -36,7 +36,7 @@ namespace ReinforcedMechanoids
             var pawn = this.parent as Pawn;
             foreach (var pawnGraphic in Props.pawnGraphicsByMissingParts)
             {
-                var bodyPart = Core.GetNonMissingBodyPart(pawn, pawnGraphic.missingPart);
+                var bodyPart = HarmonyPatches.GetNonMissingBodyPart(pawn, pawnGraphic.missingPart);
                 if (bodyPart != null)
                 {
                     ChangeGraphic(pawn, pawn.ageTracker.CurKindLifeStage.bodyGraphicData.texPath);

@@ -9,7 +9,7 @@ namespace ReinforcedMechanoids
     {
         public override bool Available()
         {
-            return Core.GetNonMissingBodyPart(CasterPawn, RM_DefOf.RM_BehemothShield) != null && base.Available();
+            return HarmonyPatches.GetNonMissingBodyPart(CasterPawn, RM_DefOf.RM_BehemothShield) != null && base.Available();
         }
         public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
         {
