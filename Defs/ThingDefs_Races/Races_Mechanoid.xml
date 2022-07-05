@@ -321,7 +321,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</butcherProducts>
 		<comps>
-			<li Class="ReinforcedMechanoidsOlympusLine.CompProperties_ExplosionOnHit">
+			<li Class="ReinforcedMechanoids.CompProperties_ExplosionOnHit">
 				<cooldownTicks>7200</cooldownTicks>
 				<explosiveRadius>8.6</explosiveRadius>
 				<explosiveDamageType>Smoke</explosiveDamageType>

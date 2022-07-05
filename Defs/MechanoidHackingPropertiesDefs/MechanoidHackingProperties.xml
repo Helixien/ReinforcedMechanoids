@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	
-	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingSmall</defName>
 		<hackingBase>RM_ReclaimationStationSmall</hackingBase>
 		<hackableMechanoids>
@@ -12,9 +12,9 @@
 			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Marshal</li>
 			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Vulture</li>
 		</hackableMechanoids>
-	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 
-	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingMedium</defName>
 		<hackingBase>RM_ReclaimationBaseMedium</hackingBase>
 		<hackableMechanoids>
@@ -30,9 +30,9 @@
 			<li>Mech_Termite</li>
 			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Behemoth</li>
 		</supportMechanoids>
-	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 	
-	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingBig</defName>
 		<hackingBase>RM_ReclaimationBaseBig</hackingBase>
 		<hackableMechanoids>
@@ -45,7 +45,7 @@
 		<meleeMechanoids>
 			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Caretaker</li>
 		</meleeMechanoids>
-	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 	
 	
 </Defs>

@@ -75,7 +75,7 @@
 			</li>
 			
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>12</hoursToRecharge>
@@ -107,7 +107,7 @@
 			</li>
 			
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>24</hoursToRecharge>
@@ -138,7 +138,7 @@
 				<basePowerConsumption>650</basePowerConsumption>
 			</li>
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>36</hoursToRecharge>
