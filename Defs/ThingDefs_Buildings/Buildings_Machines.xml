@@ -41,6 +41,126 @@
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<tradeability>Sellable</tradeability>
 	</ThingDef>
+	<!--============================= Guardian Mechanoid ================================-->
+	<ThingDef ParentName="RM_DroidBase">
+		<defName>RM_Droid_GuardianBase</defName>
+		<label>guardian mechanoid charging station</label>
+		<description>A station for assembling and recharging spacer guardian combat mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Automation/SecurityDroidBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>2200</WorkToBuild>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<designationCategory>Security</designationCategory>
+		<researchPrerequisites>
+			<li>Fabrication</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<pawnToSpawn>RM_Droid_Guardian</pawnToSpawn>
+				<allowedWorkTypes>
+					<li>Firefighter</li>
+					<li>Doctor</li>
+				</allowedWorkTypes>
+				<extraChargingPower>1200</extraChargingPower>
+				<hoursToRecharge>18</hoursToRecharge>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>
+	<!--============================= Pesennik Mechanoid ================================-->
+	<ThingDef ParentName="RM_DroidBase">
+		<defName>RM_Droid_PesennikBase</defName>
+		<label>pesennik mechanoid charging station</label>
+		<description>A station for assembling and recharging pesennik combat mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Automation/SecurityDroidBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>2200</WorkToBuild>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<designationCategory>Security</designationCategory>
+		<researchPrerequisites>
+			<li>Fabrication</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>450</basePowerConsumption>
+			</li>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<pawnToSpawn>RM_Droid_Pesennik</pawnToSpawn>
+				<extraChargingPower>1200</extraChargingPower>
+				<hoursToRecharge>18</hoursToRecharge>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>
+	<!--============================= Spartan Mechanoid ================================-->
+	<ThingDef ParentName="RM_DroidBase">
+		<defName>RM_Droid_SpartanBase</defName>
+		<label>spartan mechanoid charging station</label>
+		<description>A station for assembling and recharging spacer spartan combat mechanoids.</description>
+		<graphicData>
+			<texPath>Things/Building/Automation/SpartanDroidBase</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<MarketValue>3000</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<designationCategory>Security</designationCategory>
+		<researchPrerequisites>
+			<li>RG_AdvancedAutomatedDefensiveMeasures</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>800</basePowerConsumption>
+			</li>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<pawnToSpawn>RM_Droid_Spartan</pawnToSpawn>
+				<allowedWorkTypes>
+					<li>Firefighter</li>
+				</allowedWorkTypes>
+				<extraChargingPower>6000</extraChargingPower>
+				<hoursToRecharge>32</hoursToRecharge>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>
 	<!--============================= Ancient Combat Mechanoid ================================-->
 	<ThingDef ParentName="RM_DroidBase">
 		<defName>RM_AncientDroid_CombatBase</defName>
@@ -125,88 +245,6 @@
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="VFEAncients.CompProperties_SolarPowerUp" MayRequire="VanillaExpanded.VFEA"/>
-		</comps>
-	</ThingDef>
-	<!--============================= Guardian Mechanoid ================================-->
-	<ThingDef ParentName="RM_DroidBase">
-		<defName>RM_Droid_GuardianBase</defName>
-		<label>guardian mechanoid charging station</label>
-		<description>A station for assembling and recharging spacer guardian combat mechanoids.</description>
-		<graphicData>
-			<texPath>Things/Building/Automation/SecurityDroidBase</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<WorkToBuild>2200</WorkToBuild>
-			<MarketValue>1800</MarketValue>
-			<MaxHitPoints>200</MaxHitPoints>
-		</statBases>
-		<costList>
-			<Plasteel>20</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-			<ComponentSpacer>1</ComponentSpacer>
-		</costList>
-		<designationCategory>Security</designationCategory>
-		<researchPrerequisites>
-			<li>Fabrication</li>
-			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AutomatedDefensiveMeasures</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-		<comps>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>500</basePowerConsumption>
-			</li>
-			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<pawnToSpawn>RM_Droid_Guardian</pawnToSpawn>
-				<allowedWorkTypes>
-					<li>Firefighter</li>
-					<li>Doctor</li>
-				</allowedWorkTypes>
-				<extraChargingPower>1200</extraChargingPower>
-				<hoursToRecharge>18</hoursToRecharge>
-			</li>
-			<li Class="CompProperties_Flickable"/>
-		</comps>
-	</ThingDef>
-	<!--============================= Spartan Mechanoid ================================-->
-	<ThingDef ParentName="RM_DroidBase">
-		<defName>RM_Droid_SpartanBase</defName>
-		<label>spartan mechanoid charging station</label>
-		<description>A station for assembling and recharging spacer spartan combat mechanoids.</description>
-		<graphicData>
-			<texPath>Things/Building/Automation/SpartanDroidBase</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<statBases>
-			<WorkToBuild>5000</WorkToBuild>
-			<MarketValue>3000</MarketValue>
-			<MaxHitPoints>250</MaxHitPoints>
-		</statBases>
-		<costList>
-			<Plasteel>50</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-			<ComponentSpacer>4</ComponentSpacer>
-		</costList>
-		<designationCategory>Security</designationCategory>
-		<researchPrerequisites>
-			<li>RG_AdvancedAutomatedDefensiveMeasures</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-		<comps>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>800</basePowerConsumption>
-			</li>
-			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<pawnToSpawn>RM_Droid_Spartan</pawnToSpawn>
-				<allowedWorkTypes>
-					<li>Firefighter</li>
-				</allowedWorkTypes>
-				<extraChargingPower>6000</extraChargingPower>
-				<hoursToRecharge>32</hoursToRecharge>
-			</li>
-			<li Class="CompProperties_Flickable"/>
 		</comps>
 	</ThingDef>
 </Defs>
