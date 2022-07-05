@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>RM_ReclaimationStationGroup</defName>
+		<label>reclaimation stations</label>
+	</DesignatorDropdownGroupDef>
+</Defs>

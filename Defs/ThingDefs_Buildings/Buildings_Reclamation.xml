@@ -10,6 +10,7 @@
 			<li>ExoticBuilding</li>
 		</tradeTags>
 		<designationCategory>Security</designationCategory>
+		<designatorDropdown>RM_ReclaimationStationGroup</designatorDropdown>
 		<comps>
 			<li Class="CompProperties_Flickable"/>
 		</comps>
