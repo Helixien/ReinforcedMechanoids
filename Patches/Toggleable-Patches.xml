@@ -39,6 +39,13 @@
 					<texPath>Things/Pawn/Droid/SecurityDroid_ALT/SecurityDroid</texPath>
 				</value>
 			</li>
+			<!-- ================ Pesennik Mechanoid ================ -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Pesennik"]/lifeStages/li/bodyGraphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Pawn/Droid/PesennikDroid_ALT/PesennikDroid</texPath>
+				</value>
+			</li>
 			<!-- ================ Spartan Mechanoid ================ -->
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/PawnKindDef[defName = "RM_Droid_Spartan"]/lifeStages/li/bodyGraphicData/texPath</xpath>
@@ -56,7 +63,7 @@
 	</Operation>
 	<Operation Class="VFECore.PatchOperationToggableSequence">
 		<enabled>False</enabled>
-		<label>Enable classic sounds for Sparten mechanoid shields?</label>
+		<label>Enable classic Halo sounds for Sparten mechanoid shields?</label>
 		<operations>
 			<!-- ================ Shield Sounds ================ -->
 			<li Class="PatchOperationAdd">
