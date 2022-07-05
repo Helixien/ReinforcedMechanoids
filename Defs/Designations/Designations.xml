@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignationDef>
+		<defName>RM_HackMechanoid</defName>
+		<texturePath>UI/Icons/Reclaim_2</texturePath>
+		<targetType>Thing</targetType>
+	</DesignationDef>
+</Defs>

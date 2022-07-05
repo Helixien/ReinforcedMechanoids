@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>What the hack?!</li>
+		</mods>
+		<success>Always</success>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef/race[fleshType = "Mechanoid" and not(nameGenerator)]</xpath>
+					<value>
+						<nameGenerator>NamerAnimalUtility</nameGenerator>
+					</value>
+				</li>
+				<li Class="PatchOperationInsert">
+					<xpath>Defs/ThinkTreeDef[defName = "Mechanoid" or defName = "Mechanoid_Skullywag"]/thinkRoot[@Class = "ThinkNode_Priority"]/subNodes/li[treeDef="LordDuty"]</xpath>
+					<value>
+						<li Class="ThinkNode_ConditionalDrafted">
+							<subNodes>
+								<li Class="ThinkNode_Tagger">
+									<tagToGive>DraftedOrder</tagToGive>
+									<subNodes>
+										<li Class="JobGiver_MoveToStandable"/>
+										<li Class="JobGiver_Orders"/>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>

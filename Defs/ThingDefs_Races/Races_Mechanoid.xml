@@ -251,6 +251,108 @@
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags/>
 	</PawnKindDef>
+	<!-- ================================ Mechanoid Peacekeeper ====================== -->
+	<ThingDef ParentName="BaseMechanoid">
+		<defName>RM_Mech_Peacekeeper</defName>
+		<label>peacekeeper</label>
+		<description>placeholder</description>
+		<statBases>
+			<MoveSpeed>1.0</MoveSpeed>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<body>RM_Mechanical_Ranger</body>
+			<baseBodySize>1.8</baseBodySize>
+			<baseHealthScale>4.72</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</butcherProducts>
+		<comps>
+			<li Class="ReinforcedMechanoidsOlympusLine.CompProperties_ExplosionOnHit">
+				<cooldownTicks>7200</cooldownTicks>
+				<explosiveRadius>8.6</explosiveRadius>
+				<explosiveDamageType>Smoke</explosiveDamageType>
+				<postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+				<postExplosionSpawnChance>1</postExplosionSpawnChance>
+				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+			</li>
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Peacekeeper</defName>
+		<label>peacekeeper</label>
+		<race>RM_Mech_Peacekeeper</race>
+		<combatPower>325</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Peacekeeper/Peacekeeper</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.0</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>MechanoidGunHeavy</li>
+		</weaponTags>
+	</PawnKindDef>
 	<!-- ================================ Mechanoid Behemoth ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Behemoth</defName>
@@ -524,5 +626,73 @@
 		<weaponMoney>0~0</weaponMoney>
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags/>
+	</PawnKindDef>
+	<!-- ================================ Mechanoid Babylon ====================== -->
+	<ThingDef ParentName="BaseMechanoid">
+		<defName>RM_Mech_Babylon</defName>
+		<label>babylon</label>
+		<description>placeholder</description>
+		<statBases>
+			<MoveSpeed>0.35</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<PsychicSensitivity>0.85</PsychicSensitivity>
+			<VEF_EnergyShieldRadiusPawn>10</VEF_EnergyShieldRadiusPawn>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.5</power>
+				<cooldownTime>2.9</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<race>
+			<body>RM_Mechanical_Caretaker</body>
+			<baseBodySize>3.5</baseBodySize>
+			<baseHealthScale>12</baseHealthScale>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1500~2500</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>80</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Babylon</defName>
+		<label>babylon</label>
+		<race>RM_Mech_Babylon</race>
+		<combatPower>100</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Babylon/Babylon</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>4.0</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
 	</PawnKindDef>
 </Defs>

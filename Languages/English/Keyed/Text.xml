@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<RM.SelectMechanoid>Select mechanoid</RM.SelectMechanoid>
+	<RM.SelectMechanoidDesc>text.todo</RM.SelectMechanoidDesc>
+	<RM.AllowRepairing>Allow repairing</RM.AllowRepairing>
+	<RM.AllowRepairingDesc>text.todo</RM.AllowRepairingDesc>
+	<RM.MissingMaterials>Missing materials: {0}</RM.MissingMaterials>
+</LanguageData>

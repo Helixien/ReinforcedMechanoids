@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+		<defName>RM_DoMechanoidHacking</defName>
+		<label>hack mechanoids</label>
+		<giverClass>ReinforcedMechanoidsOlympusLine.WorkGiver_DoMechanoidHacking</giverClass>
+		<workType>Research</workType>
+		<priorityInType>110</priorityInType>
+		<verb>hack</verb>
+		<gerund>hacking</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<workTags>
+			<li>Intellectual</li>
+		</workTags>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	<JobDef>
+		<defName>RM_HackMechanoidCorpseAtMechanoidStation</defName>
+		<driverClass>ReinforcedMechanoidsOlympusLine.JobDriver_HackMechanoidCorpseAtMechanoidStation</driverClass>
+		<reportString>hacking TargetA.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<WorkGiverDef>
+		<defName>RM_DoMechanoidRepairing</defName>
+		<label>hack mechanoids</label>
+		<giverClass>ReinforcedMechanoidsOlympusLine.WorkGiver_DoMechanoidRepairing</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>110</priorityInType>
+		<verb>repair</verb>
+		<gerund>repairing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<workTags>
+			<li>Crafting</li>
+		</workTags>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	<JobDef>
+		<defName>RM_RepairPlayerMechanoid</defName>
+		<driverClass>ReinforcedMechanoidsOlympusLine.JobDriver_RepairMechanoid</driverClass>
+		<reportString>repairing TargetA.</reportString>
+	</JobDef>
+	<WorkGiverDef>
+		<defName>RM_AttachTurretToMechanoid</defName>
+		<label>attach turret</label>
+		<giverClass>ReinforcedMechanoidsOlympusLine.WorkGiver_AttachTurretForMechanoid</giverClass>
+		<workType>Hauling</workType>
+		<verb>attach turret to</verb>
+		<gerund>attaching turret to</gerund>
+		<priorityInType>141</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	<JobDef>
+		<defName>RM_AttachTurretToMechanoid</defName>
+		<driverClass>ReinforcedMechanoidsOlympusLine.JobDriver_AttachTurretForMechanoid</driverClass>
+		<reportString>attaching turret.</reportString>
+		<suspendable>false</suspendable>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+</Defs>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+		<defName>RM_MechanoidHackingSmall</defName>
+		<hackingBase>RM_ReclaimationStationSmall</hackingBase>
+		<hackableMechanoids>
+			<li>Mech_Lancer</li>
+			<li>Mech_Scyther</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Zealot</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Ranger</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Marshal</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Vulture</li>
+		</hackableMechanoids>
+	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+
+	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+		<defName>RM_MechanoidHackingMedium</defName>
+		<hackingBase>RM_ReclaimationBaseMedium</hackingBase>
+		<hackableMechanoids>
+			<li>Mech_Centipede</li>
+			<li>Mech_Pikeman</li>
+			<li>Mech_Termite</li>
+			<li>RM_Mech_Peacekeeper</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Behemoth</li>
+		</hackableMechanoids>
+		<supportMechanoids>
+			<li>Mech_Centipede</li>
+			<li>Mech_Pikeman</li>
+			<li>Mech_Termite</li>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Behemoth</li>
+		</supportMechanoids>
+	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	
+	<ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+		<defName>RM_MechanoidHackingBig</defName>
+		<hackingBase>RM_ReclaimationBaseBig</hackingBase>
+		<hackableMechanoids>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Caretaker</li>
+			<li>RM_Mech_Babylon</li>
+		</hackableMechanoids>
+		<supportMechanoids>
+			<li>RM_Mech_Babylon</li>
+		</supportMechanoids>
+		<meleeMechanoids>
+			<li MayRequire="hlx.ReinforcedMechanoids">RM_Mech_Caretaker</li>
+		</meleeMechanoids>
+	</ReinforcedMechanoidsOlympusLine.MechanoidHackingPropertiesDef>
+	
+	
+</Defs>

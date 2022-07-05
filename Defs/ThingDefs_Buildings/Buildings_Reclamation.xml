@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase" Name="RM_DroidBase" Abstract="True">
+		<thingClass>VFE.Mechanoids.Buildings.Building_BedMachine</thingClass>
+		<graphicData>
+			<shadowData>
+				<volume>(0.5,0.3,0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.234375,0,0.515625,0.984375)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<fillPercent>0.1</fillPercent>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<tickerType>Rare</tickerType>
+		<statBases>
+			<Mass>6</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+	<!--============================= Reclaimation Station - Base ================================-->
+	<ThingDef ParentName="RM_DroidBase" Name="RM_ReclaimationBase" Abstract="True">
+		<label>reclaimation station</label>
+		<description>A station for assembling and recharging reclaimed mechanoids.</description>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>ExoticBuilding</li>
+		</tradeTags>
+		<designationCategory>Security</designationCategory>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>
+	<!--============================= Reclaimation Station - Small ================================-->
+	<ThingDef ParentName="RM_ReclaimationBase">
+		<defName>RM_ReclaimationStationSmall</defName>
+		<label>small</label>
+		<graphicData>
+			<texPath>Things/Building/Automation/Placeholder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1800</MarketValue>
+			<MaxHitPoints>500</MaxHitPoints>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>350</basePowerConsumption>
+			</li>
+			
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<allowedWorkTypes/>
+				<extraChargingPower>2800</extraChargingPower>
+				<hoursToRecharge>12</hoursToRecharge>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!--============================= Reclaimation Station - Medium (2x2) ================================-->
+	<ThingDef ParentName="RM_ReclaimationBase">
+		<defName>RM_ReclaimationBaseMedium</defName>
+		<label>medium</label>
+		<graphicData>
+			<texPath>Things/Building/Automation/Placeholder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Plasteel>90</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>450</basePowerConsumption>
+			</li>
+			
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<allowedWorkTypes/>
+				<extraChargingPower>2800</extraChargingPower>
+				<hoursToRecharge>24</hoursToRecharge>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!--============================= Reclaimation Station - Big (3x3) ================================-->
+	<ThingDef ParentName="RM_ReclaimationBase">
+		<defName>RM_ReclaimationBaseBig</defName>
+		<label>big</label>
+		<graphicData>
+			<texPath>Things/Building/Automation/Placeholder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2200</MarketValue>
+			<MaxHitPoints>1500</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Plasteel>135</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>6</ComponentSpacer>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>650</basePowerConsumption>
+			</li>
+			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
+				<compClass>ReinforcedMechanoidsOlympusLine.CompMechanoidStation</compClass>
+				<allowedWorkTypes/>
+				<extraChargingPower>2800</extraChargingPower>
+				<hoursToRecharge>36</hoursToRecharge>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

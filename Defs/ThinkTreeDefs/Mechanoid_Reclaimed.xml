@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThinkTreeDef>
+		<defName>RM_MechanoidHacked_Behaviour</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalOfPlayerFaction">
+					<subNodes>
+						<li Class="VFEMech.ThinkNode_ConditionalHasPower">
+							<subNodes>
+
+								<li Class="ThinkNode_QueuedJob"/>
+
+								<li Class="ThinkNode_ConditionalHasLord">
+									<subNodes>
+										<li Class="ThinkNode_Duty"/>
+									</subNodes>
+								</li>
+								<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_Recharge"/>
+								<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_ReturnToStation"/>
+								<li Class="ThinkNode_Tagger">
+									<tagToGive>Idle</tagToGive>
+									<subNodes>
+										<!-- Wander -->
+										<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_ReturnToStationIdle"/>
+									</subNodes>
+								</li>
+								<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_StandIdle"/>
+							</subNodes>
+						</li>
+
+						<li Class="VFEMech.ThinkNode_ConditionalHasPower">
+							<invert>true</invert>
+							<subNodes>
+								<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_Recharge"/>
+								<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_ReturnToStation"/>
+							</subNodes>
+						</li>
+						<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_StandIdle"/>
+
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+</Defs>
