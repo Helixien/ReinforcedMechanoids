@@ -9,6 +9,13 @@ namespace ReinforcedMechanoids
     public class CompMechanoidStation : CompMachineChargingStation
     {
         public Pawn mechanoidToHack;
+        public CompPowerTrader compPower;
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            compPower = this.parent.GetComp<CompPowerTrader>();
+        }
         public override void SpawnMyPawn()
         {
             wantsRespawn = false;
@@ -21,7 +28,7 @@ namespace ReinforcedMechanoids
             }
             if (this.parent.Faction == Faction.OfPlayer)
             {
-                yield return new Command_Action
+                var command = new Command_Action
                 {
                     defaultLabel = "RM.SelectMechanoid".Translate(),
                     defaultDesc = "RM.SelectMechanoidDesc".Translate(),
@@ -54,6 +61,11 @@ namespace ReinforcedMechanoids
                         }, (LocalTargetInfo t) => true);
                     }
                 };
+                if (compPower != null && !compPower.PowerOn)
+                {
+                    command.Disable("NoPower".Translate());
+                }
+                yield return command;
             }
         }
 

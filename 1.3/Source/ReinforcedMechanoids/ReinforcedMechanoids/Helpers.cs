@@ -45,7 +45,10 @@ namespace ReinforcedMechanoids
                 TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, delegate (Thing b)
             {
                 var platform = b.TryGetComp<CompMechanoidStation>();
-                if (platform != null && ((platform.myPawn is null || platform.myPawn == targetPawn) && !forHacking || platform.mechanoidToHack == targetPawn))
+                if (platform != null 
+                    && ((platform.myPawn is null || platform.myPawn == targetPawn) 
+                    && (!forHacking || platform.mechanoidToHack == targetPawn)
+                    && (!checkForPower || (platform.compPower?.PowerOn ?? false))))
                 {
                     return true;
                 }

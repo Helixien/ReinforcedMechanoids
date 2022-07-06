@@ -39,35 +39,46 @@ namespace ReinforcedMechanoids
             this.FailOnDespawnedNullOrForbidden(TargetIndex.C);
             this.FailOnDestroyedOrNull(TargetIndex.A);
             this.FailOnBurningImmobile(TargetIndex.B);
+            this.FailOn(delegate
+            {
+                var comp = TargetC.Thing.TryGetComp<CompPowerTrader>();
+                if (comp != null)
+                {
+                    return comp.PowerOn is false;
+                }
+                return false;
+            });
             if (!forbiddenInitially)
             {
                 this.FailOnForbidden(TargetIndex.A);
             }
-            Toil reserveTargetA = Toils_Reserve.Reserve(TargetIndex.A);
-            yield return reserveTargetA;
-            Toil toilGoto = null;
-            toilGoto = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnSomeonePhysicallyInteracting(TargetIndex.A)
-                .FailOn((Func<bool>)delegate
+
+            if (TargetA.Cell != TargetC.Cell)
             {
-                Pawn actor = toilGoto.actor;
-                Job curJob = actor.jobs.curJob;
-                if (curJob.haulMode == HaulMode.ToCellStorage)
-                {
-                    Thing thing = curJob.GetTarget(TargetIndex.A).Thing;
-                    if (!actor.jobs.curJob.GetTarget(TargetIndex.B).Cell.IsValidStorageFor(base.Map, thing))
+                Toil toilGoto = null;
+                toilGoto = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnSomeonePhysicallyInteracting(TargetIndex.A)
+                    .FailOn((Func<bool>)delegate
                     {
-                        return true;
-                    }
-                }
-                return false;
-            });
-            yield return toilGoto;
-            yield return Toils_Haul.StartCarryThing(TargetIndex.A, putRemainderInQueue: false, subtractNumTakenFromJobCount: true);
-            Toil carryToCell = Toils_Haul.CarryHauledThingToCell(TargetIndex.B, PathEndMode.Touch);
-            yield return carryToCell;
-            yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.B, carryToCell, storageMode: true);
-            var gotoToil = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            yield return gotoToil;
+                        Pawn actor = toilGoto.actor;
+                        Job curJob = actor.jobs.curJob;
+                        if (curJob.haulMode == HaulMode.ToCellStorage)
+                        {
+                            Thing thing = curJob.GetTarget(TargetIndex.A).Thing;
+                            if (!actor.jobs.curJob.GetTarget(TargetIndex.B).Cell.IsValidStorageFor(base.Map, thing))
+                            {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                yield return toilGoto;
+                yield return Toils_Haul.StartCarryThing(TargetIndex.A, putRemainderInQueue: false, subtractNumTakenFromJobCount: true);
+                Toil carryToCell = Toils_Haul.CarryHauledThingToCell(TargetIndex.B, PathEndMode.Touch);
+                yield return carryToCell;
+                yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.B, carryToCell, storageMode: true);
+            }
+
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
 
             var hack = new Toil
             {
