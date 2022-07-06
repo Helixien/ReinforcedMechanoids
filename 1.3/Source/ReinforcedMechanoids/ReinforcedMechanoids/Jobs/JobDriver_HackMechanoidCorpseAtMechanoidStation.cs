@@ -96,6 +96,7 @@ namespace ReinforcedMechanoids
                         }
                         var comp = TargetC.Thing.TryGetComp<CompMechanoidStation>();
                         comp.myPawn = mech;
+                        comp.mechanoidToHack = null;
                         ReadyForNextToil();
                     }
                 }

@@ -106,6 +106,7 @@ namespace ReinforcedMechanoids
             }
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("Mechanoids will drop weapons upon death", ref ReinforcedMechanoidsSettings.dropWeaponOnDeath);
+            listing_Standard.GapLine();
             listing_Standard.Label("Disable mechanoids from spawning in the game");
             foreach (var pawn in DefDatabase<PawnKindDef>.AllDefs)
             {

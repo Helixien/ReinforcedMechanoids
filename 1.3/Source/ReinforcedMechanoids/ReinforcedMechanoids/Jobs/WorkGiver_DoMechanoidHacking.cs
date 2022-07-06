@@ -21,10 +21,11 @@ namespace ReinforcedMechanoids
         }
         public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
         {
-            if (thing is Corpse corpse)
+            if (thing is Corpse corpse && pawn.CanReserveAndReach(corpse, PathEndMode.Touch, Danger.Deadly))
             {
-                var station = Helpers.GetAvailableMechanoidStation(pawn, corpse.InnerPawn, checkForPower: true) as Building;
-                if (station != null && (station.Position != corpse.Position || station.TryGetComp<CompPowerTrader>().PowerOn))
+                var station = Helpers.GetAvailableMechanoidStation(pawn, corpse.InnerPawn, checkForPower: true, forHacking: true) as Building;
+                if (station != null && pawn.CanReserveAndReach(station, PathEndMode.Touch, Danger.Deadly) 
+                    && (station.Position != corpse.Position || station.TryGetComp<CompPowerTrader>().PowerOn))
                 {
                     Job job = JobMaker.MakeJob(RM_DefOf.RM_HackMechanoidCorpseAtMechanoidStation, corpse, station.Position, station);
                     job.count = 1;

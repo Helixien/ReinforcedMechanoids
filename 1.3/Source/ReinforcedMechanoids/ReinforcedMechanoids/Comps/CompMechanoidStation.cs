@@ -8,11 +8,11 @@ namespace ReinforcedMechanoids
 {
     public class CompMechanoidStation : CompMachineChargingStation
     {
+        public Pawn mechanoidToHack;
         public override void SpawnMyPawn()
         {
             wantsRespawn = false;
         }
-
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             foreach (var g in base.CompGetGizmosExtra())
@@ -40,7 +40,13 @@ namespace ReinforcedMechanoids
                         {
                             if (x.Thing != null)
                             {
+                                var designation = this.parent.Map.designationManager.DesignationOn(x.Thing);
+                                if (designation != null)
+                                {
+                                    this.parent.Map.designationManager.RemoveDesignation(designation);
+                                }
                                 this.parent.Map.designationManager.AddDesignation(new Designation(x, RM_DefOf.RM_HackMechanoid));
+                                mechanoidToHack = x.Thing is Corpse corpse ? corpse.InnerPawn : null;
                             }
                         }, delegate (LocalTargetInfo t)
                         {
@@ -51,6 +57,11 @@ namespace ReinforcedMechanoids
             }
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_References.Look(ref mechanoidToHack, "mechanoidToHack");
+        }
     }
 }
 

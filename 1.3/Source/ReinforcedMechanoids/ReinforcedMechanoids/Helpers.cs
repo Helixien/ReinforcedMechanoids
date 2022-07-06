@@ -38,14 +38,14 @@ namespace ReinforcedMechanoids
             return false;
         }
 
-        public static Thing GetAvailableMechanoidStation(Pawn pawn, Pawn targetPawn, bool checkForPower = false)
+        public static Thing GetAvailableMechanoidStation(Pawn pawn, Pawn targetPawn, bool checkForPower = false, bool forHacking = false)
         {
             return GenClosest.ClosestThingReachable(targetPawn.Position, targetPawn.MapHeld, 
                 ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell, 
                 TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, delegate (Thing b)
             {
                 var platform = b.TryGetComp<CompMechanoidStation>();
-                if (platform != null && (platform.myPawn is null || platform.myPawn == targetPawn))
+                if (platform != null && ((platform.myPawn is null || platform.myPawn == targetPawn) && !forHacking || platform.mechanoidToHack == targetPawn))
                 {
                     return true;
                 }

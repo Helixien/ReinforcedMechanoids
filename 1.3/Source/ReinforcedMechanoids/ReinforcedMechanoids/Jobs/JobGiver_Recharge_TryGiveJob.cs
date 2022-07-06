@@ -32,7 +32,9 @@ namespace ReinforcedMechanoids
                     if (building != null)
                     {
                         comp.myBuilding = building as Building;
-                        building.TryGetComp<CompMechanoidStation>().myPawn = pawn;
+                        var compStation = building.TryGetComp<CompMechanoidStation>();
+                        compStation.myPawn = pawn;
+                        compStation.mechanoidToHack = pawn;
                     }
                     else
                     {
