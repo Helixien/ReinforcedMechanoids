@@ -339,7 +339,7 @@
 	<ThingDef ParentName="RM_BaseDroid">
 		<defName>RM_Droid_Pesennik</defName>
 		<label>pesennik mechanoid</label>
-		<description>placeholder</description>
+		<description>A frontline medic replacement similar in stature to a human, complete with a face plate that can display simple emojis for a warmer touch and a sing-song voice, earning its moniker “the songster”. Programmed to be almost satirically upbeat, they have proven to be quite popular among mercenary bands who can be fiercely protective of them. Very lightly armoured and only intended to heal not maim.</description>
 		<statBases>
 			<MoveSpeed>2.8</MoveSpeed>
 			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
