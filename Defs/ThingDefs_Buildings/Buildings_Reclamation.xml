@@ -3,9 +3,6 @@
 	<!--============================= Reclaimation Station - Base ================================-->
 	<ThingDef ParentName="RM_DroidBase" Name="RM_ReclaimationBase" Abstract="True">
 		<description>A station for assembling and recharging reclaimed mechanoids.</description>
-		<thingSetMakerTags>
-			<li>RewardStandardHighFreq</li>
-		</thingSetMakerTags>
 		<tradeTags>
 			<li>ExoticBuilding</li>
 		</tradeTags>
@@ -15,7 +12,7 @@
 			<li Class="CompProperties_Flickable"/>
 		</comps>
 	</ThingDef>
-	<!--============================= Reclaimation Station - Small ================================-->
+	<!--============================= Reclaimation Station - Small (1x1) ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationStationSmall</defName>
 		<label>reclaimation station (small)</label>
@@ -42,13 +39,14 @@
 		</comps>
 	</ThingDef>
 	
-	<!--============================= Reclaimation Station - Medium (2x2) ================================-->
+	<!--============================= Reclaimation Station - Medium (3x3) ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationBaseMedium</defName>
 		<label>reclaimation station (medium)</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
 		</graphicData>
 		<statBases>
 			<MarketValue>2000</MarketValue>
@@ -59,6 +57,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>4</ComponentSpacer>
 		</costList>
+		<size>(3,3)</size>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -74,13 +73,14 @@
 		</comps>
 	</ThingDef>
 	
-	<!--============================= Reclaimation Station - Big (3x3) ================================-->
+	<!--============================= Reclaimation Station - Big (5x5) ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationBaseBig</defName>
 		<label>reclaimation station (large)</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
 		</graphicData>
 		<statBases>
 			<MarketValue>2200</MarketValue>
@@ -91,6 +91,7 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 			<ComponentSpacer>6</ComponentSpacer>
 		</costList>
+		<size>(5,5)</size>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
