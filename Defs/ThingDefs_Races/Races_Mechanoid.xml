@@ -631,7 +631,7 @@
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Babylon</defName>
 		<label>babylon</label>
-		<description>Hulking artillery mechanoids similar in form to a crab, with massive legs that also act as stabilisers. Their only offensive capability is a siege cannon, complete with an onboard munitions autoforge that allow it to not only fire seemingly without end but also alternate subminition types to keep the enemy on their toes. Practically a mobile citadel and requires an escort.</description>
+		<description>Hulking artillery mechanoids similar in form to a crab, with massive legs that also act as stabilisers. Their only offensive capability is a siege cannon, complete with an onboard munitions autoforge that allow it to not only fire seemingly without end but also alternate submunition types to keep the enemy on their toes. Practically a mobile citadel and requires an escort.</description>
 		<statBases>
 			<MoveSpeed>0.35</MoveSpeed>
 			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
