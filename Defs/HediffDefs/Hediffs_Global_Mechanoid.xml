@@ -3,11 +3,11 @@
 	<HediffDef>
 		<defName>RM_ImprovisedRepairs</defName>
 		<label>improvised repairs</label>
-		<description>text.todo</description>
+		<description>This mechanoid was repaired online using makeshift material, severely affecting performance</description>
 	</HediffDef>
 	<HediffDef>
 		<defName>RM_JuryRigged</defName>
 		<label>jury rigged</label>
-		<description>text.todo</description>
+		<description>This mechanoid’s remote uplink has been disrupted, allowing local control at decreased efficiency</description>
 	</HediffDef>
 </Defs>
