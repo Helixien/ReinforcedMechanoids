@@ -251,10 +251,10 @@
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags/>
 	</PawnKindDef>
-	<!-- ================================ Mechanoid Peacekeeper ====================== -->
+	<!-- ================================ Mechanoid Sentinal ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
-		<defName>RM_Mech_Peacekeeper</defName>
-		<label>peacekeeper</label>
+		<defName>RM_Mech_Sentinal</defName>
+		<label>sentinal</label>
 		<description>An unusual mechanoid favoured by the Shattered Empire, purposefully designed with an angular humanoid shape. Equipped with a personalised shotgun and smokepops, its primary purpose is to enforce law and order during political dissent. Their stature makes them quite intimidating to face, however they were made to be mass produced for a low cost.</description>
 		<statBases>
 			<MoveSpeed>1.0</MoveSpeed>
@@ -332,14 +332,14 @@
 		</comps>
 	</ThingDef>
 	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_Mech_Peacekeeper</defName>
-		<label>peacekeeper</label>
-		<race>RM_Mech_Peacekeeper</race>
+		<defName>RM_Mech_Sentinal</defName>
+		<label>sentinal</label>
+		<race>RM_Mech_Sentinal</race>
 		<combatPower>325</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Peacekeeper/Peacekeeper</texPath>
+					<texPath>Things/Pawn/Mechanoid/Sentinal/Sentinal</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2.0</drawSize>
 					<shadowData>
