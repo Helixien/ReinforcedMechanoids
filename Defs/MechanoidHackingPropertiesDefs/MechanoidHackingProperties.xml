@@ -9,10 +9,22 @@
 			<li>RM_Mech_Zealot</li>
 			<li>RM_Mech_Ranger</li>
 			<li>RM_Mech_Marshal</li>
-			<li>RM_Mech_Vulture</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Knight</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedKnight</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Lancer</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedLancer</li>
+			<li MayRequire="Orion.MoreMechanoids">Mech_Assaulter</li>
+			<li MayRequire="Spino.MechanoidsExtraordinaire">Vespa</li>
 		</hackableMechanoids>
 		<meleeMechanoids>
+			<li>RM_Mech_Vulture</li>
 			<li>Mech_Scyther</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Scyther</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedScyther</li>
+			<li MayRequire="Orion.MoreMechanoids">Mech_Crawler</li>
+			<li MayRequire="Orion.MoreMechanoids">Mech_Skullywag</li>
+			<li MayRequire="Orion.MoreMechanoids">Mech_Flamebot</li>
+			<li MayRequire="Spino.MechanoidsExtraordinaire">Goliath</li>
 		</meleeMechanoids>
 	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 	<!--============================= Reclaimation Station - Big ================================-->
@@ -26,6 +38,21 @@
 			<li>RM_Mech_Behemoth</li>
 			<li>RM_Mech_Babylon</li>
 			<li>RM_Mech_Caretaker</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Termite</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvTermite</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Centipede</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedCentipede</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Pikeman</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedPikeman</li>
 		</supportMechanoids>
+		<meleeMechanoids>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_AncientMech_AncientCarpenter</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_Carpenter</li>
+			<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Mech_AdvancedCarpenter</li>
+			<li MayRequire="Orion.MoreMechanoids">Mech_Mammoth</li>
+			<li MayRequire="Spino.MechanoidsExtraordinaire">Chimera</li>
+			<li MayRequire="Spino.MechanoidsExtraordinaire">Hound</li>
+			<li MayRequire="Spino.MechanoidsExtraordinaire">Kraken</li>
+		</meleeMechanoids>
 	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 </Defs>
