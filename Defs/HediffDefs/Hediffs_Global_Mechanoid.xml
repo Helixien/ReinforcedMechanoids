@@ -5,4 +5,9 @@
 		<label>improvised repairs</label>
 		<description>text.todo</description>
 	</HediffDef>
+	<HediffDef>
+		<defName>RM_JuryRigged</defName>
+		<label>jury rigged</label>
+		<description>text.todo</description>
+	</HediffDef>
 </Defs>

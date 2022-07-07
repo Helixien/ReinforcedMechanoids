@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Genetics Expanded</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="BuildingBase">
+							<defName>GR_RustedWallA</defName>
+							<label>rusted laboratory wall</label>
+							<description>An ancient impassable wall. Capable of holding up a roof.</description>
+							<thingClass>Building</thingClass>
+							<category>Building</category>
+							<graphicData>
+								<texPath>Things/Building/RM_RustedWallA</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<MaxHitPoints>450</MaxHitPoints>
+								<WorkToBuild>135</WorkToBuild>
+								<Flammability>0</Flammability>
+								<MeditationFocusStrength>0.22</MeditationFocusStrength>
+							</statBases>
+							<costList>
+								<Steel>1</Steel>
+							</costList>
+							<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+							<altitudeLayer>Building</altitudeLayer>
+							<passability>Impassable</passability>
+							<blockWind>true</blockWind>
+							<castEdgeShadows>true</castEdgeShadows>
+							<fillPercent>1</fillPercent>
+							<coversFloor>true</coversFloor>
+							<placingDraggableDimensions>1</placingDraggableDimensions>
+							<tickerType>Never</tickerType>
+							<rotatable>false</rotatable>
+							<selectable>true</selectable>
+							<neverMultiSelect>true</neverMultiSelect>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>1.0</staticSunShadowHeight>
+							<blockLight>true</blockLight>
+							<canOverlapZones>false</canOverlapZones>
+							<fertility>0</fertility>
+							<building>
+								<isInert>true</isInert>
+								<isPlaceOverableWall>true</isPlaceOverableWall>
+								<ai_chillDestination>false</ai_chillDestination>
+								<blueprintGraphicData>
+									<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+								</blueprintGraphicData>
+							</building>
+							<damageMultipliers>
+								<li>
+									<damageDef>Bomb</damageDef>
+									<multiplier>2</multiplier>
+								</li>
+								<li>
+									<damageDef>Thump</damageDef>
+									<multiplier>2</multiplier>
+								</li>
+							</damageMultipliers>
+							<designationHotKey>Misc3</designationHotKey>
+						</ThingDef>
+						<ThingDef ParentName="BuildingBase">
+							<defName>GR_RustedWallB</defName>
+							<label>rusted laboratory wall</label>
+							<description>An ancient impassable wall. Capable of holding up a roof.</description>
+							<thingClass>Building</thingClass>
+							<category>Building</category>
+							<graphicData>
+								<texPath>Things/Building/RM_RustedWallB</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<linkType>CornerFiller</linkType>
+								<linkFlags>
+									<li>Wall</li>
+									<li>Rock</li>
+								</linkFlags>
+								<damageData>
+									<cornerTL>Damage/Corner</cornerTL>
+									<cornerTR>Damage/Corner</cornerTR>
+									<cornerBL>Damage/Corner</cornerBL>
+									<cornerBR>Damage/Corner</cornerBR>
+									<edgeTop>Damage/Edge</edgeTop>
+									<edgeBot>Damage/Edge</edgeBot>
+									<edgeLeft>Damage/Edge</edgeLeft>
+									<edgeRight>Damage/Edge</edgeRight>
+								</damageData>
+							</graphicData>
+							<statBases>
+								<MaxHitPoints>450</MaxHitPoints>
+								<WorkToBuild>135</WorkToBuild>
+								<Flammability>0</Flammability>
+								<MeditationFocusStrength>0.22</MeditationFocusStrength>
+							</statBases>
+							<costList>
+								<Steel>1</Steel>
+							</costList>
+							<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+							<altitudeLayer>Building</altitudeLayer>
+							<passability>Impassable</passability>
+							<blockWind>true</blockWind>
+							<castEdgeShadows>true</castEdgeShadows>
+							<fillPercent>1</fillPercent>
+							<coversFloor>true</coversFloor>
+							<placingDraggableDimensions>1</placingDraggableDimensions>
+							<tickerType>Never</tickerType>
+							<rotatable>false</rotatable>
+							<selectable>true</selectable>
+							<neverMultiSelect>true</neverMultiSelect>
+							<holdsRoof>true</holdsRoof>
+							<staticSunShadowHeight>1.0</staticSunShadowHeight>
+							<blockLight>true</blockLight>
+							<canOverlapZones>false</canOverlapZones>
+							<fertility>0</fertility>
+							<building>
+								<isInert>true</isInert>
+								<isPlaceOverableWall>true</isPlaceOverableWall>
+								<ai_chillDestination>false</ai_chillDestination>
+								<blueprintGraphicData>
+									<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+								</blueprintGraphicData>
+							</building>
+							<damageMultipliers>
+								<li>
+									<damageDef>Bomb</damageDef>
+									<multiplier>2</multiplier>
+								</li>
+								<li>
+									<damageDef>Thump</damageDef>
+									<multiplier>2</multiplier>
+								</li>
+							</damageMultipliers>
+							<designationHotKey>Misc3</designationHotKey>
+						</ThingDef>
+						<TerrainDef Name="GR_FloorBase" Abstract="True">
+							<layerable>true</layerable>
+							<affordances>
+								<li>Light</li>
+								<li>Medium</li>
+								<li>Heavy</li>
+							</affordances>
+							<tags>
+								<li>Floor</li>
+							</tags>
+							<fertility>0</fertility>
+							<constructEffect>ConstructDirt</constructEffect>
+						</TerrainDef>
+						<!-- ================= Misc ================= -->
+						<TerrainDef ParentName="GR_FloorBase">
+							<defName>GR_CrackedConcrete</defName>
+							<label>cracked concrete</label>
+							<description>Rough concrete. Broken due to lack of maintenance.</description>
+							<texturePath>Terrain/Surfaces/RM_CrackedConcrete</texturePath>
+							<edgeType>Hard</edgeType>
+							<renderPrecedence>71</renderPrecedence>
+							<statBases>
+								<Beauty>-1</Beauty>
+								<WorkToBuild>100</WorkToBuild>
+							</statBases>
+							<costList>
+								<Steel>1</Steel>
+							</costList>
+						</TerrainDef>
+						<TerrainDef ParentName="GR_FloorBase">
+							<defName>GR_PavedTile</defName>
+							<label>rusted laboratory tile</label>
+							<renderPrecedence>231</renderPrecedence>
+							<description>Rusted metallic tiles.</description>
+							<texturePath>Terrain/Surfaces/RM_PavedTile</texturePath>
+							<statBases>
+								<WorkToBuild>300</WorkToBuild>
+							</statBases>
+							<costList>
+								<Steel>1</Steel>
+							</costList>
+						</TerrainDef>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+</Patch>
