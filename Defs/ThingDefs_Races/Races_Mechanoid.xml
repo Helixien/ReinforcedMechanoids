@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ======================================================================== -->
+	<!-- ================================ Tyrikan-Line ====================== -->
+	<!-- ======================================================================== -->
+	<!-- ================================ Mechanoid Vulture ====================== -->
+	<ThingDef ParentName="BaseMechanoidWalker">
+		<defName>RM_Mech_Vulture</defName>
+		<label>vulture</label>
+		<description>Small and agile support mechanoids designed to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets but especially to being tied up in melee. They will actively avoid engaging in combat unless they are left with no alternative.</description>
+		<statBases>
+			<MoveSpeed>4.2</MoveSpeed>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>RM_Mechanical_Vulture</body>
+			<baseHealthScale>0.90</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>8</Steel>
+			<Plasteel>2</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Vulture</defName>
+		<label>vulture</label>
+		<race>RM_Mech_Vulture</race>
+		<combatPower>20</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Vulture/Vulture</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>0</weaponMoney>
+		<weaponTags inherit="False"/>
+	</PawnKindDef>
+	<!-- ================================ Mechanoid Ranger ====================== -->
+	<ThingDef ParentName="BaseMechanoidWalker">
+		<defName>RM_Mech_Ranger</defName>
+		<label>ranger</label>
+		<description>Rapid Sangheili-class humanoid mechanoids designed to act as cannon fodder. Very lightly armoured to promote mass-produced swarm tactics, but particularly weak once engaged in melee.</description>
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>RM_Mechanical_Ranger</body>
+			<baseHealthScale>0.55</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>10</Steel>
+			<Plasteel>4</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Ranger</defName>
+		<label>ranger</label>
+		<race>RM_Mech_Ranger</race>
+		<combatPower>75</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Ranger/Ranger</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>MechanoidGunMedium</li>
+		</weaponTags>
+		<aiAvoidCover>false</aiAvoidCover>
+	</PawnKindDef>
 	<!-- ================================ Mechanoid Zealot ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
 		<defName>RM_Mech_Zealot</defName>
@@ -84,85 +242,6 @@
 			<li>MechanoidGunMedium</li>
 			<li>MechanoidGunCoil</li>
 		</weaponTags>
-	</PawnKindDef>
-	<!-- ================================ Mechanoid Ranger ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
-		<defName>RM_Mech_Ranger</defName>
-		<label>ranger</label>
-		<description>Rapid Sangheili-class humanoid mechanoids designed to act as cannon fodder. Very lightly armoured to promote mass-produced swarm tactics, but particularly weak once engaged in melee.</description>
-		<statBases>
-			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-		</statBases>
-		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>right fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>7.5</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<body>RM_Mechanical_Ranger</body>
-			<baseHealthScale>0.55</baseHealthScale>
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-		</race>
-		<butcherProducts>
-			<Steel>10</Steel>
-			<Plasteel>4</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</butcherProducts>
-	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_Mech_Ranger</defName>
-		<label>ranger</label>
-		<race>RM_Mech_Ranger</race>
-		<combatPower>75</combatPower>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Ranger/Ranger</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.4</drawSize>
-					<shadowData>
-						<volume>(0.4, 0.8, 0.4)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>9999~9999</weaponMoney>
-		<weaponTags>
-			<li>MechanoidGunMedium</li>
-		</weaponTags>
-		<aiAvoidCover>false</aiAvoidCover>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Marshal ====================== -->
 	<ThingDef ParentName="BaseMechanoidWalker">
@@ -250,108 +329,6 @@
 		<weaponMoney>0~0</weaponMoney>
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags/>
-	</PawnKindDef>
-	<!-- ================================ Mechanoid Sentinal ====================== -->
-	<ThingDef ParentName="BaseMechanoid">
-		<defName>RM_Mech_Sentinal</defName>
-		<label>sentinal</label>
-		<description>An unusual mechanoid favoured by the Shattered Empire, purposefully designed with an angular humanoid shape. Equipped with a personalised shotgun and smokepops, its primary purpose is to enforce law and order during political dissent. Their stature makes them quite intimidating to face, however they were made to be mass produced for a low cost.</description>
-		<statBases>
-			<MoveSpeed>1.0</MoveSpeed>
-			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-			<PsychicSensitivity>0.75</PsychicSensitivity>
-		</statBases>
-		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>right fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>7.5</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<intelligence>ToolUser</intelligence>
-			<thinkTreeMain>Mechanoid</thinkTreeMain>
-			<body>RM_Mechanical_Ranger</body>
-			<baseBodySize>1.8</baseBodySize>
-			<baseHealthScale>4.72</baseHealthScale>
-			<lifeStageAges>
-				<li>
-					<def>MechanoidFullyFormed</def>
-					<minAge>0</minAge>
-					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
-					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
-					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
-				</li>
-			</lifeStageAges>
-			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
-			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
-		</race>
-		<butcherProducts>
-			<Steel>20</Steel>
-			<Plasteel>25</Plasteel>
-			<ComponentIndustrial>3</ComponentIndustrial>
-		</butcherProducts>
-		<comps>
-			<li Class="ReinforcedMechanoids.CompProperties_ExplosionOnHit">
-				<cooldownTicks>7200</cooldownTicks>
-				<explosiveRadius>8.6</explosiveRadius>
-				<explosiveDamageType>Smoke</explosiveDamageType>
-				<postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
-				<postExplosionSpawnChance>1</postExplosionSpawnChance>
-				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
-			</li>
-		</comps>
-	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_Mech_Sentinal</defName>
-		<label>sentinal</label>
-		<race>RM_Mech_Sentinal</race>
-		<combatPower>325</combatPower>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Sentinal/Sentinal</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.0</drawSize>
-					<shadowData>
-						<volume>(0.4, 0.8, 0.4)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>9999~9999</weaponMoney>
-		<weaponTags>
-			<li>MechanoidGunHeavy</li>
-		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Behemoth ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
@@ -455,84 +432,6 @@
 			<li>MechanoidGunHeavy</li>
 		</weaponTags>
 	</PawnKindDef>
-	<!-- ================================ Mechanoid Vulture ====================== -->
-	<ThingDef ParentName="BaseMechanoidWalker">
-		<defName>RM_Mech_Vulture</defName>
-		<label>vulture</label>
-		<description>Small and agile support mechanoids designed to repair other mechanoids in the field. Their bodies are light and lack any real armour, making them extremely vulnerable targets but especially to being tied up in melee. They will actively avoid engaging in combat unless they are left with no alternative.</description>
-		<statBases>
-			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-		</statBases>
-		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>4.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>right fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>4.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>5</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.3</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<body>RM_Mechanical_Vulture</body>
-			<baseHealthScale>0.90</baseHealthScale>
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-		</race>
-		<butcherProducts>
-			<Steel>10</Steel>
-			<Plasteel>2</Plasteel>
-			<ComponentIndustrial>1</ComponentIndustrial>
-		</butcherProducts>
-	</ThingDef>
-	<PawnKindDef ParentName="BaseMechanoidKind">
-		<defName>RM_Mech_Vulture</defName>
-		<label>vulture</label>
-		<race>RM_Mech_Vulture</race>
-		<combatPower>25</combatPower>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Mechanoid/Vulture/Vulture</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.0</drawSize>
-					<shadowData>
-						<volume>(0.4, 0.8, 0.4)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>9999~9999</weaponMoney>
-		<weaponTags>
-			<li>MechanoidGunSmall</li>
-		</weaponTags>
-	</PawnKindDef>
 	<!-- ================================ Mechanoid Caretaker ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
 		<defName>RM_Mech_Caretaker</defName>
@@ -626,6 +525,111 @@
 		<weaponMoney>0~0</weaponMoney>
 		<defendPointRadius>0</defendPointRadius>
 		<weaponTags/>
+	</PawnKindDef>
+	<!-- ======================================================================== -->
+	<!-- ================================ Olympus-Line ====================== -->
+	<!-- ======================================================================== -->
+	<!-- ================================ Mechanoid Sentinal ====================== -->
+	<ThingDef ParentName="BaseMechanoid">
+		<defName>RM_Mech_Sentinal</defName>
+		<label>sentinal</label>
+		<description>An unusual mechanoid favoured by the Shattered Empire, purposefully designed with an angular humanoid shape. Equipped with a personalised shotgun and smokepops, its primary purpose is to enforce law and order during political dissent. Their stature makes them quite intimidating to face, however they were made to be mass produced for a low cost.</description>
+		<statBases>
+			<MoveSpeed>1.0</MoveSpeed>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<body>RM_Mechanical_Ranger</body>
+			<baseBodySize>1.8</baseBodySize>
+			<baseHealthScale>4.72</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+					<soundCall>Pawn_Mech_Centipede_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</butcherProducts>
+		<comps>
+			<li Class="ReinforcedMechanoids.CompProperties_ExplosionOnHit">
+				<cooldownTicks>7200</cooldownTicks>
+				<explosiveRadius>8.6</explosiveRadius>
+				<explosiveDamageType>Smoke</explosiveDamageType>
+				<postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+				<postExplosionSpawnChance>1</postExplosionSpawnChance>
+				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+			</li>
+		</comps>
+	</ThingDef>
+	<PawnKindDef ParentName="BaseMechanoidKind">
+		<defName>RM_Mech_Sentinal</defName>
+		<label>sentinal</label>
+		<race>RM_Mech_Sentinal</race>
+		<combatPower>325</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Sentinal/Sentinal</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.0</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>MechanoidGunHeavy</li>
+		</weaponTags>
 	</PawnKindDef>
 	<!-- ================================ Mechanoid Babylon ====================== -->
 	<ThingDef ParentName="BaseMechanoid">
