@@ -5,7 +5,6 @@
 		<hackingBase>RM_ReclaimationStationSmall</hackingBase>
 		<hackableMechanoids>
 			<li>Mech_Lancer</li>
-			<li>Mech_Scyther</li>
 			<li>RM_Mech_Zealot</li>
 			<li>RM_Mech_Ranger</li>
 			<li>RM_Mech_Marshal</li>
@@ -18,13 +17,6 @@
 	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingMedium</defName>
 		<hackingBase>RM_ReclaimationBaseMedium</hackingBase>
-		<hackableMechanoids>
-			<li>Mech_Centipede</li>
-			<li>Mech_Pikeman</li>
-			<li>Mech_Termite_Breach</li>
-			<li>RM_Mech_Peacekeeper</li>
-			<li>RM_Mech_Behemoth</li>
-		</hackableMechanoids>
 		<supportMechanoids>
 			<li>Mech_Centipede</li>
 			<li>Mech_Pikeman</li>
@@ -35,10 +27,6 @@
 	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingBig</defName>
 		<hackingBase>RM_ReclaimationBaseBig</hackingBase>
-		<hackableMechanoids>
-			<li>RM_Mech_Caretaker</li>
-			<li>RM_Mech_Babylon</li>
-		</hackableMechanoids>
 		<supportMechanoids>
 			<li>RM_Mech_Babylon</li>
 			<li>RM_Mech_Caretaker</li>
