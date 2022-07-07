@@ -12,10 +12,10 @@
 			<li Class="CompProperties_Flickable"/>
 		</comps>
 	</ThingDef>
-	<!--============================= Reclaimation Station - Small (1x1) ================================-->
+	<!--============================= Reclaimation Station - Small ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationStationSmall</defName>
-		<label>reclaimation station (small)</label>
+		<label>reclaimation station</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -29,7 +29,6 @@
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>350</basePowerConsumption>
 			</li>
-			
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
 				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
 				<allowedWorkTypes/>
@@ -38,11 +37,10 @@
 			</li>
 		</comps>
 	</ThingDef>
-	
-	<!--============================= Reclaimation Station - Medium (3x3) ================================-->
+	<!--============================= Reclaimation Station - Big ================================-->
 	<ThingDef ParentName="RM_ReclaimationBase">
 		<defName>RM_ReclaimationBaseMedium</defName>
-		<label>reclaimation station (medium)</label>
+		<label>reclaimation station</label>
 		<graphicData>
 			<texPath>Things/Building/Automation/Placeholder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -63,45 +61,11 @@
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>450</basePowerConsumption>
 			</li>
-			
 			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
 				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
 				<allowedWorkTypes/>
 				<extraChargingPower>2800</extraChargingPower>
 				<hoursToRecharge>24</hoursToRecharge>
-			</li>
-		</comps>
-	</ThingDef>
-	
-	<!--============================= Reclaimation Station - Big (5x5) ================================-->
-	<ThingDef ParentName="RM_ReclaimationBase">
-		<defName>RM_ReclaimationBaseBig</defName>
-		<label>reclaimation station (large)</label>
-		<graphicData>
-			<texPath>Things/Building/Automation/Placeholder</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(5,5)</drawSize>
-		</graphicData>
-		<statBases>
-			<MarketValue>2200</MarketValue>
-			<MaxHitPoints>1500</MaxHitPoints>
-		</statBases>
-		<costList>
-			<Plasteel>135</Plasteel>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>6</ComponentSpacer>
-		</costList>
-		<size>(5,5)</size>
-		<comps>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>650</basePowerConsumption>
-			</li>
-			<li Class="VFE.Mechanoids.CompProperties_MachineChargingStation">
-				<compClass>ReinforcedMechanoids.CompMechanoidStation</compClass>
-				<allowedWorkTypes/>
-				<extraChargingPower>2800</extraChargingPower>
-				<hoursToRecharge>36</hoursToRecharge>
 			</li>
 		</comps>
 	</ThingDef>

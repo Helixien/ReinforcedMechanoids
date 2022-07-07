@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--============================= Reclaimation Station - Small ================================-->
 	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingSmall</defName>
 		<hackingBase>RM_ReclaimationStationSmall</hackingBase>
@@ -14,6 +15,7 @@
 			<li>Mech_Scyther</li>
 		</meleeMechanoids>
 	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
+	<!--============================= Reclaimation Station - Big ================================-->
 	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
 		<defName>RM_MechanoidHackingMedium</defName>
 		<hackingBase>RM_ReclaimationBaseMedium</hackingBase>
@@ -22,12 +24,6 @@
 			<li>Mech_Pikeman</li>
 			<li>Mech_Termite_Breach</li>
 			<li>RM_Mech_Behemoth</li>
-		</supportMechanoids>
-	</ReinforcedMechanoids.MechanoidHackingPropertiesDef>
-	<ReinforcedMechanoids.MechanoidHackingPropertiesDef>
-		<defName>RM_MechanoidHackingBig</defName>
-		<hackingBase>RM_ReclaimationBaseBig</hackingBase>
-		<supportMechanoids>
 			<li>RM_Mech_Babylon</li>
 			<li>RM_Mech_Caretaker</li>
 		</supportMechanoids>
