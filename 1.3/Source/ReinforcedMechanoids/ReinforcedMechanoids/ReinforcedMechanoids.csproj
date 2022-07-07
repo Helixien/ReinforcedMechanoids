@@ -54,7 +54,7 @@
     <Compile Include="Comps\CompChangePawnGraphic.cs" />
     <Compile Include="Comps\CompCauseGameCondition_ForceWeather.cs" />
     <Compile Include="Comps\CompCauseGameCondition_TemperatureOffset.cs" />
-    <Compile Include="Core.cs" />
+    <Compile Include="HarmonyPatches.cs" />
     <Compile Include="GenerateImpliedDefs_PreResolve_Patch.cs" />
     <Compile Include="GizmoGridDrawer_DrawGizmoGrid_Patch.cs" />
     <Compile Include="Helpers.cs" />

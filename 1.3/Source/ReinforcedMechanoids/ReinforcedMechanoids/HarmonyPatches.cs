@@ -32,6 +32,23 @@ namespace ReinforcedMechanoids
         }
     }
 
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.TryGetAttackVerb))]
+    public static class TryGetAttackVerb_Patch
+    {
+        private static void Postfix(Pawn __instance, ref Verb __result, Thing target)
+        {
+            if (__instance.kindDef == RM_DefOf.RM_Mech_Vulture)
+            {
+                __result = null;
+                var job = JobGiver_AIFightEnemy_TryGiveJob.FleeIfEnemiesAreNearby(__instance);
+                if (job != null && __instance.CurJobDef != job.def && __instance.jobs.jobQueue.jobs.Any(x => x.job.def == job.def) is false)
+                {
+                    __instance.jobs.jobQueue.EnqueueFirst(job);
+                }
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(JobGiver_AITrashColonyClose), "TryGiveJob")]
     public static class JobGiver_AITrashColonyClose_TryGiveJob
     {
@@ -162,16 +179,57 @@ namespace ReinforcedMechanoids
 
                     if (pawn.kindDef == RM_DefOf.RM_Mech_Vulture)
                     {
-                        __result = HealOtherMechanoids(pawn, otherPawns);
+                        __result = FleeIfEnemiesAreNearby(pawn);
                         if (__result is null)
                         {
-                            __result = FollowOtherMechanoids(pawn, otherPawns);
+                            __result = HealOtherMechanoids(pawn, otherPawns);
+                            if (__result is null)
+                            {
+                                __result = FollowOtherMechanoids(pawn, otherPawns);
+                            }
                         }
                         return false;
                     }
                 }
             }
             return true;
+        }
+
+        public static Job FleeIfEnemiesAreNearby(Pawn pawn)
+        {
+            var enemies = pawn.Map.attackTargetsCache?.GetPotentialTargetsFor(pawn)?.Where(x =>
+                        (x is Pawn pawnEnemy && !pawnEnemy.Dead && !pawnEnemy.Downed || !(x.Thing is Pawn) && x.Thing.DestroyedOrNull())
+                        && x.Thing.Position.DistanceTo(pawn.Position) < 15f
+                        && GenSight.LineOfSight(x.Thing.Position, pawn.Position, pawn.Map))?.Select(y => y.Thing);
+            if (enemies?.Count() > 0)
+            {
+                return MakeFlee(pawn, enemies.OrderBy(x => x.Position.DistanceTo(pawn.Position)).First(), 15, enemies.ToList());
+            }
+            return null;
+        }
+
+        public static Job MakeFlee(Pawn pawn, Thing danger, int radius, List<Thing> dangers)
+        {
+            Job job = null;
+            IntVec3 intVec;
+            if (pawn.CurJob != null && pawn.CurJob.def == JobDefOf.Flee)
+            {
+                intVec = pawn.CurJob.targetA.Cell;
+            }
+            else
+            {
+                intVec = CellFinderLoose.GetFleeDest(pawn, dangers, 24f);
+            }
+
+            if (intVec == pawn.Position)
+            {
+                intVec = GenRadial.RadialCellsAround(pawn.Position, radius, radius * 2).RandomElement();
+            }
+            if (intVec != pawn.Position)
+            {
+                job = JobMaker.MakeJob(JobDefOf.Flee, intVec, danger);
+            }
+            return job;
         }
         public static readonly IntRange ExpiryInterval_ShooterSucceeded = new IntRange(450, 550);
 
