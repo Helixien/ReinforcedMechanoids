@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="RM_UpdateFeatureBase">
+		<modNameReadable>Reinforced Mechanoids 2 - Now in testing!</modNameReadable>
+		<modIdentifier>ModName</modIdentifier>
+		<linkUrl>https://discord.gg/PgmsatuRwc</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="RM_UpdateFeatureBase">
+		<defName>RM_TestingUpdate</defName>
+		<assemblyVersion>2.0</assemblyVersion>
+		<targetAudience>AllPlayers</targetAudience>
+		<content>img:News/TestingPreview |After quite some work I am happy to annoucne that the first version of Reinforced Mechanoids 2 is now in testing and we need you! | |Join the Vanilla Testing Expanded Server now and help us find bugs, give feedback on new content and get an early look at the mod. Face new mechanoid threats, reworked and improved old foes, a new faction and explore ancient downed ships. All of that, while enjoying new music fitting the Halo theme of the mod. | |Click the link at the top right of this news section to get to go to thr discord server right now!</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
